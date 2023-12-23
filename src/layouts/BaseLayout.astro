@@ -1,0 +1,54 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import NavigationMobile from "../components/NavigationMobile.astro";
+import "../styles/global.css";
+
+// import { myButton } from "../utils/backToTop.js";
+
+import "@fontsource/ubuntu/300.css";
+import "@fontsource/ubuntu/400.css";
+import "@fontsource/ubuntu/500.css";
+import "@fontsource/ubuntu/700.css";
+
+import "@fontsource/poppins";
+
+const { pageTitle, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script> -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/ac1.png" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="bg-light dark:bg-dark text-dark dark:text-light">
+    <main
+      id="swup"
+      class="swup-transition-fade relative md:container md:mx-auto w-full min-h-screen"
+    >
+      <Header />
+      <article class="text-lg md:text-2xl px-4 py-8">
+        <slot />
+      </article>
+      <Footer />
+      <NavigationMobile />
+    </main>
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>
+
+<!-- Ich habe in Zeile 29 md:container auf lg:container gesetzt.Jetzt verläuft die border-2 einstellung komplett von Bildrand zu Bildrand sobald sie unter 1024px fällt.-->
+
+<!-- Zeile 29 habe ich auf 2xl:container geändert damit der Effekt (es fehlt ein stück vom Bild oben rechts in der Ecke im Header) wieder verschwindet  -->
+
+<!--class="swup-transition-fade relative min-xl:container md:mx-auto w-full min-h-screen" -->

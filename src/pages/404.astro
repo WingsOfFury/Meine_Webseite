@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section
+    class="bg-gray-100 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center"
+  >
+    <div
+      class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl"
+    >
+      <div class="lg:w-1/2">
+        <div
+          class="h-64 bg-cover lg:h-full"
+          style="background-image:url('https://media.istockphoto.com/id/901208180/photo/computer-monitor.jpg?s=612x612&w=0&k=20&c=JlSZQeTg1hKvqpbyhAGPQs6KF5uY9FIdTfRCcVOSkT8=')"
+        >
+        </div>
+      </div>
+
+      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
+        <h3
+          class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl"
+        >
+          Build Your New <span class="text-blue-500">Idea</span>
+        </h3>
+
+        <p class="mt-4 text-gray-500 dark:text-gray-300">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi
+          reprehenderit vitae exercitationem aliquid dolores ullam temporibus
+          enim expedita aperiam mollitia iure consectetur dicta tenetur, porro
+          consequuntur saepe accusantium consequatur.
+        </p>
+
+        <div class="inline-flex w-full mt-6 sm:w-auto">
+          <a
+            href="/"
+            class="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
+          >
+            Go Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<!-- ---
+import ErrorLayout from "../layouts/ErrorLayout.astro";
+
+const pageTitle = "404";
+---
+
+<ErrorLayout pageTitle={pageTitle}>
+  <section class="flex items-center justify-center h-screen">
+    <div class="flex w-10/12 border-2 border-dark rounded-xl p-4 bg-slate-300">
+      <div class="flex w-full">
+        <img
+          class="rounded-xl border-2 border-dark"
+          src="https://www.mubis.es/media/users/11242/104369/yossarian-l_cover.gif"
+        />
+      </div>
+      <div class="flex flex-col items-center w-full text-center">
+        <h4
+          class="text-[50px] font-bold leading-none sm:text-[80px] md:text-[100px]"
+        >
+          404
+        </h4>
+        <h3 class="mb-3 text-xl font-semibold leading-tight">
+          Oops! Die Seite wurde nicht gefunden.
+        </h3>
+        <p class="mb-8 text-lg">
+          Bitte klicke auf "Go Home" um zurück auf die Website zu gelangen.
+        </p>
+        <a href="/"
+          ><button
+            class="inline-block rounded-lg border border-dark px-8 py-3 text-center text-lg font-semibold transition bg-indigo-600 hover:bg-indigo-500 ease-linear text-white"
+            ><span>Go Home</span>
+          </button></a
+        >
+      </div>
+    </div>
+  </section>
+</ErrorLayout> -->

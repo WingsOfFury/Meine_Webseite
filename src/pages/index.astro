@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import devguy from "../images/developer-guy.png";
+const pageTitle = "Startseite";
+---
+
+<BaseLayout pageTitle={pageTitle} description="Akansel Cengiz Webseite">
+  <div class="flex flex-col xl:flex-row justify-between items-center">
+    <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center py-10">
+      <Image
+        src={devguy}
+        width={1200}
+        height={1100}
+        quality={80}
+        format="webp"
+        alt="Ein Programmierer mit Laptop"
+      />
+    </div>
+    <div
+      class="w-full xl:w-1/2 flex flex-col justify-between items-center xl:items-start"
+    >
+      <div class="text-4xl md:text-6xl text-center xl:text-start mb-4">
+        <br />
+        <span
+          id="dynamic-header-text"
+          class="text-rose-600 dark:text-green-400 border-r-4 border-r-black dark:border-r-light"
+          ><p>Eat</p></span
+        ><br />
+      </div>
+      <div class="mb-6 text-center xl:text-start leading-relaxed">
+        <!-- Schön das du es auf meine Webseite geschafft hast. Alles wissenswerte
+        befindet sich in der Navbar. Mein Portfolio ist hier natürlich auch
+        komplett mit Github verlinkt. Du kannst mir auch gerne schreiben. -->
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut quod
+          pariatur maxime accusamus fuga placeat sequi illum. Repellendus fugit
+          facere fuga recusandae perferendis quidem a. Repellat omnis distinctio
+          ipsa magni!
+        </p>
+        <!-- <div class="flex items-center">
+        <Button url="mailto:akcengiz@gmx.de" title="Contact" external={true} />
+      </div> -->
+        <div class="flex items-center"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Ich habe im Button, NavigationSocialBar und im Header die Icons von Rounded-full auf Eckig umgestellt -->
+</BaseLayout>

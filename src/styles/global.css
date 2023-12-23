@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl md:text-6xl mb-6 md:mb-12;
+    font-family: "ubuntu", sans-serif;
+    font-weight: 400;
+    font-variation-settings: "wdth" 75, "wght" 500;
+  }
+
+  h2,
+  h3 {
+    @apply text-2xl md:text-4xl my-6 md:my-6;
+    font-family: "ubuntu", sans-serif;
+    font-weight: 400;
+    font-variation-settings: "wdth" 75, "wght" 500;
+  }
+
+  h1::before,
+  h2::before {
+    @apply mr-4 text-rose-600 dark:text-green-400;
+    content: "";
+  }
+
+  #rocket::before {
+    content: "";
+  }
+
+  p {
+    @apply my-4 leading-relaxed;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-variation-settings: "wdth" 75, "wght" 500;
+  }
+
+  h1 + p {
+    @apply first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold;
+  }
+
+  pre {
+    @apply text-lg md:text-xl rounded-lg my-8 p-3;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-variation-settings: "wdth" 75, "wght" 500;
+  }
+
+  #toc {
+    @apply xl:float-right xl:w-1/2 xl:ml-8;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-variation-settings: "wdth" 75, "wght" 500;
+  }
+
+  #toc > ul {
+    @apply border-2 border-dark dark:border-light rounded-lg my-8 py-2 px-4 text-base md:text-xl;
+  }
+
+  #toc li {
+    @apply my-2 mx-4 list-disc;
+  }
+
+  a {
+    font-family: "ubuntu";
+    font-weight: 400;
+    font-variation-settings: "wdth" 75, "wght" 500;
+  }
+
+  li {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-variation-settings: "wdth" 75, "wght" 500;
+  }
+
+  p > a,
+  li > a {
+    @apply text-rose-600;
+  }
+
+  p > code {
+    @apply bg-slate-300 dark:bg-green-400 text-dark dark:text-dark  px-2 whitespace-nowrap rounded italic;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-variation-settings: "wdth" 75, "wght" 500;
+  }
+}
+
+html.is-changing .swup-transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+html.is-animating .swup-transition-fade {
+  opacity: 0;
+  transform: translateY(20px);
+}
