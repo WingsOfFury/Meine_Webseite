@@ -7,7 +7,7 @@ import Country from './Country';
 import Age from './Age';
 
 
-const pageTitle = "Stimmen aus der Community...";
+// const pageTitle = "Stimmen aus der Community...";
 
 const Refresh = () => {
     // Zustand für deine API-Daten
@@ -51,7 +51,7 @@ const Refresh = () => {
     // Hier kannst du den Rest deiner JSX-Komponente mit den API-Daten rendern
     return (
         <div>
-            <b><h4 className="">{pageTitle}</h4></b>
+            {/* <b><h4 className="">{pageTitle}</h4></b> */}
             {/* Hier kannst du die API-Daten in deinem JSX verwenden */}
             {randomUserData && (
                 <div

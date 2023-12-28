@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { slide } from "astro:transitions";
 
 const pageTitle = "About me | Akansel Cengiz";
+const description = "Über mich!";
 const happy = true;
 const finished = true;
 const goal = 3;
@@ -32,8 +34,8 @@ const textCase = "uppercase";
   }
 </style>
 
-<BaseLayout pageTitle={pageTitle}>
-  <h1>... my new Astro site!</h1>
+<BaseLayout pageTitle={pageTitle} description={description}>
+  <!-- <h1>... my new Astro site!</h1> -->
 
   <p>
     I am working through Astro's introductory tutorial. This is the second page

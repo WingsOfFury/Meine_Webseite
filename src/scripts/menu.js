@@ -3,54 +3,10 @@ import SwupScrollPlugin from "@swup/scroll-plugin";
 import SwupHeadPlugin from "@swup/head-plugin";
 import SwupA11yPlugin from "@swup/a11y-plugin";
 
-// document.getElementById("#menuToggle").addEventListener("click", function () {
-//   let navLinks = document.getElementById("navLinks");
-//   navLinks.classList.toggle("#hidden");
-// });
-
 // pageHandler ist die Klasse, die alle Funktionen enthält, die auf der Seite ausgeführt werden sollen.
 class PageHandler {
-  // der Konstruktor wird beim Erstellen einer neuen Instanz der Klasse ausgeführt.
   constructor() {
-    // Hier werden alle Funktionen aufgerufen, die beim Laden der Seite ausgeführt werden sollen.
-    // Wenn im localStorage der Wert "theme" auf "dark" gesetzt ist, wird der Klasse "dark" auf dem HTML-Element hinzugefügt.
-    if (localStorage.getItem("theme") == "dark") {
-      document.documentElement.classList.add("dark");
-    }
-
-    // Initiale Funktionen welche beim Laden der Seite ausgeführt werden sollen.
-    this.setThemeIcon();
     this.typeWriterManager();
-
-    // Event-Listener für den Dark-Mode-Switch
-    // Bei Klick auf den Switch wird die Klasse "dark" auf dem HTML-Element hinzugefügt oder entfernt.
-    document.querySelector("#colorSwitch").addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-
-      if (localStorage.getItem("theme") == "dark") {
-        localStorage.setItem("theme", "");
-      } else {
-        localStorage.setItem("theme", "dark");
-      }
-
-      this.setThemeIcon();
-    });
-  }
-
-  // Diese Funktion setzt das Icon für den Dark-Mode-Switch.
-  setThemeIcon() {
-    let colorSwitch = document.querySelector("#colorSwitch");
-    if (colorSwitch === null) return;
-
-    if (localStorage.getItem("theme") == "dark") {
-      colorSwitch.innerHTML = `
-        <img src="/icons/sun.svg?a=${Math.random()}" alt="sun" class="w-6 h-6" />
-      `;
-    } else {
-      colorSwitch.innerHTML = `
-        <img src="/icons/moon.svg?a=${Math.random()}" alt="sun" class="w-6 h-6" />
-      `;
-    }
   }
 
   // Diese Funktion verwaltet einen Typewriter-Effekt für ein beliebiges Element.
@@ -117,3 +73,5 @@ var swup = new Swup({
 });
 
 swup.hooks.on("content:replace", () => init());
+
+// swup.on("contentReplaced", init);

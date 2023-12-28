@@ -9,6 +9,7 @@ image:
     alt: "Thumbnail of Astro arcs."
 tags: ["astro", "blogging", "learning in public", "successes"]
 relatedPosts: ["post-1"]
+
 ---
 After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!
 

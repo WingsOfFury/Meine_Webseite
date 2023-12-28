@@ -14,24 +14,28 @@ import spotlightjs from "@spotlightjs/astro";
 // MDX importieren
 import mdx from "@astrojs/mdx";
 
-import preact from "@astrojs/preact";
-
 // https://astro.build/config
 export default defineConfig({
   // Astro-Plugins registrieren
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), react(), sentry(), spotlightjs(), mdx(), preact()],
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    react(),
+    sentry(),
+    spotlightjs(),
+    mdx(),
+  ],
   // site: "https://example.com",
   // Markdown-Plugin konfigurieren
   markdown: {
     syntaxHighlight: "shiki",
     shikiConfig: {
       theme: "one-dark-pro",
-      wrap: true
+      wrap: true,
     },
-    gfm: true
-  }
+    gfm: true,
+  },
 });

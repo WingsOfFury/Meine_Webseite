@@ -9,6 +9,7 @@ image:
     alt: "The word astro against an illustration of planets and stars."
 tags: ["astro", "successes"]
 relatedPosts: ["post-2"]
+
 ---
 
 

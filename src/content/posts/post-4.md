@@ -1,5 +1,5 @@
 ---
-title: 04 | Woher und Wie beziehe ich die Daten für meine Testimonials Seite ?
+title: 04 | Woher und Wie bekomme ich die Daten für meine Testimonials ?
 author: Akansel Cengiz
 authorContact: akcengiz@gmx.de
 pubDate: 2023-11-20
@@ -9,6 +9,7 @@ image:
     alt: "Thumbnail of Astro rays."
 tags: ["astro", "learning in public", "setbacks", "community"]
 relatedPosts: ["post-4"]
+
 ---
 It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
 
@@ -39,6 +40,4 @@ Meine Bemühungen sind nicht auf den aktuellen Kenntnisstand beschränkt. Ich in
 *Bild 3 symbolisiert mein Ziel, ein erfolgreicher Junior Cloud Engineer zu werden.*
 
 Ich freue mich darauf, meine Fähigkeiten weiter zu vertiefen und einen bedeutenden Beitrag im Bereich Cloud-Technologien zu leisten.
-
-
 

@@ -41,7 +41,7 @@ const { frontmatter } = Astro.props;
         new Date(frontmatter.pubDate).toLocaleDateString("de-DE")
       }
     </p>
-    <p>Verfasser: {frontmatter.author}</p>
+    <p>Verfasser: <a href="/about/">{frontmatter.author}</a></p>
     <slot />
   </section>
 </BaseLayout>

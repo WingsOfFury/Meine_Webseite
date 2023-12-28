@@ -3,10 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Refresh from "../components/Refresh.jsx";
 
 const pageTitle = "Referenzen | Akansel Cengiz";
+const description = "Stimmen aus der Community...";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <Refresh client:load />
+<BaseLayout pageTitle={pageTitle} description={description}>
+  <Refresh client:visible />
 </BaseLayout>
 
  // 07.12.2023 10:26 Uhr // Schaue bitte hier später nochmal nach warum die "Testimonials
