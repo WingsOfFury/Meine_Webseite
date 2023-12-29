@@ -94,3 +94,55 @@ html.is-animating .swup-transition-fade {
   opacity: 0;
   transform: translateY(20px);
 }
+
+.hamburger {
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 0.4rem;
+  background-color: #0a0a0a;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 60%;
+  bottom: 20%;
+  left: 1%;
+  width: 320px;
+  height: 367px;
+  border: solid 4px black;
+}
+
+.nav-links a {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #e5e9f0;
+  opacity: 0.9;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #858688;
+  color: white;
+}
+
+.expanded {
+  display: unset;
+}

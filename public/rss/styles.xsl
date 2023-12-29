@@ -127,8 +127,14 @@ This file is in BETA. Please test and contribute to the discussion:
                     <xsl:value-of select="link"/>
                   </xsl:attribute>
                   <xsl:value-of select="title"/>
-                </a>
-              </h3>
+                  </a>
+                  </h3>
+                 <p class="text-gray">By
+              <xsl:value-of select="author" />
+              </p>
+             <p class="text-gray-light">Description:
+              <xsl:value-of select="description" />
+              </p>
               <small class="text-gray">
                 Published: <xsl:value-of select="pubDate" />
               </small>

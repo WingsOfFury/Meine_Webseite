@@ -1,5 +1,6 @@
 ---
 import Hamburger from "./Hamburger.astro";
+import Navigation from "./Navigation.astro";
 ---
 
 <section
@@ -12,7 +13,10 @@ import Hamburger from "./Hamburger.astro";
     lg:gap-8 md:gap-8 sm:gap-8
     lg:text-2xl md:text-xl sm:text-xl"
   >
-    <Hamburger />
-    <!-- <NavigationLinks /> -->
+    <Navigation />
+
+    <div class="flex justify-end w-full">
+      <Hamburger />
+    </div>
   </nav>
 </section>
