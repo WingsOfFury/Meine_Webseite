@@ -95,7 +95,7 @@ html.is-animating .swup-transition-fade {
   transform: translateY(20px);
 }
 
-.hamburger {
+/* .hamburger {
   padding-right: 2rem;
   cursor: pointer;
 }
@@ -145,4 +145,4 @@ html.is-animating .swup-transition-fade {
 
 .expanded {
   display: unset;
-}
+} */
