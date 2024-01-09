@@ -1,7 +1,7 @@
 *TODO - 
-Ändere bitte akansel-cengiz.yaml unter src> content> authors> in eine JSON Datei um.
+<!-- Ändere bitte akansel-cengiz.yaml unter src> content> authors> in eine JSON Datei um.  -->
 Füge einen Visitor Counter auf die Homepage ein.
-Füge eine CV Seite mit deinem Lebenslauf ein.
+Füge eine Resume Seite mit deinem Lebenslauf ein.
 
 
 

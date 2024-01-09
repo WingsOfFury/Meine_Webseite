@@ -6,7 +6,7 @@ pubDate: 2023-11-30
 description: "Interessanter Einblick in die Welt des Blog schreibens."
 image:
     src: "/src/images/markdown.jpeg"
-    alt: "The word astro against an illustration of planets and stars."
+    alt: "The logo of the markdown language."
 tags: ["astro", "successes"]
 relatedPosts: ["post-2"]
 

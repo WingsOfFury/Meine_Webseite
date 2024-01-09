@@ -7,7 +7,7 @@ updatedDate: '12345'
 description: 'Dieses Bild sagt mehr als 1000 Worte und sollte für jeden ein positives Beispiel sein immer weiter zu machen.'
 image:
     src: '/src/images/first.png'
-    alt: 'The full Astro logo.'
+    alt: 'A twitter screenshot with some text'
 tags: ["TailwindCSS", "Astro", "React", "Typescript"]
 relatedPosts: ["post-3"]
 

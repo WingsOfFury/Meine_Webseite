@@ -28,14 +28,17 @@
 
     // Diese Funktion setzt das Icon für den Dark-Mode-Switch.
     setThemeIcon() {
+      // console.log("setThemeIcon wird aufgerufen!");
       let colorSwitch = document.querySelector("#themeToggle");
       if (colorSwitch === null) return;
 
       if (localStorage.getItem("theme") == "dark") {
+        // console.log("Dark-Mode aktiv!");
         colorSwitch.innerHTML = `
         <img src="/icons/sun.svg?a=${Math.random()}" alt="sun" class="w-6 h-6" />
       `;
       } else {
+        // console.log("Dark-Mode nicht aktiv!");
         colorSwitch.innerHTML = `
         <img src="/icons/moon.svg?a=${Math.random()}" alt="sun" class="w-6 h-6" />
       `;
