@@ -3,9 +3,9 @@ import SwupScrollPlugin from "@swup/scroll-plugin";
 import SwupHeadPlugin from "@swup/head-plugin";
 import SwupA11yPlugin from "@swup/a11y-plugin";
 
-document.querySelector(".hamburger").addEventListener("click", () => {
-  document.querySelector(".nav-links").classList.toggle("expanded");
-});
+// document.querySelector(".hamburger").addEventListener("click", () => {
+//   document.querySelector(".nav-links").classList.toggle("expanded");
+// });
 
 // pageHandler ist die Klasse, die alle Funktionen enthält, die auf der Seite ausgeführt werden sollen.
 class PageHandler {

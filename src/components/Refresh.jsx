@@ -50,39 +50,39 @@ const Refresh = () => {
 
     // Hier kannst du den Rest deiner JSX-Komponente mit den API-Daten rendern
     return (
-        <div>
+        <>
             {/* <b><h4 className="">{pageTitle}</h4></b> */}
             {/* Hier kannst du die API-Daten in deinem JSX verwenden */}
             {randomUserData && (
-                <div
+                <section
                     className="font-roboto mx-auto mt-20 w-full flex flex-row justify-center items-center pt-12"
                 >
-                    <div className="card w-96 mx-auto dark:text-dark border bg-indigo-300 rounded shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)]">
+                    <section className="card w-96 mx-auto dark:text-dark border bg-indigo-300 rounded shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)]">
                         <img
                             className="w-32 mx-auto rounded-full -mt-20 border-8 border-stone-300"
                             src={randomUserData.picture.large}
                             alt="Fotos von Gesichtern"
                         />
-                        <div className="text-center mt-2 text-3xl font-medium">
+                        <article className="text-center mt-2 text-3xl font-medium">
                             {randomUserData.name.first}{" "}
                             {randomUserData.name.last}
-                        </div>
-                        <div className="text-center mt-2 font-light text-sm">
+                        </article>
+                        <article className="text-center mt-2 font-light text-sm">
                             {randomUserData.login.username}
-                        </div>
+                        </article>
                         <hr className="mt-8" />
-                        <div className="text-center font-normal text-lg">
+                        <article className="text-center font-normal text-lg">
                             <Location city={randomUserData.location.city} />
                             <State state={randomUserData.location.state} />
                             <Country country={randomUserData.location.country} />
                             <Age age={randomUserData.dob.age} />
                             <Contact client="load" email={randomUserData.email} />
-                        </div>
-                    </div>
-                </div>
+                        </article>
+                    </section>
+                </section>
             )
             }
-        </div >
+        </ >
     );
 };
 

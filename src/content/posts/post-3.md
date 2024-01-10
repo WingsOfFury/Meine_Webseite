@@ -6,7 +6,7 @@ pubDate: 2023-10-28
 description: "Warum gibt es auf dieser Welt so viele unterschiedliche Fonts ?"
 image:
     src: "/src/images/fonts.png"
-    alt: "Thumbnail of Astro arcs."
+    alt: "A green to yellow background color with some text."
 tags: ["astro", "blogging", "learning in public", "successes"]
 relatedPosts: ["post-1"]
 

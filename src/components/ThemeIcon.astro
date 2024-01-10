@@ -3,8 +3,8 @@
     // der Konstruktor wird beim Erstellen einer neuen Instanz der Klasse ausgeführt.
     constructor() {
       // Hier werden alle Funktionen aufgerufen, die beim Laden der Seite ausgeführt werden sollen.
-      // Wenn im localStorage der Wert "theme" auf "dark" gesetzt ist, wird der Klasse "dark" auf dem HTML-Element hinzugefügt.
-      if (localStorage.getItem("theme") == "dark") {
+      // Wenn im localStorage der Wert "theme" auf "dark" gesetzt ist, wird die Klasse "dark" auf dem HTML-Element hinzugefügt.
+      if (localStorage.getItem("theme") === "dark") {
         document.documentElement.classList.add("dark");
       }
 
@@ -15,8 +15,7 @@
       // Bei Klick auf den Switch wird die Klasse "dark" auf dem HTML-Element hinzugefügt oder entfernt.
       document.querySelector("#themeToggle").addEventListener("click", () => {
         document.documentElement.classList.toggle("dark");
-
-        if (localStorage.getItem("theme") == "dark") {
+        if (localStorage.getItem("theme") === "dark") {
           localStorage.setItem("theme", "");
         } else {
           localStorage.setItem("theme", "dark");
@@ -32,10 +31,12 @@
       if (colorSwitch === null) return;
 
       if (localStorage.getItem("theme") == "dark") {
+        // console.log("Dark-Mode aktiv!");
         colorSwitch.innerHTML = `
         <img src="/icons/sun.svg?a=${Math.random()}" alt="sun" class="w-6 h-6" />
       `;
       } else {
+        // console.log("Dark-Mode nicht aktiv!");
         colorSwitch.innerHTML = `
         <img src="/icons/moon.svg?a=${Math.random()}" alt="sun" class="w-6 h-6" />
       `;
@@ -50,11 +51,11 @@
   document.addEventListener("DOMContentLoaded", () => init());
 </script>
 
-<div
+<section
   id="themeToggle"
   class="hover:cursor-pointer border-2 border-dark bg-dark dark:bg-yellow-200 p-1"
 >
   <img src="/icons/moon.svg" alt="moon" class="w-6 h-6" />
-</div>
+</section>
 
 <!-- Ich habe probiert den alten JS Code für den colorToggle zu ersetzen  -->

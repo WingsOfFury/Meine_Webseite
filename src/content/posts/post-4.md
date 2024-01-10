@@ -3,10 +3,10 @@ title: 04 | Woher und Wie bekomme ich die Daten für meine Testimonials ?
 author: Akansel Cengiz
 authorContact: akcengiz@gmx.de
 pubDate: 2023-11-20
-description: "Wir tauschen ein in die Welt von Fake Daten auf Abruf und wo sie zu finden sind."
+description: "Wir tauchen ein in die Welt von Fake Daten auf Abruf und wo sie zu finden sind."
 image:
     src: "/src/images/api.png"
-    alt: "Thumbnail of Astro rays."
+    alt: "A pic with black background and white letters."
 tags: ["astro", "learning in public", "setbacks", "community"]
 relatedPosts: ["post-4"]
 
