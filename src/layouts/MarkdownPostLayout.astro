@@ -1,78 +1,30 @@
 ---
-import NavigationMobile from "../components/NavigationMobile.astro";
 import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <!-- <h1>{frontmatter.title}</h1>
-  <p>Published on: {frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
-  <p>Written by: {frontmatter.author}</p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <div class="tags">
-    <div class="flex flex-no-wrap">
-      {
-        frontmatter.tags.map((tag) => (
-          <p class="inline-block border border-solid border-gray-300 rounded-md p-2 m-2 text-xs bg-opacity-60 bg-gray-300 bg-dark:text-light">
-            <a class="text-black" href={`/tags/${tag}`}>
-              {tag}
-            </a>
-          </p>
-        ))
-      }
-    </div>
-    <slot />
-    <NavigationMobile />
-  </div> -->
-
   <section class="flex flex-col justify-center items-center w-full">
-    <h3>{frontmatter.title}</h3>
-    <p><em>{frontmatter.description}</em></p>
-    <!-- <p>{frontmatter.pubDate.toString().slice(0, 10)}</p> -->
-    <p>
-      Veröffentlicht am {
-        new Date(frontmatter.pubDate).toLocaleDateString("de-DE")
-      }
-    </p>
-    <p>Verfasser: <a href="/about/">{frontmatter.author}</a></p>
     <img
       src={frontmatter.image.src}
-      class="rounded border-dark border-2 w-10/12"
+      class="rounded border-dark border-2 w-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
       alt={frontmatter.image.alt}
     />
+    <section class="flex flex-row justify-between w-full text-sm">
+      <p>Verfasser: <a href="/about/">{frontmatter.author}</a></p>
+      <p>
+        Veröffentlicht am {
+          new Date(frontmatter.pubDate).toLocaleDateString("de-DE")
+        }
+      </p>
+    </section>
+    <section class="flex flex-col justify-center items-center w-full">
+      <h3>{frontmatter.title}</h3>
+      <p><em>{frontmatter.description}</em></p>
+    </section>
+    <hr class="border-1 border-dark w-10/12 mt-10 mb-20" />
+    <!-- <p>{frontmatter.pubDate.toString().slice(0, 10)}</p> -->
     <slot />
   </section>
 </BaseLayout>
-
-<!-- <!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
-    <meta name="author" content={author} />
-    <meta name="keywords" content={keywords} />
-    <meta name="robots" content="index, follow" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
-  </head>
-  <body class="font-mono bg-light dark:bg-dark text-dark dark:text-light">
-    <main
-      id="swup"
-      class="relative md:container md:mx-auto w-full min-h-screen"
-    >
-      <Header />
-      <article class="swuptransition-fade text-lg md:text-2xl px-4 py-8">
-        <slot />
-      </article>
-      <Footer />
-      <NavigationMobile />
-    </main>
-    <script src="../js/app.js"></script>
-  </body>
-</html>
-<style is:global>
-  @import "../styles/base.css";
-</style> -->

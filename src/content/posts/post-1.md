@@ -4,7 +4,7 @@ author: Akansel Cengiz
 authorContact: akcengiz@gmx.de
 pubDate: 2023-10-20
 updatedDate: '12345'
-description: 'Dieses Bild sagt mehr als 1000 Worte und sollte für jeden ein positives Beispiel sein immer weiter zu machen.'
+description: 'Dieses Foto bringt es genau auf den Punkt. Egal mit was du starten wirst das aller erste mal wird das Ergebnis immer schlecht sein.'
 image:
     src: '/src/images/first.png'
     alt: 'A twitter screenshot with some text'
@@ -16,41 +16,12 @@ relatedPosts: ["post-3"]
 
 
 
-## Ich habe es endlich geschafft
-## Quo Vadis, Akansel ?
+## Table of Content
 
 
 
-<section id="toc">
-  
-- [Ich habe es endlich geschafft](#ich-habe-es-endlich-geschafft)
-- [Quo Vadis, Akansel ?](#quo-vadis-akansel-)
-- [Git Repository erstellen](#git-repository-erstellen)
-- [Den Status eines Projektes prüfen](#den-status-eines-projektes-prüfen)
-- [Neue Änderungen ins Staging hinzufügen](#neue-änderungen-ins-staging-hinzufügen)
-- [Änderungen im Staging commiten](#änderungen-im-staging-commiten)
-- [Die letzten Commits anzeigen](#die-letzten-commits-anzeigen)
-- [Alle Aktivitäten anzeigen](#alle-aktivitäten-anzeigen)
-- [Die Unterschiede zwischen Commits und Dateien anzeigen](#die-unterschiede-zwischen-commits-und-dateien-anzeigen)
-- [Die letzten Änderungen rückgangig machen](#die-letzten-änderungen-rückgangig-machen)
-- [Dateien aus dem Staging entfernen oder Änderungen rückgängig machen](#dateien-aus-dem-staging-entfernen-oder-änderungen-rückgängig-machen)
-- [Eine Änderung dem letzten Commit hinzufügen](#eine-änderung-dem-letzten-commit-hinzufügen)
-- [Älteren Commit rückgängig machen](#älteren-commit-rückgängig-machen)
-- [Änderungen einer einzelnen Datei Rückgängig machen](#änderungen-einer-einzelnen-datei-rückgängig-machen)
-- [Etwas komplett verkackt?](#etwas-komplett-verkackt)
-- [Branches erstellen, wechseln und löschen](#branches-erstellen-wechseln-und-löschen)
-- [Branches wechseln oder Dateien aus einem anderen Branch kopieren](#branches-wechseln-oder-dateien-aus-einem-anderen-branch-kopieren)
-- [Branches zusammenführen](#branches-zusammenführen)
-- [Ausversehen auf den master commited](#ausversehen-auf-den-master-commited)
-- [In den falschen Branch commited](#in-den-falschen-branch-commited)
-- [Das arbeiten mit Remote Repositories](#das-arbeiten-mit-remote-repositories)
-- [Kopieren eines Remote Repository in ein lokales Repository](#kopieren-eines-remote-repository-in-ein-lokales-repository)
-- [Lokale Änderungen in ein Remote Repository übertragen](#lokale-änderungen-in-ein-remote-repository-übertragen)
-- [Den Stand eines Remote Repositorys in ein lokales Repository übertragen](#den-stand-eines-remote-repositorys-in-ein-lokales-repository-übertragen)
-- [Den Stand eines Remote Repositorys in ein lokales Repository übertragen und zusammenführen](#den-stand-eines-remote-repositorys-in-ein-lokales-repository-übertragen-und-zusammenführen)
-- [Fazit](#fazit)
-
-</div>
+<!-- 
+ -->
 
 ## Git Repository erstellen
 

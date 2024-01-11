@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+// import { Icon } from "astro-icon";
 import NavigationLink from "./NavigationLink.astro";
 
 import Button from "../components/Button.astro";
@@ -44,7 +44,7 @@ const currentPath = pathname.split("/");
   <Button url="mailto:akcengiz@gmx.de" title="Contact" external={true} />
 </article>
 
-{
+<!-- {
   currentPath[1] === "blog" && currentPath[2] ? (
     <a href="#toc" class="block md:hidden">
       <Icon name="mdi:toc" width="32" height="32" class="ml-2" />
@@ -52,4 +52,4 @@ const currentPath = pathname.split("/");
   ) : (
     ""
   )
-}
+} -->

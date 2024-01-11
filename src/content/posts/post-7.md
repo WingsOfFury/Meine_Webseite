@@ -20,7 +20,7 @@ Ich habe erst mal an nichts schlimmes gedacht weil mein Mac mit der iCloud verbu
 weil sie noch nicht aktualisiert worden sind.
 Ich habe die iCloud erst off und dann wieder online gesetzt mit der Hoffnung das es aktualisiert wird, aber nichts ist passiert.
 Auf Github war das Repository noch in Takt.
-Wunderbar dachte ich mir und wollte mit <code>git clone <Pfad></code> die Daten herunter laden und weiter daran arbeiten.
+Wunderbar dachte ich mir und wollte mit <code>git clone</code> die Daten herunter laden und weiter daran arbeiten.
 Es erschien ein "unable tree error" oder so. Ich konnte weder Clone noch Fetch benutzen. 
 Egal was ich tat "Error Error Error".
 Nichts hat funktioniert.

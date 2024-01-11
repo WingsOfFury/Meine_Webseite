@@ -1,10 +1,13 @@
 *TODO - 
 <!-- Ändere bitte akansel-cengiz.yaml unter src> content> authors> in eine JSON Datei um.  -->
-Füge einen Visitor Counter auf die Homepage ein.
-Füge eine Resume Seite mit deinem Lebenslauf ein.
+Implementiere einen Visitor Counter für die Homepage ein.
+Implementiere eine Resume Seite mit deinem Lebenslauf ein.
+Implementiere eine multiple Sprachen Leiste neben dem toggleSwitch ein.
+AWS Badges in About einpflegen.
+SEO implementieren.
 
 
 
 #FIXME - 
-Das themeIcon zum switchen von Hell auf Dunkel funktioniert immer erst wenn die Seite refreshed worden ist.
-Bitte fixen.
+<!-- Das themeIcon zum switchen von Hell auf Dunkel funktioniert immer erst wenn die Seite refreshed worden ist.
+Bitte fixen. -->
