@@ -1,22 +1,29 @@
----
+<!-- ---
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
+import NavigationLink from "./NavigationLink.astro";
+import NavigationLinks from "./NavigationLinks.astro";
 ---
 
-<section
-  class="fixed top-0 lg:hidden shadow-lg border-t-2
-  border-gray-300/30 bg-[#e0e2e6]"
->
+<section>
   <nav
     class="flex items-center justify-center
-    w-screen h-20 pl-2 gap-x-1 dark:text-dark
+    pl-2 gap-x-1 dark:text-dark
     lg:gap-8 md:gap-8 sm:gap-8
     lg:text-2xl md:text-xl sm:text-xl"
   >
-    <Navigation />
+    <NavigationLinks />
+
+    <a href="/">
+      <img
+        src="/ac1.png"
+        class="w-12 lg:block relative group border hidden"
+        alt="Ein Logo"
+      />
+    </a>
 
     <div class="flex justify-end w-full">
       <Hamburger />
     </div>
   </nav>
-</section>
+</section> -->
