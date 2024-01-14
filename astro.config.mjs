@@ -36,6 +36,6 @@ export default defineConfig({
       theme: "one-dark-pro",
       wrap: true,
     },
-    gfm: true,
+    // gfm: true,
   },
 });

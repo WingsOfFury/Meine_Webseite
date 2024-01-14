@@ -24,6 +24,10 @@ const { pageTitle, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <link
+      href="https://{{cdn}}/prismjs@v1.x/themes/prism.css"
+      rel="stylesheet"
+    />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="//unpkg.com/alpinejs" defer></script>
     <link rel="icon" type="image/png" sizes="192x192" href="/ac1.png" />
@@ -46,5 +50,10 @@ const { pageTitle, description } = Astro.props;
     </script>
     <!-- Ich habe in Zeile 29 md:container auf lg:container gesetzt.Jetzt verläuft die border-2 einstellung komplett von Bildrand zu Bildrand sobald sie unter 1024px fällt.--><!-- Zeile 29 habe ich auf 2xl:container geändert damit der Effekt (es fehlt ein stück vom Bild oben rechts in der Ecke im Header) wieder verschwindet  --><!--class="swup-transition-fade relative min-xl:container md:mx-auto w-full min-h-screen" --><!-- Zeile 40 wurde eine Transition eingefügt um die "{description}" 
 bei jedem Seitenwechsel in das Bild rein Sliden zu lassen-->
+    <script src="https://{{cdn}}/prismjs@v1.x/components/prism-core.min.js"
+    ></script>
+    <script
+      src="https://{{cdn}}/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"
+    ></script>
   </body>
 </html>
