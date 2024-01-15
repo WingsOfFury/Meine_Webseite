@@ -6,6 +6,7 @@ import DropdownLanguages from "./DropdownLanguages.astro";
 // import { Icon } from "astro-icon";
 
 // import { SITE_TITLE } from "../consts";
+import LanguagePicker from "../components/LanguagePicker.astro";
 ---
 
 <section class="bg-[#e0e2e6] border-b-2 border-gray-300/30
@@ -15,8 +16,7 @@ import DropdownLanguages from "./DropdownLanguages.astro";
   >
     <a href="/" class="flex items-center justify-around gap-3">
       <img src="/ac1.png" class="w-12" alt="Akansel Cengiz Logo" />
-      <span
-        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+      <span class="self-center text-2xl font-semibold whitespace-nowrap"
         >Akansel Cengiz</span
       >
     </a>
@@ -30,6 +30,7 @@ import DropdownLanguages from "./DropdownLanguages.astro";
 
     <nav class="hidden lg:flex items-center justify-center gap-x-5">
       <DropdownLanguages />
+      <LanguagePicker />
       <section
         id="themeToggle"
         class="hover:cursor-pointer border-2 border-dark bg-dark dark:bg-yellow-200 p-1"

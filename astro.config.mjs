@@ -14,6 +14,8 @@ import spotlightjs from "@spotlightjs/astro";
 // MDX importieren
 import mdx from "@astrojs/mdx";
 
+import { remarkReadingTime } from "./remark-reading-time.mjs";
+
 // https://astro.build/config
 export default defineConfig({
   // Astro-Plugins registrieren
@@ -31,6 +33,7 @@ export default defineConfig({
   // site: "https://example.com",
   // Markdown-Plugin konfigurieren
   markdown: {
+    remarkPlugins: [remarkReadingTime],
     syntaxHighlight: "shiki",
     shikiConfig: {
       theme: "one-dark-pro",

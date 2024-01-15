@@ -17,6 +17,7 @@ const postsCollection = defineCollection({
       tags: z.array(z.string()),
       updatedDate: z.coerce.date().optional(),
       relatedPosts: z.array(reference("posts")).optional(),
+      // date: z.date(),
 
     })
 });
