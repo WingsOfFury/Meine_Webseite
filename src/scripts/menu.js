@@ -3,9 +3,31 @@ import SwupScrollPlugin from "@swup/scroll-plugin";
 import SwupHeadPlugin from "@swup/head-plugin";
 import SwupA11yPlugin from "@swup/a11y-plugin";
 
-// document.querySelector(".hamburger").addEventListener("click", () => {
-//   document.querySelector(".nav-links").classList.toggle("expanded");
-// });
+// Hier holt er sich die ID "top-top-button"
+let toTopButton = document.getElementById("to-top-button");
+
+// Checkt ob der Button existiert
+if (toTopButton) {
+  // Scroll event, toggle button wird erst sichtbar wenn nach unten gescrollt wird
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 500 ||
+      document.documentElement.scrollTop > 500
+    ) {
+      toTopButton.classList.remove("hidden");
+    } else {
+      toTopButton.classList.add("hidden");
+    }
+  };
+
+  // Funktion um "smooth" BackToTop zu gelangen
+  window.goToTop = function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+}
 
 // pageHandler ist die Klasse, die alle Funktionen enthält, die auf der Seite ausgeführt werden sollen.
 class PageHandler {

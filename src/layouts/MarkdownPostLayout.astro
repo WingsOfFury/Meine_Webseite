@@ -12,7 +12,7 @@ const { frontmatter } = Astro.props;
       alt={frontmatter.image.alt}
     />
     <section class="flex flex-row justify-between w-full text-sm">
-      <p>Verfasser: <a href="/about/">{frontmatter.author}</a></p>
+      <p>Verfasst von <a href="/about/">{frontmatter.author}</a></p>
       <p>
         Veröffentlicht am {
           new Date(frontmatter.pubDate).toLocaleDateString("de-DE")
@@ -21,7 +21,7 @@ const { frontmatter } = Astro.props;
     </section>
     <section class="flex flex-col justify-center items-center w-full">
       <h3>{frontmatter.title}</h3>
-      <p><em>{frontmatter.description}</em></p>
+      <p>{frontmatter.description}</p>
     </section>
     <hr class="border-1 border-dark w-10/12 mt-10 mb-20" />
     <!-- <p>{frontmatter.pubDate.toString().slice(0, 10)}</p> -->
