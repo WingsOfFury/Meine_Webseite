@@ -11,6 +11,10 @@ tags: ["astro", "learning in public", "setbacks", "community"]
 relatedPosts: ["post-4"]
 
 ---
+
+<section class="w-10/12 text-justify "> 
+
+
 It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
 
 
@@ -41,3 +45,4 @@ Meine Bemühungen sind nicht auf den aktuellen Kenntnisstand beschränkt. Ich in
 
 Ich freue mich darauf, meine Fähigkeiten weiter zu vertiefen und einen bedeutenden Beitrag im Bereich Cloud-Technologien zu leisten.
 
+</section>

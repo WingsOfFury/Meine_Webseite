@@ -46,7 +46,7 @@
     font-variation-settings: "wdth" 75, "wght" 500;
   }
 
-  /* #toc {
+  #toc {
     @apply xl:float-right xl:w-1/2 xl:ml-8;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -59,7 +59,7 @@
 
   #toc li {
     @apply my-2 mx-4 list-disc;
-  } */
+  }
 
   a {
     font-family: "ubuntu";

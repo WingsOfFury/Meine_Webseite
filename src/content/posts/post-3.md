@@ -11,6 +11,9 @@ tags: ["astro", "blogging", "learning in public", "successes"]
 relatedPosts: ["post-1"]
 
 ---
+
+<section class="w-10/12 text-justify "> 
+
 After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.

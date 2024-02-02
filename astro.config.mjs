@@ -15,6 +15,7 @@ import spotlightjs from "@spotlightjs/astro";
 import mdx from "@astrojs/mdx";
 
 import { remarkReadingTime } from "./remark-reading-time.mjs";
+import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
@@ -39,6 +40,14 @@ export default defineConfig({
       theme: "one-dark-pro",
       wrap: true,
     },
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          content: { type: "text", value: " ↗️" },
+        },
+      ],
+    ],
     // gfm: true,
   },
 });
