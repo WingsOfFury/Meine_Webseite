@@ -80,7 +80,7 @@ class PageHandler {
     let dynamicHeaderElement = document.querySelector("#dynamic-header-text");
     if (dynamicHeaderElement === null) return;
 
-    let dynamicHeaderTextArray = ["Eat", "Sleep", "Code", "Repeat"];
+    let dynamicHeaderTextArray = ["Eat", "Sleep", "Cloud", "Repeat"];
     let i = 0;
     let currentText = dynamicHeaderTextArray[i];
     let currentWord = dynamicHeaderTextArray[i];
