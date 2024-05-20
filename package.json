@@ -10,25 +10,25 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.2.0",
-    "@astrojs/react": "^3.1.0",
+    "@astrojs/mdx": "^3.0.0",
+    "@astrojs/react": "^3.3.4",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/tailwind": "^5.1.0",
-    "@fontsource/poppins": "^5.0.12",
-    "@fontsource/ubuntu": "^5.0.12",
-    "@sentry/astro": "^7.107.0",
-    "@spotlightjs/astro": "^1.0.16",
-    "@swup/a11y-plugin": "^4.5.0",
+    "@fontsource/poppins": "^5.0.14",
+    "@fontsource/ubuntu": "^5.0.13",
+    "@sentry/astro": "^7.116.0",
+    "@spotlightjs/astro": "^1.0.20",
+    "@swup/a11y-plugin": "^5.0.0",
     "@swup/head-plugin": "^2.2.0",
     "@swup/scroll-plugin": "^3.3.2",
-    "astro": "^4.5.4",
+    "astro": "^4.8.2",
     "astro-icon": "^0.8.2",
     "install": "^0.13.0",
     "mdast-util-to-string": "^4.0.0",
-    "npm": "^10.5.0",
+    "npm": "^10.7.0",
     "reading-time": "^1.5.0",
     "rehype-external-links": "^3.0.0",
-    "swup": "^4.6.0",
-    "tailwindcss": "^3.4.1"
+    "swup": "^4.6.1",
+    "tailwindcss": "^3.4.3"
   }
 }
