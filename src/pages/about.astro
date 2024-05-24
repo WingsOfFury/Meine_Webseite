@@ -3,13 +3,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "Über mich";
 const description = "Ueber mich!";
-const happy = true;
-const finished = true;
-const goal = 4;
+// const happy = true;
+// const finished = true;
+// const goal = 4;
 
 const identity = {
   firstName: "Akansel",
   city: "Wuppertal",
+  age: "44",
   occupation: "Full Stack Web Developer",
   hobbies: ["Lebenslanges Lernen", "Kochen", "Fitnesstudio"],
   occupationNew: "Cloud Developer",
@@ -37,7 +38,7 @@ const textCase = "uppercase";
 <BaseLayout {pageTitle} description={description}>
   <!-- <h1>... my new Astro site!</h1> -->
 
-  <p>
+  <!-- <p>
     Ich arbeite seit einigen Monaten mit Astro/TailwindCSS und React an dieser
     Seite. Es ist kein Template alles wurde aus dem nichts Aufgebaut. Ich habe
     vorher noch nie mit Astro und TailwindCSS gearbeitet. Aber durch die sehr
@@ -74,29 +75,47 @@ const textCase = "uppercase";
         werden.
       </p>
     )
-  }
+  } -->
 
-  <p>Genug geredet hier sind ein paar Infos über mich:</p>
+  <p>Ein paar Infos über mich:</p>
   <ul></ul>
-  <li>Mein Name ist {identity.firstName}.</li>
   <li>
-    Ich lebe in {identity.city} und wurde von 09-2022 bis 02-2023 in einem Bootcamp
-    zum {identity.occupation} ausgebildet.
-    {
-      identity.hobbies.length >= 2 && (
-        <li>
-          Zwei meiner Hobbies sind: {identity.hobbies[0]} und{" "}
-          {identity.hobbies[2]}
-        </li>
-      )
-    }
-
+    Mein Name ist {identity.firstName} bin {identity.age} Jahre alt und komme aus
+    {identity.city}.
+  </li>
+  <li>
+    Bevor ich mich voll und ganz der Full Stack Web Entwicklung verschrieben
+    habe war ich 10 Jahre in der Systemgastronomie Selbständig tätig.
+  </li>
+  <li>
+    Da ich schon immer in der IT arbeiten wollte habe ich von 09-2022 bis
+    02-2023 erfolgreich an einem
+    {identity.occupation} Bootcamp teilgenommen.
+    <li>
+      Mit den dort erlernten Fähigkeiten und gesammelten Wissen konnte ich diese
+      Seite aufbauen und mich zugleich auf meine erste AWS Zertifizierung
+      vorbereiten und bestehen.
+    </li>
     <p>
+      {
+        identity.hobbies.length >= 2 && (
+          <li>
+            Meine Hobbies sind: {identity.hobbies[0]} und das{" "}
+            {identity.hobbies[2]}
+          </li>
+        )
+      }
+    </p>
+    <p>
+      Diese beiden Hobbies passen Perfekt zusammen.<br />
+      Das eine ist gut für die Seele und das andere ist gut den Körper.
+    </p>
+    <!-- <p>
       Nach meiner Ausbildung zum {identity.occupation} habe ich angefangen mich in
       richtung AWS Cloud zu Orientieren. Ich habe auch die AWS CCP Zertifizierung
       bestanden. Mein Ziel ist es AWS
       {identity.occupationNew} zu werden.
-    </p>
+    </p> -->
     <p>Meine Skills sind:</p><p></p><ul></ul>
     <section class="animate-fadeInSlideRight">
       {skills.map((skill) => <li class="skill">{skill}</li>)}
