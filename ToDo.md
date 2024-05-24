@@ -4,7 +4,7 @@ Implementiere einen Visitor Counter für die Homepage ein.
 Implementiere eine Resume Seite mit deinem Lebenslauf ein.
 <!-- Implementiere eine multiple Sprachen Leiste neben dem toggleSwitch ein. -->
 AWS Badges in About einpflegen.
-SEO NICHT implementieren.
+SEO NICHT implementieren. 
 i18n NICHT implementieren.
 
 

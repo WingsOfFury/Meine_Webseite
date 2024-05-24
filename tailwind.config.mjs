@@ -51,7 +51,7 @@ module.exports = {
         jump: "jump 4s alternate infinite",
         fadeInSlideLeft: "fadeInSlideLeft 1.5s ease-out",
         fadeInSlideRight: "fadeInSlideRight 1.5s ease-out",
-        fadeInSlideUp: "fadeInSlideUp 1.5s ease-out",
+        fadeInSlideUp: "fadeInSlideUp 3.5s ease-out",
       },
 
       colors: {

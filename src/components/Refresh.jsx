@@ -35,7 +35,7 @@ const Refresh = () => {
         // Intervall alle 3 Sekunden für das Aktualisieren der API-Daten
         const intervalId = setInterval(() => {
             fetchUserData();
-        }, 5000)
+        }, 4500)
 
         // Aufräumen: Interval stoppen, wenn die Komponente unmontiert wird
         return () => clearInterval(intervalId);

@@ -5,13 +5,14 @@ const pageTitle = "Über mich";
 const description = "Ueber mich!";
 const happy = true;
 const finished = true;
-const goal = 3;
+const goal = 4;
 
 const identity = {
   firstName: "Akansel",
-  country: "Deutschland",
+  city: "Wuppertal",
   occupation: "Full Stack Web Developer",
   hobbies: ["Lebenslanges Lernen", "Kochen", "Fitnesstudio"],
+  occupationNew: "Cloud Developer",
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "GitHub", "AWS"];
@@ -33,185 +34,215 @@ const textCase = "uppercase";
   }
 </style>
 
-<BaseLayout pageTitle={pageTitle} description={description}>
+<BaseLayout {pageTitle} description={description}>
   <!-- <h1>... my new Astro site!</h1> -->
 
   <p>
-    I am working through Astro's introductory tutorial. This is the second page
-    on my website, and it's the first one I built myself!
+    Ich arbeite seit einigen Monaten mit Astro/TailwindCSS und React an dieser
+    Seite. Es ist kein Template alles wurde aus dem nichts Aufgebaut. Ich habe
+    vorher noch nie mit Astro und TailwindCSS gearbeitet. Aber durch die sehr
+    guten Dokumentationen habe ich mich gut zurecht gefunden.
   </p>
-
-  <p>
-    This site will update as I complete more of the tutorial, so keep checking
-    back and see how my journey is going!
-  </p>
-
-  {happy && <p>I am happy to be learning Astro!</p>}
-
-  {finished && <p>I finish this tutorial!</p>}
 
   {
-    goal === 3 ? (
-      <p>My goal is to finish in 3 days.</p>
-    ) : (
-      <p>My goal is not 3 days.</p>
+    happy && (
+      <p>
+        Es macht mir enorm viel Spass mit Astro zu arbeiten, testen und neue
+        Dinge auszuprobieren.
+      </p>
     )
   }
 
-  <p>Here are a few facts about me:</p>
-  <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>
-      I live in {identity.country} and I work as a {identity.occupation}.
-    </li>
+  {
+    finished && (
+      <p>
+        Ich bin unendlich froh mein Ziel erreicht zu haben und diese Seite
+        Online setzen zu können.
+      </p>
+    )
+  }
+
+  {
+    goal === 4 ? (
+      <p>
+        Mein goal war es 10-2023 zu starten und spätestens Ende 01-2024 fertig
+        zu werden.
+      </p>
+    ) : (
+      <p>
+        Mein goal war es nicht 10-2023 zu starten und Ende 01-2024 fertig zu
+        werden.
+      </p>
+    )
+  }
+
+  <p>Genug geredet hier sind ein paar Infos über mich:</p>
+  <ul></ul>
+  <li>Mein Name ist {identity.firstName}.</li>
+  <li>
+    Ich lebe in {identity.city} und wurde von 09-2022 bis 02-2023 in einem Bootcamp
+    zum {identity.occupation} ausgebildet.
     {
       identity.hobbies.length >= 2 && (
         <li>
-          Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[2]}
+          Zwei meiner Hobbies sind: {identity.hobbies[0]} und{" "}
+          {identity.hobbies[2]}
         </li>
       )
     }
-  </ul>
-  <p>My skills are:</p><p></p>
-  <section class="animate-fadeInSlideRight">
-    <ul>
+
+    <p>
+      Nach meiner Ausbildung zum {identity.occupation} habe ich angefangen mich in
+      richtung AWS Cloud zu Orientieren. Ich habe auch die AWS CCP Zertifizierung
+      bestanden. Mein Ziel ist es AWS
+      {identity.occupationNew} zu werden.
+    </p>
+    <p>Meine Skills sind:</p><p></p><ul></ul>
+    <section class="animate-fadeInSlideRight">
       {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-  </section>
+    </section>
 
-  <section class="flex flex-row gap-4 animate-fadeInSlideLeft">
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="5a1d4644-4078-47bf-baa2-c87bb299082e"
-      data-share-badge-host="https://www.credly.com"
+    <section>
+      <h3 class="flex justify-center animate-fadeInSlideLeft">
+        Meine AWS Badges:
+      </h3>
+    </section>
+    <section
+      class="ml-32 mt-32 sm:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 animate-fadeInSlideLeft"
     >
-    </div>
-    <script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="5a1d4644-4078-47bf-baa2-c87bb299082e"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="2896435d-ec25-4fda-ac07-ca81eec91120"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div>
-    <script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="2896435d-ec25-4fda-ac07-ca81eec91120"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="14333596-5e63-4197-b5e1-6c327a932bdd"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="14333596-5e63-4197-b5e1-6c327a932bdd"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="0f4e9fa4-e0be-40f0-a36a-27453d561ae9"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="0f4e9fa4-e0be-40f0-a36a-27453d561ae9"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="08b269cf-c6d8-4447-aeeb-6e28cc404453"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="08b269cf-c6d8-4447-aeeb-6e28cc404453"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="1ae49cf3-c3e4-4ce2-bccc-8e8dcbf4ca7b"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="1ae49cf3-c3e4-4ce2-bccc-8e8dcbf4ca7b"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="1388b719-6d54-42a6-b58c-b6721b6e23f0"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="1388b719-6d54-42a6-b58c-b6721b6e23f0"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="2979f8e5-5551-456d-97bf-c81af78c0a6d"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="2979f8e5-5551-456d-97bf-c81af78c0a6d"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="85f32c58-fa9f-40f5-8013-b28181b2feba"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="85f32c58-fa9f-40f5-8013-b28181b2feba"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="dd6472b4-0213-4e0e-9d85-74dd367af219"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="dd6472b4-0213-4e0e-9d85-74dd367af219"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="b83b5ca6-61cf-46aa-99d1-0f35ec660ba1"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="b83b5ca6-61cf-46aa-99d1-0f35ec660ba1"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-    <div
-      data-iframe-width="150"
-      data-iframe-height="270"
-      data-share-badge-id="0e337030-45d1-4aa2-a846-bf0ec21b8e49"
-      data-share-badge-host="https://www.credly.com"
-    >
-    </div><script
-      type="text/javascript"
-      async
-      src="//cdn.credly.com/assets/utilities/embed.js"></script>
-  </section>
+      <div
+        data-iframe-width="150"
+        data-iframe-height="270"
+        data-share-badge-id="0e337030-45d1-4aa2-a846-bf0ec21b8e49"
+        data-share-badge-host="https://www.credly.com"
+      >
+      </div><script
+        type="text/javascript"
+        async
+        src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    </section>
+  </li>
 </BaseLayout>
