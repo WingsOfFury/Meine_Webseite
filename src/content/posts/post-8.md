@@ -1,105 +1,373 @@
 ---
-title: 02 | Die Suche nach dem perfekten Font
+title: 08 | Intro - Meine Gedanken, Ziele und weitere Projekte
 author: Akansel Cengiz
 authorContact: akcengiz@gmx.de
-pubDate: 2023-10-28
-description: "Warum gibt es auf dieser Welt so viele unterschiedliche Fonts ?"
+pubDate: 2024-05-20
+updatedDate: '12345'
+description: 'Dieses Foto bringt es genau auf den Punkt. Egal mit was du starten wirst das aller erste mal wird das Ergebnis immer schlecht sein.'
 image:
-    src: "/src/images/fonts.png"
-    alt: "A green to yellow background color with some text."
-tags: ["astro", "blogging", "learning in public", "successes"]
-relatedPosts: ["post-1"]
+    src: '/src/images/first.png'
+    alt: 'A twitter screenshot with some text'
+tags: ["TailwindCSS", "Astro", "React", "Typescript"]
+relatedPosts: ["post-3"]
 
 ---
 
-<section class="w-10/12 text-justify"> 
 
-After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!
+## Git Repository erstellen
 
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+Mit `git init` wird ein neues lokales Git Repository erstellt. Das heißt, dass Git nun alle Änderungen in diesem Ordner verfolgt. Du kannst `git init` auch in einem bereits bestehenden Git Repository verwenden, um ein neues Repository zu erstellen. Das ist hilfreich, wenn du ein Projekt kopierst und die Git History nicht mitkopieren möchtest.
 
-
-
-```js
-console.log("Hallo Welt");
+```bash
+git init
 ```
 
+## Den Status eines Projektes prüfen
 
-```markdown
-1. First item
-2. Second item
-3. Third item
+Um den Status eines Projektes zu prüfen kannst du `git status` verwenden. Dieser Befehl zeigt dir alle Änderungen an, die du gemacht hast. Du kannst dir auch nur die Dateien anzeigen lassen, die sich im Staging befinden. Das ist hilfreich, wenn du nur die Dateien sehen möchtest, die du für den nächsten Commit ausgewählt hast. Du kannst dir den Status auch in einem kompakteren Format anzeigen lassen.
+
+```bash
+# Gibt den Zustand aller Dateien zurück
+git status
+# Gibt den Zustand aller Dateien im Staging zurück
+git status --staged
+# Kompaktere Auflistung
+git status -s
+
+# Mögliche Werte
+# ?? Datei wurde hinzugefügt, aber noch nicht getrackt
+# A  Datei wurde hinzugefügt und wird getrackt
+# M  Datei wurde geändert
+# D  Datei wurde gelöscht
+# R  Datei wurde umbenannt
+# C  Datei wurde kopiert
+# U  Datei ist unmerged
 ```
 
-```markdown
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
+## Neue Änderungen ins Staging hinzufügen
+
+Mit `git add` kannst du Dateien/Änderungen zu Git hinzufügen (Staging), welche du später für den nächsten Commit einbeziehen möchtest. Du kannst entweder einzelne Dateien, ganze Ordner oder einzelene Änderungen (Codezeilen) hinzufügen.
+
+```bash
+# Fügt eine Datei hinzu
+git add <Dateiname>
+# Fügt alle Dateien hinzu
+git add .
+# Fügt alle Dateien in einem Ordner hinzu
+git add <Ordnername>
+# Einzelne Änderungen/Hunks auswählen
+git add --patch <Dateiname>
 ```
 
+## Änderungen im Staging commiten
 
+Mit `git commit` kannst du deine Änderungen welche sich im Staging befinden in das lokale Repository übertragen. Du kannst deinem Commit eine Nachricht hinzufügen, um später nachvollziehen zu können, was du geändert hast.
 
-
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
-
-```markdown
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+```bash
+# Erstellt eine neue Version aus den Dateien im Staging
+git commit -m "Nachricht"
+# Überspringt Staging, Neue Dateien werden ignoriert
+git commit -am "Nachricht"
+# Ändert die Nachricht des letzten Commits
+# Achtung! Ändert den Commit Hash. Nur verwenden, wenn der Commit noch nicht gepusht wurde
+git commit --amend -m "Neue Nachricht"
 ```
 
+## Die letzten Commits anzeigen
 
+Mit `git log` kannst du dir die letzten Commits anzeigen lassen. Du kannst dir die Commits in verschiedenen Formaten anzeigen lassen. Du kannst dir die Commits auch in einem Graph anzeigen lassen. Das ist sehr hilfreich, wenn du mit mehreren Branches arbeitest.
 
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
+```bash
+# Die letzten Commits
+git log
+# Die letzten Commits mit Änderungen
+git log -p
+# Die letzten Commits mit Änderungen und Statistiken
+git log -p -stat
+# Commits mit Graph
+git log --graph
+# Die letzten Commits mit Änderungen und Statistiken in einer Zeile
+git log --pretty=oneline --graph --decorate --all
+# Die letzten 3 Commits
+git log -n 3
+# Die letzten 3 Commits mit Änderungen
+git log -n 3 -p
+```
 
-H<sub>2</sub>O
+## Alle Aktivitäten anzeigen
 
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
+Mit `git reflog` kannst du dir alle Aktionen anzeigen lassen, die du in deinem Repository gemacht hast. Das ist sehr hilfreich, wenn du einen Commit rückgängig machen möchtest. Du kannst dir die Aktionen in verschiedenen Formaten anzeigen lassen.
 
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+```bash
+# Zeigt alle Aktionen an
+git reflog
+# Zeigt alle Aktionen mit Hash an
+git reflog --abbrev-commit
+# Zeigt alle Aktionen mit Hash und Datum an
+git reflog --abbrev-commit --date=iso
+```
 
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+## Die Unterschiede zwischen Commits und Dateien anzeigen
 
-![blog placeholder](/src/images/rick.jpeg)
+Mit `git diff` kannst du dir die Änderungen zwischen zwei Commits anzeigen lassen. Oder die Änderungen zwischen dem letzten Commit und dem aktuellen Stand.
 
+```bash
+# Änderungen zwischen dem letzten Commit und dem aktuellen Stand
+git diff
+# Für Dateien im Staging
+git diff --staged
+# Änderungen zwischen zwei Commits
+git diff <Commit 1> <Commit 2>
+```
 
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+## Die letzten Änderungen rückgangig machen
 
+Mit `git reset` kannst du deinen Arbeitsstand zurücksetzen. Du kannst entweder den Arbeitsstand, den Index oder beides zurücksetzen. Du kannst entweder einzelne Dateien, ganze Ordner oder einzelene Änderungen (Codezeilen) zurücksetzen.
 
+```bash
+# Holt alle Dateien aus dem Staging
+git reset
+# Holt eine Datei aus dem Staging
+git reset <Dateiname>
+# Macht den letzten Commit rückgängig. Dateien bleiben im Staging
+git reset --soft HEAD~
+# Macht den letzten Commit rückgängig. Änderungen bleiben im Workspace erhalten
+git reset --mixed HEAD~
+# Löscht alle Änderungen des letzten Commits
+git reset --hard HEAD~
+```
 
-| Italics   | Bold     | Code   |
-| --------- | -------- | ------ |
-| _italics_ | **bold** | `code` |
+## Dateien aus dem Staging entfernen oder Änderungen rückgängig machen
 
+Mit `git restore` kannst du Dateien aus dem Staging entfernen oder Änderungen rückgängig machen. Du kannst entweder einzelne Dateien, ganze Ordner oder einzelene Änderungen (Codezeilen) entfernen.
 
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+```bash
+# Entfernt eine Datei aus dem Staging
+git restore --staged <Dateiname>
+# Du kannst einzelne Änderungen auswählen und aus dem Staging entfernen
+git restore --staged --patch <Datei>
+# Entfernt alle Dateien aus dem Staging
+git restore --staged .
+# Macht Änderungen einer Datei rückgängig
+git restore <Dateiname>
+```
 
+## Eine Änderung dem letzten Commit hinzufügen
 
+Wenn du eine Änderung vergessen hast, kannst du diese dem letzten Commit hinzufügen. Du musst dafür den letzten Commit noch nicht gepusht haben. Wenn du den Commit bereits gepusht hast, solltest du `git commit --amend` nicht verwenden, da du damit den Commit Hash änderst.
 
-# Welcome to Markdoc 👋
+```bash
+# Änderungen dem letzten Commit hinzufügen
+git commit --amend --no-edit
+```
 
-{% aside type="tip" %}
+## Älteren Commit rückgängig machen
 
-Use tags like this fancy "aside" to add some _flair_ to your docs.
+Falls du einen Commit rückgängig machen möchtest, kannst du das mit `git revert` machen. Du musst dafür den Commit noch nicht gepusht haben. Wenn du den Commit bereits gepusht hast, solltest du dennoch `git revert` verwenden, da du damit den Commit Hash nicht änderst.
 
-{% /aside %}
+```bash
+# Finde den betreffenden Commit
+# Verwende die Pfeiltasten um in der History zu scrollen und kopiere dir den Hash des betreffenden Commits
+git log
+# Änderungen des Commits rückgängig machen
+# git erstellt einen neuen Commit, der den gewählten Commit rückgängig macht. Du musst dafür noch eine Commit-Message eingeben oder einfach abspeichern
+git revert <Commit>
+```
 
+## Änderungen einer einzelnen Datei Rückgängig machen
 
-</section>
+Falls du eine Datei geändert hast und einen älteren Stand dieser Datei wiederherstellen möchtest, kannst du das mit `git checkout` machen. Der alte Stand der Datei wird dann in den Workspace kopiert. Du musst die Datei dann nur noch speichern.
+
+```bash
+# Finde den Hash eines Commits vor deinen Änderungen
+git log
+# Änderungen einer einzelnen Datei rückgängig machen
+git checkout <Commit> -- <pfad/zur/datei>
+# Die alte Version ist jetzt wiederhergestellt. Du musst die Datei nur noch speichern
+git add <pfad/zur/datei>
+git commit -m "Nachricht"
+```
+
+## Etwas komplett verkackt?
+
+Damit kannst du Dateien zurückholen, die du gelöscht hast, oder Dinge rückgängig machen, die dein Repo zerstört haben, oder einen nicht geglückten Merge oder einfach zu einem Stand zurückkehren, als bestimmte Dinge noch funktioniert haben.
+
+```bash
+# Zeigt alle Aktionen an
+# Du siehst eine Liste mit allem, was du in git getan hast, in allen Branches. Jeder Eintrag hat einen Index: HEAD@{index}
+# Finde den Eintrag VOR demjenigen, der alles kaputt gemacht hat.
+git reflog
+# Setze den HEAD auf den Eintrag VOR demjenigen, der alles kaputt gemacht hat.
+git reset HEAD@{index}
+# Alles ist jetzt wieder so, wie es vorher war.
+```
+
+## Branches erstellen, wechseln und löschen
+
+Anzeigen, Erstellen und Löschen von Branches. Branches sind eine Möglichkeit, um an einem Projekt zu arbeiten, ohne den Hauptzweig zu beeinträchtigen. Wenn du einen Branch erstellst, kopierst du den aktuellen Stand deines Projekts in einen neuen Branch. Du kannst dann in diesem Branch arbeiten, ohne den Hauptzweig zu beeinflussen. Wenn du fertig bist, kannst du deine Änderungen in den Hauptzweig übernehmen.
+
+```bash
+# Zeigt alle Branches an
+git branch
+# Erstellt einen neuen Branch
+git branch <Branchname>
+# Löscht einen Branch
+git branch -d <Branchname>
+```
+
+## Branches wechseln oder Dateien aus einem anderen Branch kopieren
+
+Mit `git checkout` kannst du zwischen Branches wechseln. Du kannst auch einen neuen Branch erstellen und direkt in diesen wechseln. Du kannst auch einzelne Dateien aus einem anderen Branch in deinen aktuellen Branch kopieren.
+
+```bash
+# Wechselt in einen Branch
+git checkout <Branchname>
+# Erstellt einen neuen Branch und wechselt in diesen
+git checkout -b <Branchname>
+# Kopiert eine Datei aus einem anderen Branch in deinen aktuellen Branch
+git checkout <Branchname> -- <Dateiname>
+```
+
+## Branches zusammenführen
+
+Mit `git merge` kannst du deine Änderungen aus einem Branch in einen anderen Branch übernehmen. Du kannst entweder einen Branch in einen anderen Branch mergen oder einen Branch in deinen aktuellen Branch mergen. Wenn du einen Branch in deinen aktuellen Branch mergst, musst du dich in deinen aktuellen Branch wechseln. Wenn du einen Branch in einen anderen Branch mergst, musst du dich nicht in den Zielbranch wechseln.
+
+```bash
+# Mergt einen Branch in deinen aktuellen Branch
+git merge <Branchname>
+# Mergt einen Branch in einen anderen Branch
+git merge <Branchname> <Zielbranch>
+```
+
+## Ausversehen auf den master commited
+
+Wenn du ausversehen auf den master Branch commited hast, kannst du das mit folgenden Befehlen rückgängig machen. Du musst dafür den Commit noch nicht gepusht haben.
+
+```bash
+# Erstelle einen neuen Branch
+git branch <NeuerBranchname>
+# Entferne den letzten Commit vom master
+git reset HEAD~ --hard
+# Erstelle einen neuen master Branch
+git checkout <NeuerBranchname>
+# Dein Commit lebt jetzt in dem neuen Branch weiter
+```
+
+## In den falschen Branch commited
+
+Wenn du in den falschen Branch commited hast, aber die Änderungen noch behalten möchtest um diese in den richtigen Branch zu commiten dann kannst du das mit folgenden Befehlen rückgängig machen. Du musst dafür den Commit noch nicht gepusht haben.
+
+```bash
+# Entferne den letzten Commit vom falschen Branch
+git reset HEAD~ --soft
+# Speichere die Änderungen in den Stash
+git stash
+# Wechsle in den richtigen Branch
+git checkout <RichtigerBranch>
+# Hole die Änderungen aus dem Stash
+git stash pop
+# Füge die Änderungen dem Staging hinzu
+git add .
+# Commit
+git commit -m "Nachricht"
+# Jetzt sind deine Änderungen im richtigen Branch
+```
+
+Hier eine Alternative, wenn du die Änderungen nicht im Stash speichern möchtest.
+
+```bash
+# Wechsle in den richtigen Branch
+git checkout <RichtigerBranch>
+# Hole die Änderungen aus dem falschen Branch
+git cherry-pick <falscherBranch>
+# Entferne den Commit vom falschen Branch
+git checkout <falscherBranch>
+git reset HEAD~ --hard
+```
+
+## Das arbeiten mit Remote Repositories
+
+Mit `git remote` kannst du dir alle Remotes anzeigen lassen. Du kannst auch einen Remote hinzufügen oder entfernen. Remotes sind Verknüpfungen zu einem Remote Repository. Diese Verknüpfungen werden verwendet, um deine Änderungen in ein Remote Repository zu übertragen.
+
+```bash
+# Zeigt alle Remotes an
+git remote
+# Fügt einen Remote hinzu
+git remote add <Name> <URL>
+# Entfernt einen Remote
+git remote remove <Name>
+# Nennt einen Remote um
+git remote rename <AlterName> <NeuerName>
+# Zeigt alle Remotes mit URLs an
+git remote -v
+# Zeigt alle Informationen zu einem Remote an
+git remote show <Name>
+# Zeigt die URL eines Remotes an
+git remote get-url <Name>
+# Setzt die URL eines Remotes
+git remote set-url <Name> <URL>
+```
+
+## Kopieren eines Remote Repository in ein lokales Repository
+
+Mit `git clone` kannst du ein Repository klonen. Du kannst entweder ein Repository von GitHub oder von einem anderen Git Server klonen. Du kannst auch ein lokales Repository klonen.
+
+```bash
+# Klonen eines Repositories von GitHub oder einem anderen Git Server
+git clone <URL>
+# Klonen eines lokalen Repositories
+git clone <Pfad>
+# Den Namen des Zielordners ändern
+git clone <URL> <Zielordner>
+# Das Repository wird in den aktuellen Ordner geklont
+git clone <URL> .
+```
+
+## Lokale Änderungen in ein Remote Repository übertragen
+
+Mit `git push` kannst du deine Änderungen in ein Remote Repository übertragen. Du kannst deine Änderungen in einen bestimmten Branch übertragen. Du kannst auch alle Branches auf einmal übertragen.
+
+```bash
+# Überträgt deine Änderungen in den aktuellen Branch
+git push
+# Überträgt deine Änderungen in den aktuellen Branch und setzt den Upstream
+git push -u origin
+# Überträgt deine Änderungen in einen bestimmten Branch
+git push <Remote> <Branch>
+# Überträgt alle Branches
+git push --all
+```
+
+## Den Stand eines Remote Repositorys in ein lokales Repository übertragen
+
+Mit `git fetch` kannst du dir alle Änderungen aus einem Remote Repository herunterladen. Du kannst dir auch alle Branches herunterladen. Du kannst dir auch alle Tags herunterladen. Jedoch werden die Änderungen nicht in deinen lokalen Branches übernommen. Du musst die Änderungen mit `git merge` oder `git rebase` in deine lokalen Branches übernehmen.
+
+```bash
+# Lädt alle Änderungen aus einem Remote Repository herunter
+git fetch
+# Lädt alle Branches aus einem Remote Repository herunter
+git fetch --all
+# Lädt alle Tags aus einem Remote Repository herunter
+git fetch --tags
+# Merge die Änderungen in deinen lokalen Branch
+git merge origin/master
+# Rebase die Änderungen in deinen lokalen Branch
+git rebase origin/master
+```
+
+## Den Stand eines Remote Repositorys in ein lokales Repository übertragen und zusammenführen
+
+Mit `git pull` kannst du dir alle Änderungen aus einem Remote Repository herunterladen und in deine lokalen Branches übernehmen. Du kannst dir auch alle Branches herunterladen. Du kannst dir auch alle Tags herunterladen.
+
+```bash
+# Lädt alle Änderungen aus einem Remote Repository herunter und übernimmt diese in deinen lokalen Branch
+git pull <Remote> <Branch>
+# Lädt alle Branches aus einem Remote Repository herunter und übernimmt diese in deinen lokalen Branch
+git pull <Remote> --all
+# Lädt alle Tags aus einem Remote Repository herunter und übernimmt diese in deinen lokalen Branch
+git pull <Remote> --tags
+```
+
+## Fazit
+
+Das waren die wichtigsten Git Befehle. Ich hoffe, dass ich dir mit diesem Artikel weiterhelfen konnte. Wenn du noch Fragen hast, kannst du mir gerne auf Twitter schreiben. Ich wünsche dir noch einen schönen Tag. Bis zum nächsten Mal.

@@ -1,48 +1,105 @@
 ---
-title: 03 | Woher und Wie bekomme ich die Daten für meine Testimonials ?
+title: 02 | Die Suche nach dem perfekten Font
 author: Akansel Cengiz
 authorContact: akcengiz@gmx.de
-pubDate: 2023-11-20
-description: "Wir tauchen ein in die Welt von Fake Daten auf Abruf und wo sie zu finden sind."
+pubDate: 2023-10-28
+description: "Warum gibt es auf dieser Welt so viele unterschiedliche Fonts ?"
 image:
-    src: "/src/images/api.png"
-    alt: "A pic with black background and white letters."
-tags: ["astro", "learning in public", "setbacks", "community"]
-relatedPosts: ["post-4"]
+    src: "/src/images/fonts.png"
+    alt: "A green to yellow background color with some text."
+tags: ["astro", "blogging", "learning in public", "successes"]
+relatedPosts: ["post-1"]
 
 ---
 
 <section class="w-10/12 text-justify"> 
 
+After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!
 
-It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
-
-
-# Auf dem Weg zum Junior Cloud Engineer
-
-Als leidenschaftlicher Full Stack-Entwickler aus Wuppertal strebe ich aktiv danach, meine Fähigkeiten auf das nächste Level zu heben und mich in Richtung einer Karriere als Junior Cloud Engineer zu entwickeln.
-
-## Meine Fortschritte
-
-In meiner Reise des lebenslangen Lernens habe ich nicht nur umfassende Kenntnisse im Full Stack-Bereich erworben, sondern auch gezielt Schritte unternommen, um mich in Cloud-Technologien einzuarbeiten. Von der Bereitstellung von Anwendungen bis hin zur Verwaltung von Ressourcen in der Cloud habe ich ein solides Verständnis für Cloud-Plattformen entwickelt.
-
-## Engagement für Weiterbildung
-
-Meine Bemühungen sind nicht auf den aktuellen Kenntnisstand beschränkt. Ich investiere aktiv Zeit in Schulungen, Online-Kurse und Zertifizierungen, um meine Expertise in Cloud-Architektur, Automatisierung und DevOps-Praktiken zu vertiefen.
-
-## Bilder meiner Reise
-
-![Bild 1: Cloud Computing](/src/images/rick.jpeg)
-*Bild 1 zeigt die faszinierende Welt des Cloud Computing, die mich inspiriert.*
+[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
 
-![Bild 2: Learning Journey](/src/images/rick.jpeg)
-*Bild 2 repräsentiert meine stetige Lernreise, die sowohl Herausforderungen als auch Erfolge beinhaltet.*
+
+```js
+console.log("Hallo Welt");
+```
 
 
-![Bild 3: Cloud Engineer](/src/images/rick.jpeg)
-*Bild 3 symbolisiert mein Ziel, ein erfolgreicher Junior Cloud Engineer zu werden.*
+```markdown
+1. First item
+2. Second item
+3. Third item
+```
 
-Ich freue mich darauf, meine Fähigkeiten weiter zu vertiefen und einen bedeutenden Beitrag im Bereich Cloud-Technologien zu leisten.
+```markdown
+- Fruit
+  - Apple
+  - Orange
+  - Banana
+- Dairy
+  - Milk
+  - Cheese
+```
+
+
+
+
+- Fruit
+  - Apple
+  - Orange
+  - Banana
+- Dairy
+  - Milk
+  - Cheese
+
+```markdown
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
+
+H<sub>2</sub>O
+
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
+
+Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+```
+
+
+
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
+
+H<sub>2</sub>O
+
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
+
+Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
+
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+![blog placeholder](/src/images/rick.jpeg)
+
+
+The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+
+
+
+| Italics   | Bold     | Code   |
+| --------- | -------- | ------ |
+| _italics_ | **bold** | `code` |
+
+
+> Don't communicate by sharing memory, share memory by communicating.<br>
+> — <cite>Rob Pike[^1]</cite>
+
+
+
+# Welcome to Markdoc 👋
+
+{% aside type="tip" %}
+
+Use tags like this fancy "aside" to add some _flair_ to your docs.
+
+{% /aside %}
+
 
 </section>

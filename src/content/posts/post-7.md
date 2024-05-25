@@ -1,18 +1,45 @@
 ---
-title: 08 | Intro - Meine Gedanken, Ziele und weitere Projekte
+title: 07 | Github
 author: Akansel Cengiz
 authorContact: akcengiz@gmx.de
-pubDate: 2024-05-20
-updatedDate: '12345'
-description: 'Dieses Foto bringt es genau auf den Punkt. Egal mit was du starten wirst das aller erste mal wird das Ergebnis immer schlecht sein.'
+pubDate: 2024-02-01
+description: "Nützliche Befehle die man immer gebrauchen könnte."
 image:
-    src: '/src/images/first.png'
-    alt: 'A twitter screenshot with some text'
-tags: ["TailwindCSS", "Astro", "React", "Typescript"]
-relatedPosts: ["post-3"]
+    src: "/src/images/github.png"
+    alt: "The Github Cat Logo."
+tags: ["Github", "Version Control", "Repository"]
+relatedPosts: ["post-2"]
 
 ---
 
+<section id="toc">
+
+- [Git Repository erstellen](#git-repository-erstellen)
+- [Den Status eines Projektes prüfen](#den-status-eines-projektes-prüfen)
+- [Neue Änderungen ins Staging hinzufügen](#neue-änderungen-ins-staging-hinzufügen)
+- [Änderungen im Staging commiten](#änderungen-im-staging-commiten)
+- [Die letzten Commits anzeigen](#die-letzten-commits-anzeigen)
+- [Alle Aktivitäten anzeigen](#alle-aktivitäten-anzeigen)
+- [Die Unterschiede zwischen Commits und Dateien anzeigen](#die-unterschiede-zwischen-commits-und-dateien-anzeigen)
+- [Die letzten Änderungen rückgangig machen](#die-letzten-änderungen-rückgangig-machen)
+- [Dateien aus dem Staging entfernen oder Änderungen rückgängig machen](#dateien-aus-dem-staging-entfernen-oder-änderungen-rückgängig-machen)
+- [Eine Änderung dem letzten Commit hinzufügen](#eine-änderung-dem-letzten-commit-hinzufügen)
+- [Älteren Commit rückgängig machen](#älteren-commit-rückgängig-machen)
+- [Änderungen einer einzelnen Datei Rückgängig machen](#änderungen-einer-einzelnen-datei-rückgängig-machen)
+- [Etwas komplett verkackt?](#etwas-komplett-verkackt)
+- [Branches erstellen, wechseln und löschen](#branches-erstellen-wechseln-und-löschen)
+- [Branches wechseln oder Dateien aus einem anderen Branch kopieren](#branches-wechseln-oder-dateien-aus-einem-anderen-branch-kopieren)
+- [Branches zusammenführen](#branches-zusammenführen)
+- [Ausversehen auf den master commited](#ausversehen-auf-den-master-commited)
+- [In den falschen Branch commited](#in-den-falschen-branch-commited)
+- [Das arbeiten mit Remote Repositories](#das-arbeiten-mit-remote-repositories)
+- [Kopieren eines Remote Repository in ein lokales Repository](#kopieren-eines-remote-repository-in-ein-lokales-repository)
+- [Lokale Änderungen in ein Remote Repository übertragen](#lokale-änderungen-in-ein-remote-repository-übertragen)
+- [Den Stand eines Remote Repositorys in ein lokales Repository übertragen](#den-stand-eines-remote-repositorys-in-ein-lokales-repository-übertragen)
+- [Den Stand eines Remote Repositorys in ein lokales Repository übertragen und zusammenführen](#den-stand-eines-remote-repositorys-in-ein-lokales-repository-übertragen-und-zusammenführen)
+- [Fazit](#fazit)
+
+</section>
 
 ## Git Repository erstellen
 
@@ -371,3 +398,4 @@ git pull <Remote> --tags
 ## Fazit
 
 Das waren die wichtigsten Git Befehle. Ich hoffe, dass ich dir mit diesem Artikel weiterhelfen konnte. Wenn du noch Fragen hast, kannst du mir gerne auf Twitter schreiben. Ich wünsche dir noch einen schönen Tag. Bis zum nächsten Mal.
+
