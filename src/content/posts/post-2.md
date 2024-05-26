@@ -8,7 +8,7 @@ image:
     src: "/src/images/fonts.png"
     alt: "A green to yellow background color with some text."
 tags: ["astro", "blogging", "learning in public", "successes"]
-relatedPosts: ["post-1"]
+# relatedPosts: ["post-1"]
 
 ---
 

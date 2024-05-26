@@ -8,7 +8,7 @@ image:
     src: "/src/images/api.png"
     alt: "A pic with black background and white letters."
 tags: ["astro", "learning in public", "setbacks", "community"]
-relatedPosts: ["post-4"]
+# relatedPosts: ["post-4"]
 
 ---
 

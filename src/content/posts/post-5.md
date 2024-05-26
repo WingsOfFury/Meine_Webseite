@@ -8,7 +8,7 @@ image:
     src: "/src/images/transitions.png"
     alt: "A frustrated lego guy sitting in front of a desk."
 tags: ["Transitions", "Swup"]
-relatedPosts: ["post-2"]
+# relatedPosts: ["post-2"]
 
 ---
 

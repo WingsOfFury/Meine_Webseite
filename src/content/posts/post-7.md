@@ -8,7 +8,7 @@ image:
     src: "/src/images/github.png"
     alt: "The Github Cat Logo."
 tags: ["Github", "Version Control", "Repository"]
-relatedPosts: ["post-2"]
+# relatedPosts: ["post-2"]
 
 ---
 

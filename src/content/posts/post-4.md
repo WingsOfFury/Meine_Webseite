@@ -1,5 +1,5 @@
 ---
-title: 04 | Markdown 
+title: 04 | Markdown...Markdoc ?
 author: Akansel Cengiz
 authorContact: akcengiz@gmx.de
 pubDate: 2023-11-30
@@ -8,7 +8,7 @@ image:
     src: "/src/images/markdown.jpeg"
     alt: "The logo of the markdown language."
 tags: ["astro", "successes"]
-relatedPosts: ["post-2"]
+# relatedPosts: ["post-2"]
 
 ---
 <section class="w-10/12 text-justify"> 
