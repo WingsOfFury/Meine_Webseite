@@ -12,7 +12,9 @@ const { frontmatter } = Astro.props;
       alt={frontmatter.image.alt}
     />
     <section class="flex flex-row justify-between lg:text-base text-xs w-full">
-      <p>Verfasst von <a href="/about/">{frontmatter.author}</a></p>
+      <p>
+        Verfasst von <a href="/about/">{frontmatter.author}</a>
+      </p>
       <p>
         Veröffentlicht am {
           new Date(frontmatter.pubDate).toLocaleDateString("de-DE")

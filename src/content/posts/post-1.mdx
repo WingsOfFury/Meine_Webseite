@@ -10,48 +10,84 @@ image:
     alt: 'A guy sitting in front of an notebook and thinking.'
 tags: ["astro", "blogging", "learning in public"]
 # relatedPosts: ["post-3"]
-
 ---
+
 
 <section class="w-10/12 text-justify"> 
 
-## Wie kam ich auf die Idee ?
-<p>
-Wie es dazu kam das ich mich für die Kombo [Astro](https://astro.build/) + [TailwindCSS](https://tailwindcss.com/) entschieden habe lag an dem Youtuber [Programmieren mit Mario](https://www.youtube.com/@ProgrammierenMario).
-(Am Ende des Blogs verlinke ich dir das Video)
-</p>
+<section id="toc">
 
-<p>
+- [Wie kam ich auf die Idee ?](#wie-kam-ich-auf-die-idee-)
+- [Was war dir wichtig und was waren No-Gos ?](#was-war-dir-wichtig-und-was-waren-no-gos-)
+- [Was hast du unternommen um die Page weiter auszubauen ?](#was-hast-du-unternommen-um-die-page-weiter-auszubauen-)
+- [Welche Eigenschaften sollte die Page noch haben ?](#welche-eigenschaften-sollte-die-page-noch-haben-)
+- [Was ging wieder raus oder wurde auch nicht übernommen ?](#was-ging-wieder-raus-oder-wurde-auch-nicht-übernommen-)
+- [Was Planst du in Zukunft für diese Seite ?](#was-planst-du-in-zukunft-für-diese-seite-)
+- [Was würdest du das nächste mal anders machen ?](#was-würdest-du-das-nächste-mal-anders-machen-)
+- [Welchen Techstack hast du genau benutzt ?](#welchen-techstack-hast-du-genau-benutzt-)
+- [Youtube Video](#youtube-video)
+
+</section>
+
+
+## Wie kam ich auf die Idee ?
+
+Das ich mich genau für diese Kombi [Astro](https://astro.build/) + [TailwindCSS](https://tailwindcss.com/) entschieden habe lag an dem Youtuber 
+[Programmieren mit Mario](https://www.youtube.com/@ProgrammierenMario).
+(Das Video findest du hier [Youtube Video](#video))
+
+
+
 Es gab vor einiger Zeit einen Hype von Englischsprachigen und Deutschen Devs auf Youtube die Astro in den höchsten Tönen gelobt haben.
 Zu diesem Zeitpunkt war ich auch auf der Suche nach einem neuen Techstack mit dem ich meine eigene Page bauen wollte.
 Da ich schon immer entweder mit Bootstrap oder TailwindCSS arbeiten wollte passte das mit TailwindCSS super.
 Also entschied ich mich für Astro/TailwindCSS.
-</p>
+Astro bietet eine fülle von möglichkeiten
+
 
 ## Was war dir wichtig und was waren No-Gos ?
-<p>
+
+
 Oberste Priorität war es für mich den Code selber zu schreiben und kein Template zu benutzen.
-Es gibt unmengen an Top Templates for free oder gegen Cash aber 
-sie bringen sehr wenig lerneffekte mit sich da der Code eh schon fertig geschrieben ist.
-</p>
+Es gibt im Netz unmengen an Top Templates for free oder gegen Cash aber 
+der Lerneffekt ist, wie ich finde, bei selbstgeschriebenen Code um ein vielfaches höher als bei fertigem Code.
+Wir wollen ja lernen und weiter Erfahrung sammeln und an Margins, Paddings und "How to center a div" verzweifeln 😂.
+
 
 ## Was hast du unternommen um die Page weiter auszubauen ?
-<p>
+
+
 Nachdem ich nun den Kurs beendet habe und die Page 1:1 wie in dem Video aussieht kam bei mir schnell der Gedanke auf noch mehr daraus zu machen.
 Schon beim Aufbau der Page schossen mir automatisch viele neue Ideen durch den Kopf die ich gerne umsetzen wollte.
-Also auf zur Astro Doku(mentation) Seite.
-An dieser Stelle muss ich sagen das die Doku von Astro super gestaltet, erklärt und gut nachvollziehbar ist.
-</p>
+Ich habe den Typewriter Effekt der mit Javascript erstellt wurde beibehalten.
+Astro arbeitet nach dem ZeroJS Prinzip. 
+Das heisst je weniger JS von der Client-Side aus läuft umso besser da Astro Server-first bevorzugt.
+Ich habe auch einen Typewriter Effekt mit TailwindCSS hinbekommen aber JS Code schaut irgendwie sexier aus 😂.
+Also auf zur Astro Doku(mentation) Seite und lesen, lesen und noch mehr lesen.
+An dieser Stelle muss ich sagen das die Doku von Astro super aufgebaut ist und alles gut erklärt wird.
+
 
 ## Welche Eigenschaften sollte die Page noch haben ?
-<p>
-Diese Seite habe ich mit dem Mobile First ansatz aufgebaut.
-Responsive ist sie natürlich auch.
-Ein tolles Tool ist die Google Extension [Responsive Viewer](https://responsiveviewer.org/).
-Ich kann zwar mit meinen Desktop Computer, Tablet und Smartphone gleichzeitig arbeiten und jede änderung gut erkennen aber der
-Responsive Viewer hat einige Devices mehr zu bieten.
-Ein Back-to-Top button + Javascript funktion habe ich auch implementiert.
 
+
+
+<li>Mobile First</li>
+<li>Responsive Design</li>
+<li>Navigation</li>
+<li>Gute Struktur.</li>
+<li>Kontakt Button</li>
+<li>Back-to-Top Button</li>
+<li>Site Transitions</li>
+<li>Header, Main und Footer</li>
+<li>Ein ToggleSwitch für ein Helles und Dunkles Thema</li>
+<li>Eine Seite für mein einfach gestaltetes CV + exta Download funktion</li>
+<li>404 Error Page</li>
+<li>Moderner Blog Bereich</li>
+<li>Performance hoch halten</li>
+<li>Icons wie Github, LinkedIn und AWS</li>
+
+
+Ein Back-to-Top Button in Javascript Code sieht z.B. so aus.
 ```js
 // Hier holt er sich die ID "top-top-button"
 let toTopButton = document.getElementById("to-top-button");
@@ -79,19 +115,66 @@ if (toTopButton) {
   };
 }
 ```
-</p>
 
-<p>
-Ich habe auch den Blog bereich aufgepeppt.
-Nach fertigstellung war er mir doch zu langweilig.
-Habe mich bewußt gegen einen Hover effekt entschieden.
-Es ist ein netter Effekt, gar keine Frage aber es ist so omnipräsent wie der Border Radius geworden so das ich mich auch gegen ihn entschieden habe und alles kantig gelassen habe bis auf die Blog Cards.
-So genug Anarchismus.
-</p>
 
-<p>
-Mit React habe ich z.B. die Testimonials Seite eingepflegt wo ich die Inhalte wie Fotos, Alter oder Land etc. der jeweiligen Fake Accounts über eine API fetche und bereit stelle.
-</p>
+
+## Was ging wieder raus oder wurde auch nicht übernommen ?
+
+
+Zum beispiel "internationalization" [i18n](https://docs.astro.build/en/recipes/i18n/).
+Das wollte ich nachträglich einpflegen und es wollte einfach nicht klappen.
+Habe mich strikt an die Doku gehalten.
+Ich habe es 2-3 Wochen lang geduldig ausprobiert um es endlich zum laufen zu bringen.
+Habes es am Ende genervt weg gelassen.
+Wollte erst mit "Deutsch/Englisch" anfangen und dann wenn es geklappt hätte weitere Sprachen aufnehmen.
+
+[SEO](https://github.com/jonasmerlin/astro-seo#readme) weiss ich wie es eingeplegt wird aber aktuell brauche ich es für mich nicht.
+
+Die Accesibility Idee kam später auf als die Seite schon komplett fertig gewesen ist.
+Ich wollte die Page auch endlich zum Abschluss bringen und nicht weiter herum experimentieren.
+Ehrlich gesagt hatte auch keine Lust darauf mir wieder die Seite zu zerschießen.
+Man muss hier auch erwähnen das man lange mit Debuggen beschäftigt ist.
+Wenn die Page mal wieder läuft ist man etwas zurückhaltender mit neuen Ideen.
+
+
+
+## Was Planst du in Zukunft für diese Seite ?
+
+
+<li><b><em>Pagination</em></b> einpflegen.</li>
+<li><b><em>Amazon Lex</em></b> Chatbot wäre auch nice.</li>
+<li><b><em>Tags</em></b> für die Blog-Seite einpflegen.</li>
+
+Werde die Seite erst mal als meine Landing Page nutzen. 
+Mir fällt schon noch was ein was ich einpflegen kann oder besser machen könnte. 
+
+
+
+## Was würdest du das nächste mal anders machen ?
+
+
+Ich würde von vorneherein wissen wollen was die Page alles können/haben muss.
+Ich habe das Gefühl gehabt das alles was später implementiert wird mir mehr Probleme
+verursacht hat als wenn es von Anfang an eingepflegt worden wäre.
+Die [Astro Islands](https://docs.astro.build/en/concepts/islands/) sind auch ne coole Sache die ich beim nächsten mal übernehmen werde.
+
+
+## Welchen Techstack hast du genau benutzt ?
+
+
+<li>Virtual Studio Code (VSC) als Code Editor.</li>
+<li>Github für mein Repo(sitories).</li>
+<li>Astro für das komplette Grundgerüst</li>
+<li>TailwindCSS fürs Stylen.</li>
+<li>React um die Randomuser-API zu fetchen.</li>
+<li>Javascript Vanilla für den Typewriter Effekt, ToggleSwitch etc.</li>
+<li>Markdown/Markdoc für die Blog-Seite.</li>
+<li>CSS native</li>
+<li>Swup für die Page Transitions.</li>
+<li>Cypress für das Testing.</li>
+<li>Google Lighthouse für den Performance Test</li>
+
+## Youtube Video
 
 <iframe class="size-full" width="660" height="315" src="https://www.youtube.com/embed/NJfaGJDSewc?si=KN5mAkhz5t6b8qD2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

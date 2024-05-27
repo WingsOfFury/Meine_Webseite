@@ -9,13 +9,26 @@ image:
     alt: "The Github Cat Logo."
 tags: ["Github", "Version Control", "Repository"]
 # relatedPosts: ["post-2"]
-
 ---
 
+
 <section class="w-10/12 text-justify">
-<!-- <section class="w-10/12 text-justify flex flex-col justify-center ">  -->
+
+
+
+<section id="toc">
+
+- [Was ist passiert ?](#was-ist-passiert-)
+- [Mögliche Gründe, vielleicht die iCloud ?](#mögliche-gründe-vielleicht-die-icloud-)
+- [Stack Overflow, Github Community etc.](#stack-overflow-github-community-etc)
+- [Fazit](#fazit)
+
+
+
+</section>
 
 ## Was ist passiert ?
+
 
 Ende Dezember 2023 habe ich vor dem Jahreswechsel meinen letzten Commit mit dem Inhalt "Mobile Menu implementiert" abgeschickt.
 Anfang letzter Woche wollte ich weiter an meiner Seite arbeiten und habe direkt beim Öffnen der Datei gesehen das es lückenhaft gewesen ist.
@@ -24,13 +37,15 @@ Ich habe erst mal an nichts schlimmes gedacht weil mein Mac mit der [iCloud](htt
 weil sie noch nicht aktualisiert worden sind.
 Ich habe die iCloud erst off und dann wieder online gesetzt mit der Hoffnung das es aktualisiert wird, aber nichts ist passiert.
 Auf Github war das Repository noch in Takt.
-Wunderbar dachte ich mir und wollte mit <code>git clone</code> die Daten herunter laden und weiter daran arbeiten.
+Wunderbar dachte ich mir und wollte mit `git clone` die Daten herunter laden und weiter daran arbeiten.
 Es erschien ein "unable tree error" oder so. Ich konnte weder Clone noch Fetch benutzen. 
 Egal was ich tat "Error Error Error".
 Nichts hat funktioniert.
 
 
+
 ## Mögliche Gründe, vielleicht die iCloud ?
+
 
 Nebenbei fühlte sich [iCloud](https://www.icloud.com/) so lahm beim Laden an (was mir vorher nie so aufgefallen ist)das ich keine Lust mehr darauf hatte und mich nach einer alternative umgesehen habe.
 Da ich eh meinen Email Account und einige andere Sachen bei Google habe lag der Gedanke nahe mich dort nieder zu lassen.
@@ -40,10 +55,12 @@ Aktuell 2.99 € für 200 GB.
 Wieder zurück zu meinem Haupt problem "Warum ist mein Repo so lückenhaft?".
 Auf zu Google um die verschiedenen Error Meldungen in die Suchleiste einzutippen und zu sehen ob dieses Problem auch schon bei anderen aufgetreten ist.
 
-<!-- 1. 1.": unable to read tree a203132ba17332782f2b3662c3cb5b7deda958d3" -->
-2. 2."fatal: not a git repository (or any of the parent directories): .git"
+{/* 1. 1.": unable to read tree a203132ba17332782f2b3662c3cb5b7deda958d3"*/}
+1. 2."fatal: not a git repository (or any of the parent directories): .git"
+
 
 ## Stack Overflow, Github Community etc.
+
 
 Erste Adresse [Stack Overflow](https://stackoverflow.com/).
 Wie immer nach dem Post mit dem meisten Likes Ausschau halten und lesen was dort geschrieben worden ist.
@@ -55,11 +72,12 @@ So wirklich schlau und DIE Antwort auf mein Problem habe ich jetzt nicht finden 
 Nächster halt...[Github Community](https://github.com/community).
 Ich bin dort direkt auf einen Post gestoßen der easy peasy aussah und mich wieder auf Spur bringen könnte.
 So, code eingetippt und abgeschickt:
-<!-- <code>git commit -m "Initial commit"
-git branch -M main</code> -->
+{/* <code>git commit -m "Initial commit"
+git branch -M main</code> */}
 Schnell zu [Github](https://github.com/) um nachzusehen ob alles ok ist.
 Siehe da mein Github Repo mit der Homepage,wo ich seit knapp 2 Monaten dran arbeite, ist auf einmal komplett leer.
 Ich suchte wie verrückt nach einem Weg es Rückgängig (Undo) zu machen aber je länger ich suchte umso verrückter hat es mich gemacht.
+
 
 <img
   src="/src/images/github_deleted.png"
@@ -78,6 +96,9 @@ Ich weiss ja leider auch nicht was morgen ist.
 Vielleicht sind die Daten komplett weg.
 Die darauf folgende Nacht war echt mies.
 Ich habe mich die folgende Woche nur darauf konzentriert meine Repository die irgendwie da war oder doch nicht da war wieder auf dem Schirm zurück zu holen damit sie wieder im public ordner ist.
+
+
+
 Eine nette Github Userin hat mir zwei Links 1. [How to fix the “fatal: not a git repository” error](https://www.airplane.dev/blog/fixing-fatal-not-a-git-repository-error) und 2.[
 Undo Changes in Git: git checkout, git revert, & git reset](https://www.nobledesktop.com/learn/git/undo-changes) geschickt wo ähnliche Probleme beschrieben werden.
 Beide Seiten waren super und einfach erklärt.
@@ -96,11 +117,12 @@ Da Github nun mal Github ist und nicht Malen nach Zahlen geht die Suche mit "Wie
   class="rounded border-2 border-dark float-left
    m-4"
 />
-Dann bin ich auf den Befehl <code>git reset --hard HEAD</code> gestoßen.
-Ich habe diesen Befehl benutzt um zwei überflüssige Commits rückgängig zu machen.
-Anstatt "HEAD" wird einfach die Commit ID genutzt <code>git reset --hard a0fa81</code>.
-Voila ist der GitGraph Tree wieder beim "Mobile Menu implementiert" angekommen.
 
+
+Dann bin ich auf den Befehl `git reset --hard HEAD` gestoßen.
+Ich habe diesen Befehl benutzt um zwei überflüssige Commits rückgängig zu machen.
+Anstatt "HEAD" wird einfach die Commit ID genutzt `git reset --hard a0fa81`.
+Voila ist der GitGraph Tree wieder beim "Mobile Menu implementiert" angekommen.
 
 <img
   src="/src/images/github_gitgraph.png"
@@ -112,20 +134,24 @@ Voila ist der GitGraph Tree wieder beim "Mobile Menu implementiert" angekommen.
   class="rounded border-2 border-dark float-right
    m-4"
 />
+
+
 Hier kann man es sehr schön sehen das der Commit "Initial Commit" nicht mehr im Graphen zu sehen ist.
 Er kam direkt nach "Mobile Menu implementiert".
+
 
 ## Fazit
 
 
-Ich habe mein Repo mit <code>Git Clone "Repo Name"</code> herunter laden können obwohl es komischerweise nicht im public ordner liegt.
+Ich habe mein Repo mit `Git Clone "Repo Name"` herunter laden können obwohl es komischerweise nicht im public ordner liegt.
 Bekomme es auch leider nicht wieder dorthin zurück.
 Will jetzt auch nicht mehr weiter dran rum wurschteln da ich jetzt schon fast 2 Wochen nur durch wiederherstellen und warum,wieso und weshalb verloren habe.
 Wahrscheinlich geht es easy aber gerade aktuell möchte ich es so belassen da ich das Repo nicht nochmal verlieren möchte.
 
-<p>
+
+
 Mein Rat an dich: <b class="text-3xl">Bitte schaffe eine Umgebung wo du den Code ohne Auswirkung auf dein Main Repo testen kannst um solche unnötigen Kopfschmerzen zu vermeiden.</b>
-</p>
+
 
 
 </section>
