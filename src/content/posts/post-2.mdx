@@ -1,0 +1,103 @@
+---
+title: 02 | Die Suche nach dem perfekten Font
+author: Akansel Cengiz
+authorContact: akcengiz@gmx.de
+pubDate: 2023-10-28
+description: "Warum gibt es auf dieser Welt so viele unterschiedliche Fonts ?"
+image:
+    src: "/src/images/fonts.png"
+    alt: "A green to yellow background color with some text."
+tags: ["astro", "blogging", "learning in public", "successes"]
+# relatedPosts: ["post-1"]
+
+---
+
+<section class="w-10/12 text-justify"> 
+
+
+<section id="toc">
+
+- [Vorwort](#vorwort)
+- [Von wo kommen die Fonts](#von-wo-kommen-die-fonts)
+- [Wie habe ich die Fonts eingebunden](#wie-habe-ich-die-fonts-eingebunden)
+- [Fazit](#fazit)
+
+
+
+</section>
+
+
+## Vorwort
+
+Die Suche nach einem Font das nicht nur gut aussieht sondern auch gut mit einem anderen
+Font harmoniert kann echt mühselig sein.
+
+Andere Kandidaten gab es auch wie zum Beispiel `Inter, Roboto, Nunito, Open Sans, Montserrat` oder `Mulish`.
+Ich habe mich nach langem hin und her aber für Ubuntu (h1-6) und Poppins (p,a) entschieden.
+Die Lesbarkeit der beiden Fonts finde ich sehr angenehm.
+
+## Von wo kommen die Fonts 
+
+Da Astro bereits eine Documentation mit [Fontsource](https://fontsource.org/) hat habe ich mich auch für diese entschieden.
+Fontsource bietet auch eine große Fonts Sammlung an und die Documentation von denen ist auch sehr hilfreich.
+[Google Fonts](https://fonts.google.com/) wäre auch eine alternative gewesen.
+
+
+## Wie habe ich die Fonts eingebunden
+
+Die Installation der Fonts gefällt mir echt gut.
+Es werden zwei Optionen angeboten.
+
+Einmal als Variable mit der möglichkeit nur eine Datei mit allen größen herunter zu laden.
+Wie ich finde eine tolle Sache.
+
+oder
+
+Als normale CSS, das heißt du musst genau vorher wissen und auswählen welche Größen du haben willst und dann herunter laden.
+
+Die Variable Option gibt es leider nicht bei allen Fonts.
+Ubuntu und Poppins bieten keine an.
+Für Inter, Open Sans oder Montserrat wiederum ja.
+
+
+<img
+  src="/src/images/fontforce.png"
+  width="600"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="swup logo"
+  class="rounded border-2 border-dark float-left
+   m-4"
+/>
+
+Das erste Screenshot ist von meiner BaseLayout.astro page .
+Für Ubuntu habe ich vier verschiedene Größen herunter geladen.
+Für Poppins brauchte ich nur eine.
+Standardgröße ist immer 400 voreingestellt.
+
+
+<img
+  src="/src/images/ubuntuPoppins.png"
+  width="600"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="swup logo"
+  class="rounded border-2 border-dark float-right
+   m-4"
+/>
+Das zweite Screenshot ist von meiner package.json Datei.
+Hier kann man nochmal sehen das die Fonts auch wirklich installiert sind.
+
+## Fazit
+
+Wie ihr wahrscheinlich schon selbst raus lesen konntet ist die Wahl des "richtigen" Fonts
+eine sehr subjektive und ästhetische Frage wo sich wahrscheinlich täglich die Geister dran scheiden.
+Allein Google Fonts stellt ca. 1000 Fonts kostenlos zur Verfügung.
+Jeden Tag kommen immer mehr Fonts auf dem Markt.
+
+
+</section>
+
+
