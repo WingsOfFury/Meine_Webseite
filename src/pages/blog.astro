@@ -16,9 +16,9 @@ const allPosts = await getCollection("posts");
   <section class="grid-cols-1 sm:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     {
       allPosts.sort(sortByDate).map((post) => (
-        <div class="mx-3 mt-6 flex flex-col rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0">
+        <div class="mx-3 mt-6 flex flex-col bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0 max-w-sm h-auto transition-shadow duration-300 hover:shadow-xl hover:shadow-gray-400">
           <img
-            class="rounded-t-lg object-fill w-full h-2/5"
+            class="object-fill w-full h-2/5"
             src={post.data.image.src}
             alt={post.data.image.alt}
           />
@@ -50,7 +50,7 @@ const allPosts = await getCollection("posts");
               </span>
             </div>
             <a href={`/posts/${post.slug}/`}>
-              <button class="p-2 text-xs text-white duration-300 ease-in delay-300 hover:bg-dark bg-dark focus:shadow-outline hover:text-slate-300  ring-slate-300 rounded-lg hover:ring-2 hover:ring-dark dark:hover:ring-white">
+              <button class="p-2 text-xs text-white duration-300 ease-in delay-300 hover:bg-dark bg-dark focus:shadow-outline hover:text-slate-300  ring-slate-300 hover:ring-2 hover:ring-dark dark:hover:ring-white">
                 Weiterlesen
               </button>
             </a>

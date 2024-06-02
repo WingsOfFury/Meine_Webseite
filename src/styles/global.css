@@ -54,7 +54,7 @@
   }
 
   #toc > ul {
-    @apply border-2 border-dark dark:border-light rounded-lg my-8 py-2 px-4 text-base md:text-xl shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)];
+    @apply border-2 border-dark dark:border-light my-8 py-2 px-4 text-base md:text-xl shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)];
   }
 
   #toc li {
