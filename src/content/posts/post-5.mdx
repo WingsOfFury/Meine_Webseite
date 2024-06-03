@@ -21,7 +21,7 @@ tags: ["Transitions", "Swup"]
 - [Warum wolltest du nicht mit SWUP weiter arbeiten](#warum-wolltest-du-nicht-mit-swup-weiter-arbeiten)
 - [Wo hast du versucht Hilfe für dein Problem finden](#wo-hast-du-versucht-hilfe-für-dein-problem-finden)
 - [Warum hast du nicht weiter versucht View Transitions einzubinden](#warum-hast-du-nicht-weiter-versucht-view-transitions-einzubinden)
-- [Fazit](#fazit)
+- [Mein Fazit](#mein-fazit)
 
 
 
@@ -30,7 +30,7 @@ tags: ["Transitions", "Swup"]
 
 ## Vorwort
 
-Nachdem ich die meisten Funktionen auf meiner Homepage implementiert habe und diese auch einwandfrei funktionieren (zumindest glaube und hoffe ich das 😂) bin ich an dem Punkt angekommen mich voll und ganz auf das Thema "Transitions" einzulassen.
+Nachdem ich die meisten Funktionen auf meiner Homepage implementiert habe und diese auch einwandfrei funktionieren (zumindest glaube und hoffe ich das 😂) bin ich an dem Punkt angekommen mich voll und ganz auf das Thema „Transitions“ einzulassen.
 Transitions sind echt eine super Sache. Die Übergänge zwischen den Pages wirken dadurch viel flüssiger und cooler.
 Ohne Transitions wirkt alles so abgebrochen und starr.
 
@@ -47,44 +47,43 @@ Ohne Transitions wirkt alles so abgebrochen und starr.
 
 ## Warum wolltest du nicht mit SWUP weiter arbeiten
 
-Auf dieser Hompegage benutze ich zwar [SWUP](https://swup.js.org/ "SWUP") aber der Gedanke war es alles über Astro laufen zu lassen um eventuellen Performance
-Problemen entgegen zu wirken.
-Also habe ich alles was mit SWUP Transitions zu tun hat auskommentiert und offline gesetzt.
-Gleichzeitig habe ich mich strikt an die [View Transition Documentation](https://docs.astro.build/en/tutorials/add-view-transitions/ "View Transition Documentation") gehalten um einen reibungslosen Ablauf zu gewährleisten. 
+Auf dieser Homepage benutze ich zwar [SWUP](https://swup.js.org/ "SWUP"), aber der Gedanke war es alles über Astro laufen zu lassen, um eventuellen Performance
+Problemen entgegenzuwirken.
+Also habe ich alles, was mit SWUP Transitions zu tun hat, auskommentiert und offline gesetzt.
+Gleichzeitig habe ich mich strikt an die [View Transition Documentation](https://docs.astro.build/en/tutorials/add-view-transitions/ "View Transition Documentation") gehalten, um einen reibungslosen Ablauf zu gewährleisten. 
 
-Testweise habe ich dem Header eine `SLIDE` funktion verpasst und der `h1` eine `FADE` transition spendiert.
+Testweise habe ich dem Header eine `SLIDE` Funktion verpasst und der `h1` eine `FADE` Transition spendiert.
 So, getestet und View Transitions funktioniert wunderbar.
-Jetzt funktioniert aber auf einmal der toggleSwitch für das Dark und Light Theme nicht mehr.
-Wenn ich die Homepage immer neu lade klappt der Switch aber wenn ich die Pages wechsele funktioniert der Schalter nicht mehr.
+Jetzt funktioniert aber auf einmal der ToggleSwitch für das Dark und Light Theme nicht mehr.
+Wenn ich die Homepage immer neu lade, klappt der ToggleSwitch, aber wenn ich die Pages wechsele funktioniert der Schalter nicht mehr.
 Also auf zur nächsten Baustelle.
 
-Alles wieder auskommentieren und schauen ob es ohne View Transitions funktioniert.
-Yes, es klappt ohne probleme.
+Alles wieder auskommentieren und schauen, ob es ohne View Transitions funktioniert.
+Yes, es klappt ohne Probleme.
 View Transitions aktiviert.
 No, klappt nicht.
-Jetzt wieder SWUP aktivieren und schauen ob der toggleSwitch hier auch nicht klappt was mir vielleicht bei swup nicht aufgefallen ist das der toggleSwitch nicht funktioniert.
+Jetzt wieder SWUP aktivieren und schauen ob der ToggleSwitch hier auch nicht klappt, was mir vielleicht bei SWUP nicht aufgefallen ist, das der ToggleSwitch nicht funktioniert.
 Page Transitions funktioniert.
-Schon mal ein gutes Zeichen. Jetzt noch den toggleSwitch testen. Funktioniert auch wieder ohne probleme.
+Schon mal ein gutes Zeichen. Jetzt noch den ToggleSwitch testen. Funktioniert auch wieder ohne Probleme.
 
 ## Wo hast du versucht Hilfe für dein Problem finden
 
-
-Ich habe mich natürlich auf dem [Astro Discord Server](https://discord.com/invite/grF4GTXXYm "Astro Discord Server") angemeldet um mein Problem mit der Community zu teilen.
+Ich habe mich natürlich auf dem [Astro Discord Server](https://discord.com/invite/grF4GTXXYm "Astro Discord Server") angemeldet, um mein Problem mit der Community zu teilen.
 Es gab zwar einige Responses aber eine richtige Lösung war leider nicht dabei.
 Danach ging es mit der Google Suche und [StackOverflow](https://stackoverflow.com/ "StackOverflow") weiter.
 Auch hier keine Lösung.
-Zum Astro Discord Server kann ich nur sagen das er, wie ich finde, sehr riesig ist und man bekommt auch sehr, sehr viel Input über Astro vermittelt.
+Zum Astro Discord Server kann ich nur sagen, dass er, wie ich finde, sehr riesig ist und man bekommt auch sehr, sehr viel Input über Astro vermittelt.
 
 
 ## Warum hast du nicht weiter versucht View Transitions einzubinden 
 
-Nach ungefähr 1 1/2 Wochen habe ich aufgehört mich damit zu beschäftigen warum der toggleSwitch nicht bei View Transitions aber bei SWUP funktioniert.
-Die Zeit rast halt verdammt schnell an einem vorbei so das es aus 1 1/2 schnell mal 3-4 Wochen oder mehr werden können.
+Nach ungefähr 1 1/2 Wochen habe ich aufgehört mich damit zu beschäftigen, warum der ToggleSwitch nicht bei View Transitions, aber bei SWUP funktioniert.
+Die Zeit rast halt verdammt schnell an einem vorbei so das es aus 1 1/2 schnell mal 3–4 Wochen oder mehr werden können.
 Definitiv zu lange für mich.
-Das ist auch der Grund warum ich mich gegen View Transitions und für SWUP entschieden habe.
+Das ist auch der Grund, warum ich mich gegen View Transitions und für SWUP entschieden habe.
 
 
-## Fazit
+## Mein Fazit
 
 Noch ein Wort über SWUP. Es ist ein sehr schönes und leicht zu implementierendes Tool.
 Ich werde es auch weiterhin in anderen Projekten benutzen.

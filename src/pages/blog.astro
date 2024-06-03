@@ -16,15 +16,15 @@ const allPosts = await getCollection("posts");
   <section class="grid-cols-1 sm:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     {
       allPosts.sort(sortByDate).map((post) => (
-        <div class="mx-3 mt-6 flex flex-col bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0 max-w-sm h-auto transition-shadow duration-300 hover:shadow-xl hover:shadow-gray-400">
+        <div class="mx-3 mt-6 flex flex-col justify-self-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0 max-w-sm h-auto transition-shadow duration-300 hover:shadow-xl hover:shadow-gray-400">
           <img
-            class="object-fill w-full h-2/5"
+            class="object-center w-full h-44"
             src={post.data.image.src}
             alt={post.data.image.alt}
           />
 
           <div class="p-6">
-            <h5 class="mb-2 text-xl leading-tight text-neutral-900 dark:text-neutral-50">
+            <h5 class=" text-xl leading-tight text-neutral-900 dark:text-neutral-50">
               <BlogPost title={post.data.title} />
             </h5>
             <p class="mb-4 text-base text-gray-400 dark:text-neutral-200">
@@ -34,11 +34,13 @@ const allPosts = await getCollection("posts");
           </div>
           <div class="flex items-center justify-start p-4 border-t-2 mt-auto">
             <div class="flex items-center">
+              <a href="/about">
               <img
                 class="object-cover w-14 rounded-full"
                 src="/src/content/authors/akansel-cengiz.png"
                 alt="Avatar"
               />
+              </a>
             </div>
            <div class="flex flex-col w-full">
               <span class="flex mx-1 font-semibold text-gray-700 dark:text-gray-200 text-xs">
@@ -50,7 +52,7 @@ const allPosts = await getCollection("posts");
               </span>
             </div>
             <a href={`/posts/${post.slug}/`}>
-              <button class="p-2 text-xs text-white duration-300 ease-in delay-300 hover:bg-dark bg-dark focus:shadow-outline hover:text-slate-300  ring-slate-300 hover:ring-2 hover:ring-dark dark:hover:ring-white">
+              <button class="p-2 flex text-xs text-white duration-300 ease-in delay-300 hover:bg-dark bg-dark focus:shadow-outline hover:text-slate-300  ring-slate-300 hover:ring-2 hover:ring-dark dark:hover:ring-white">
                 Weiterlesen
               </button>
             </a>

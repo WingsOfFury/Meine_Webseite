@@ -19,11 +19,11 @@ tags: ["astro", "learning in public", "setbacks", "community"]
 
 - [Vorwort](#vorwort)
 - [Was ist eine API](#was-ist-eine-api)
-- [Woher kommen die Fake User Daten von der Testimonial Seite](#woher-kommen-die-fake-user-daten-von-der-testimonial-seite)
-- [Wie komme ich an die Daten ran](#wie-komme-ich-an-die-daten-ran)
+- [Woher kommen die Fake-User Daten von der Testimonial-Seite](#woher-kommen-die-fake-user-daten-von-der-testimonial-seite)
+- [Wie fordere ich die Daten an](#wie-fordere-ich-die-daten-an)
 - [Wie stelle ich Daten auf meiner Seite bereit und mache Sie sichtbar](#wie-stelle-ich-daten-auf-meiner-seite-bereit-und-mache-sie-sichtbar)
 - [Wirst du die Seite weiter bearbeiten](#wirst-du-die-seite-weiter-bearbeiten)
-- [Fazit](#fazit)
+- [Mein Fazit](#mein-fazit)
 
 
 </section>
@@ -31,15 +31,15 @@ tags: ["astro", "learning in public", "setbacks", "community"]
 
 ## Vorwort
 
-Ich hatte gar nicht vor eine Testimonials Seite einzupflegen.
-Den nötigen Schupser hat mir wieder die Astro Documentation gegeben.
-Ich kannte mich mit dem Fetchen zwar aus und die herangehensweise von Astro gefiel 
-mir auch sehr gut aber hab mich am Ende trotzdem für meine Variante entschieden.
+Ich hatte gar nicht vor, eine Testimonials-Seite einzupflegen.
+Den nötigen Schubser hat mir wieder die Astro Documentation gegeben.
+Ich kannte mich mit dem Fetchen zwar aus und die Herangehensweise von Astro gefiel
+mir auch sehr gut, aber hab mich am Ende trotzdem für meine Variante entschieden.
 
 
 ## Was ist eine API
 
-`API` steht für `Application Programming Interface` und was es genau macht und wie es funktioniert erfährst du in der nächsten Zeile.
+`API` steht für `Application Programming Interface` und was es genau macht und wie es funktioniert erfährst du in der nächsten Zeile.
 
 Alles Wissenswerte zu APIs findest du unter diesem Link [AWS](https://aws.amazon.com/de/what-is/api/ "Amazon Web Services") :
 
@@ -59,16 +59,16 @@ Alles Wissenswerte zu APIs findest du unter diesem Link [AWS](https://aws.amazon
 
 
 
-## Woher kommen die Fake User Daten von der Testimonial Seite
+## Woher kommen die Fake-User Daten von der Testimonial-Seite
 
-Auf der Documentation Seite von Astro wird mit [RandomUser](https://randomuser.me/ "RandomUser") gearbeitet. 
+Auf der Documentation Seite von Astro wird mit [RandomUser](https://randomuser.me/ "RandomUser") gearbeitet.
 Das habe ich auch so belassen.
-Es gibt auch genug andere Alternativen die man nehmen könnte.
-Man muss bei Google z.B. einfach nach "Fake User API" suchen.
+Es gibt auch genug andere Alternativen, die man nehmen könnte.
+Man muss bei Google z.B. einfach nach „Fake User API“ suchen.
 Einer der bekanntesten überhaupt ist meines Wissens der [JSON Placeholder](https://jsonplaceholder.typicode.com/ "JSON Placeholder").
 
 
-## Wie komme ich an die Daten ran
+## Wie fordere ich die Daten an
 
 In der Welt der Webentwicklung müssen Webseiten und Apps häufig mit Servern kommunizieren, um Daten abzurufen oder zu senden.
 Dieser Prozess erfolgt über das Client-Server-Modell, bei dem der Client (die Webseite oder die App) Anfragen an den Server sendet und Antworten erhält.
@@ -99,7 +99,7 @@ const randomUser = data.results[0];
 <Location city={randomUser.location.city} />
 ```
 
-Bild 2 ⬇️ ist eine native JavaScript "Fetch API"
+Bild 2 ⬇️ ist ein native JavaScript „Fetch API“
 ```js
 fetch('https://randomuser.me/api/')
   .then(response => response.json())
@@ -108,7 +108,7 @@ fetch('https://randomuser.me/api/')
 ```
 
 
-Bild 3 ⬇️ ist von der JavaScript Bibliothek "Axios"
+Bild 3 ⬇️ ist von der JavaScript-Bibliothek „Axios“
 ```js
 axios.get('https://randomuser.me/api/')
   .then(response => console.log(response.data))
@@ -209,7 +209,7 @@ export default Refresh;
 ```
 
 
-Der untere Screenshot zeigt dir die [JSON](https://de.wikipedia.org/wiki/JavaScript_Object_Notation "JavaScript Object Notation") Datei des Anbieters an wo alle Parameter einer Person aufgelistet sind.
+Der untere Screenshot zeigt dir die [JSON](https://de.wikipedia.org/wiki/JavaScript_Object_Notation "JavaScript Object Notation") Datei des Anbieters an, wo alle Parameter einer Person aufgelistet sind.
 
 Wir brauchen z.B. nur den *Vornamen*, *Nachnamen* und die *Stadt* dann muss der Code so aussehen.
 
@@ -231,13 +231,13 @@ Wir brauchen z.B. nur den *Vornamen*, *Nachnamen* und die *Stadt* dann muss der 
 <Location city={randomUserData.location.city}
 ```
 
-Dann wäre das laut dem Objekt der JSON Datei.<br/>
+Dann wäre das laut dem Objekt der JSON Datei.<br />
 `Jenni Nichols aus Billings`.
 
-Ich hoffe du verstehst jetzt etwas besser wie eine API funktioniert.
-Du kannst jeden verfügbaren Parameter anfordern den du möchtest (Siehe großes JSON-Bild).
-Wenn du z.B. ein Bild haben möchtest dann schaut der Code so aus.
-Das ist das tolle an APIs.
+Ich hoffe, du verstehst es jetzt etwas besser wie eine API funktioniert.
+Du kannst jeden verfügbaren Parameter anfordern, den du möchtest (Siehe großes JSON-Bild).
+Wenn du z.B. ein Bild haben möchtest, dann schaut der Code so aus.
+Das ist das Tolle an APIs.
 
 ```js
 {randomUserData.picture.large}
@@ -250,16 +250,16 @@ oder in anderen größen
 
 ## Wie stelle ich Daten auf meiner Seite bereit und mache Sie sichtbar
 
-Ich empfehle zuerst mit einem minimalem CSS Styling zu arbeiten mit der man
-nur sehen kann ob die Daten auch wirklich alle da sind die man angefordert hat.
-Wenn alles geklappt hat und die gewünschten Daten fließen dann kann man auch
+Ich empfehle zuerst mit einem minimalem CSS Styling zu arbeiten, mit der man
+nur sehen kann, ob die Daten auch wirklich alle da sind, die man angefordert hat.
+Wenn alles geklappt hat und die gewünschten Daten fließen, dann kann man auch
 die Seite in Ruhe zu Ende stylen.
 
 
-Selbstverständlich muss man die `Console.log`Daten die in der Konsole ausgegeben 
-werden auch im Auge behalten.
-Wenn du Apple User bist geht es am schnellsten mit dem Shortcut `Shift+Command+C` oder
-als Windows User mit `Strg+Umschalt+C` um in den `Inspector-Modus`zu gelangen.
+Selbstverständlich muss man die `Console.log` Daten, die in der Konsole ausgegeben
+werden, auch im Auge behalten.
+Wenn du Apple User bist, geht es am schnellsten mit dem Shortcut `Shift+Command+C` oder
+als Windows User mit `Strg+Umschalt+C` um in den `Inspector-Modus` zu gelangen.
 
 <img
   src="/src/images/konsole.png"
@@ -272,22 +272,23 @@ als Windows User mit `Strg+Umschalt+C` um in den `Inspector-Modus`zu gelangen.
 />
 
 
-Du könntest aber auch wenn du auf der Page bist irgendwo im `Viewport` (Unter dem Begriff Viewport versteht man denjenigen Bereich einer Webseite, der für einen Benutzer sichtbar ist) auf Mausklick-rechts klicken
-und im folgendem aufgepopten Fenster nach dem Text "Untersuchen" suchen.
-Der befindet sich meistens immer ganz unten im Fenster.
+Du könntest aber auch, wenn du auf der Page bist, irgendwo im `Viewport` (Unter dem Begriff Viewport versteht man denjenigen Bereich einer Webseite, der für einen Benutzer sichtbar ist) auf Mausklick-rechts klicken
+und im folgenden auf gepoppten Fenster nach dem Text „Untersuchen“ schauen.
+Der befindet sich meistens ganz unten im Fenster.
 
 
 ## Wirst du die Seite weiter bearbeiten 
 
-Ich werde die Seite so umbauen das ich
+Ich werde die Seite so umbauen, dass ich
 multiple Cards von Personen nebeneinander anzeigen lassen kann.
 Das Design werde ich auch optimieren.
 
-## Fazit
+## Mein Fazit
 
-Es gibt viele Möglichkeiten Daten von einer API anzufordern.
-Jedes bringt natürlich seine Vor und Nachteile mit sich.
-Für mich hat es auf jeden Fall Spass gemacht.
+Es gibt viele Möglichkeiten, Daten von einer API anzufordern.
+Jedes bringt natürlich seine Vor- und Nachteile mit sich.
+Für mich hat es auf jeden Fall Spaß gemacht und freue mich
+schon auf meine nächste Arbeit mit einer API.
 
 
 
