@@ -40,16 +40,16 @@
   }
 
   pre {
-    @apply text-lg md:text-xl rounded-lg my-8 p-3;
+    @apply text-lg md:text-xl my-8 p-3;
     font-family: "Poppins", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-variation-settings: "wdth" 75, "wght" 500;
   }
 
   #toc {
     @apply xl:float-right xl:w-1/2 xl:ml-8;
     font-family: "Poppins", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-variation-settings: "wdth" 75, "wght" 500;
   }
 
@@ -79,7 +79,7 @@
   }
 
   p > code {
-    @apply bg-slate-300 dark:bg-green-400 text-dark dark:text-dark  px-2 whitespace-nowrap rounded;
+    @apply bg-slate-300 dark:bg-green-400 text-dark dark:text-dark px-2 whitespace-nowrap;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-variation-settings: "wdth" 75, "wght" 500;

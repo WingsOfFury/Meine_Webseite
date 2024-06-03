@@ -1,5 +1,5 @@
 ---
-title: 03 | Woher und Wie bekomme ich die Daten für meine Testimonials ?
+title: 03 | Woher bekomme ich die Daten für meine Testimonials ?
 author: Akansel Cengiz
 authorContact: akcengiz@gmx.de
 pubDate: 2023-11-20
@@ -12,6 +12,7 @@ tags: ["astro", "learning in public", "setbacks", "community"]
 
 ---
 
+
 <section class="w-10/12 text-justify"> 
 
 <section id="toc">
@@ -20,7 +21,7 @@ tags: ["astro", "learning in public", "setbacks", "community"]
 - [Was ist eine API](#was-ist-eine-api)
 - [Woher kommen die Fake User Daten von der Testimonial Seite](#woher-kommen-die-fake-user-daten-von-der-testimonial-seite)
 - [Wie komme ich an die Daten ran](#wie-komme-ich-an-die-daten-ran)
-- [Wie stelle ich Sie auf meiner Seite bereit und mache Sie sichtbar](#wie-stelle-ich-sie-auf-meiner-seite-bereit-und-mache-sie-sichtbar)
+- [Wie stelle ich Daten auf meiner Seite bereit und mache Sie sichtbar](#wie-stelle-ich-daten-auf-meiner-seite-bereit-und-mache-sie-sichtbar)
 - [Wirst du die Seite weiter bearbeiten](#wirst-du-die-seite-weiter-bearbeiten)
 - [Fazit](#fazit)
 
@@ -32,14 +33,15 @@ tags: ["astro", "learning in public", "setbacks", "community"]
 
 Ich hatte gar nicht vor eine Testimonials Seite einzupflegen.
 Den nötigen Schupser hat mir wieder die Astro Documentation gegeben.
-Ich kannte mich mit dem Fetchen zwar aus und Astros herangehensweise gefiel mir auch sehr gut aber habe mich trotzdem für meine Variante entschieden.
+Ich kannte mich mit dem Fetchen zwar aus und die herangehensweise von Astro gefiel 
+mir auch sehr gut aber hab mich am Ende trotzdem für meine Variante entschieden.
 
 
 ## Was ist eine API
 
-`API` steht für `Application Programming Interface` und was es genau macht und wie es funktioniert erfährst du im nächsten Absatz.
+`API` steht für `Application Programming Interface` und was es genau macht und wie es funktioniert erfährst du in der nächsten Zeile.
 
-Eine schöne Erklärung von [AWS](https://aws.amazon.com/de/what-is/api/ "Amazon Web Services") :<br/>
+Alles Wissenswerte zu APIs findest du unter diesem Link [AWS](https://aws.amazon.com/de/what-is/api/ "Amazon Web Services") :
 
 <img
   src="/src/images/api1.png"
@@ -51,6 +53,7 @@ Eine schöne Erklärung von [AWS](https://aws.amazon.com/de/what-is/api/ "Amazon
   class="rounded border-2 border-dark float-left
    m-4"
 />
+**Kurze Erklärung**:
 
 *APIs sind Mechanismen, die es zwei Software-Komponenten ermöglichen, über eine Reihe von Definitionen und Protokollen miteinander zu kommunizieren. Beispielsweise enthält das Software-System des Wetteramtes tägliche Wetterdaten. Die Wetter-App auf Ihrem Mobiltelefon „spricht“ über APIs mit diesem System und zeigt Ihnen tägliche Wetteraktualisierungen auf Ihrem Mobiltelefon an.*
 
@@ -67,13 +70,16 @@ Einer der bekanntesten überhaupt ist meines Wissens der [JSON Placeholder](http
 
 ## Wie komme ich an die Daten ran
 
-Hier verdeutliche ich dir nochmal wie ich die Daten angezapft habe.
-Das Zauberwort heißt "Fetch" und bedeutet nichts anderes als sich die Daten zu "bringen/holen".
-Es gibt viele Fetch Methoden um an die Daten heran zu kommen.
-Hier ist ein Link für dich
+In der Welt der Webentwicklung müssen Webseiten und Apps häufig mit Servern kommunizieren, um Daten abzurufen oder zu senden.
+Dieser Prozess erfolgt über das Client-Server-Modell, bei dem der Client (die Webseite oder die App) Anfragen an den Server sendet und Antworten erhält.
+
+Ein gängiger Ansatz für diese Kommunikation sind HTTP-Clients. 
+HTTP-Clients sind Bibliotheken oder Funktionen, die es dem Client ermöglichen, HTTP-Anfragen zu stellen und Antworten zu verarbeiten.
 Ich habe mich für die von React entschieden.
 
-Das erste Bild ist ein Beispiel aus der Documentation von Astro:
+**Hier ein paar Beispiele**:
+
+Bild 1 ⬇️ ist aus der Documentation von Astro:
 
 ```js
 ---
@@ -93,8 +99,24 @@ const randomUser = data.results[0];
 <Location city={randomUser.location.city} />
 ```
 
-Das zweite Bild ist von meinem Code:
+Bild 2 ⬇️ ist eine native JavaScript "Fetch API"
+```js
+fetch('https://randomuser.me/api/')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+```
 
+
+Bild 3 ⬇️ ist von der JavaScript Bibliothek "Axios"
+```js
+axios.get('https://randomuser.me/api/')
+  .then(response => console.log(response.data))
+  .catch(error => console.error('Error:', error));
+```
+
+
+Bild 4 ⬇️ ist von meinem Code
 ```js
 import React, { useState, useEffect } from 'react';
 import Location from './Location';
@@ -187,14 +209,9 @@ export default Refresh;
 ```
 
 
-Das dritte Bild zeigt dir die JSON Datei des Anbieters an wo alle Daten einer Person aufgelistet ist.
-Wir brauchen z.B. nur den Vornamen, Nachnamen und die Stadt dann muss der Code so aussehen.
+Der untere Screenshot zeigt dir die [JSON](https://de.wikipedia.org/wiki/JavaScript_Object_Notation "JavaScript Object Notation") Datei des Anbieters an wo alle Parameter einer Person aufgelistet sind.
 
-```js
-{randomUserData.name.first}
-{randomUserData.name.last}
-<Location city={randomUserData.location.city}
-```
+Wir brauchen z.B. nur den *Vornamen*, *Nachnamen* und die *Stadt* dann muss der Code so aussehen.
 
 <img
   src="/src/images/randomUser.png"
@@ -204,16 +221,23 @@ Wir brauchen z.B. nur den Vornamen, Nachnamen und die Stadt dann muss der Code s
   loading="lazy"
   alt="swup logo"
   class="rounded border-2 border-dark
-   m-4"
+   m-4 float-left"
 />
+
+
+```js
+{randomUserData.name.first}
+{randomUserData.name.last}
+<Location city={randomUserData.location.city}
+```
 
 Dann wäre das laut dem Objekt der JSON Datei.<br/>
 `Jenni Nichols aus Billings`.
 
 Ich hoffe du verstehst jetzt etwas besser wie eine API funktioniert.
-Du kannst jeden verfügbaren Parameter anzapfen den du möchtest.
+Du kannst jeden verfügbaren Parameter anfordern den du möchtest (Siehe großes JSON-Bild).
 Wenn du z.B. ein Bild haben möchtest dann schaut der Code so aus.
-Das ist so klasse an APIs.
+Das ist das tolle an APIs.
 
 ```js
 {randomUserData.picture.large}
@@ -224,21 +248,46 @@ oder in anderen größen
 {randomUserData.picture.thumbnail}
 ```
 
-## Wie stelle ich Sie auf meiner Seite bereit und mache Sie sichtbar
+## Wie stelle ich Daten auf meiner Seite bereit und mache Sie sichtbar
 
 Ich empfehle zuerst mit einem minimalem CSS Styling zu arbeiten mit der man
-nur sehen kann ob die Daten auch wirklich alle da sind die man angezapt hat.
+nur sehen kann ob die Daten auch wirklich alle da sind die man angefordert hat.
 Wenn alles geklappt hat und die gewünschten Daten fließen dann kann man auch
-die Seite zu Ende stylen.
+die Seite in Ruhe zu Ende stylen.
+
+
+Selbstverständlich muss man die `Console.log`Daten die in der Konsole ausgegeben 
+werden auch im Auge behalten.
+Wenn du Apple User bist geht es am schnellsten mit dem Shortcut `Shift+Command+C` oder
+als Windows User mit `Strg+Umschalt+C` um in den `Inspector-Modus`zu gelangen.
+
+<img
+  src="/src/images/konsole.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="swup logo"
+  class="rounded border-2 border-dark"
+/>
+
+
+Du könntest aber auch wenn du auf der Page bist irgendwo im `Viewport` (Unter dem Begriff Viewport versteht man denjenigen Bereich einer Webseite, der für einen Benutzer sichtbar ist) auf Mausklick-rechts klicken
+und im folgendem aufgepopten Fenster nach dem Text "Untersuchen" suchen.
+Der befindet sich meistens immer ganz unten im Fenster.
+
 
 ## Wirst du die Seite weiter bearbeiten 
 
-Ja, ich werde mich später darum kümmern mehrere Personen
-nebeneinander gleichzeitig anzeigen zu lassen.
-Das Design werde ich auch ändern.
+Ich werde die Seite so umbauen das ich
+multiple Cards von Personen nebeneinander anzeigen lassen kann.
+Das Design werde ich auch optimieren.
 
 ## Fazit
 
+Es gibt viele Möglichkeiten Daten von einer API anzufordern.
+Jedes bringt natürlich seine Vor und Nachteile mit sich.
+Für mich hat es auf jeden Fall Spass gemacht.
 
 
 
