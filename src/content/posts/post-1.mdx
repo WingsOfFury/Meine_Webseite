@@ -1,10 +1,10 @@
 ---
-title: 01 | Warum habe ich mich für dieses Design entschieden ?
+title: 01 | Warum habe ich mich für dieses Design und Tech-Stack entschieden ?
 author: Akansel Cengiz
 authorContact: akcengiz@gmx.de
 pubDate: 2023-10-25
 updatedDate: 'Dec 21 2017'
-description: 'Wie ich meine erste eigene Webseite aufgebaut habe.'
+description: 'Fragen und Antworten.'
 image:
     src: '/src/images/thinking.jpeg'
     alt: 'A guy sitting in front of an notebook and thinking.'
@@ -17,14 +17,16 @@ tags: ["astro", "blogging", "learning in public"]
 
 <section id="toc">
 
-- [Wie kam ich auf die Idee](#wie-kam-ich-auf-die-idee)
-- [Was war dir wichtig und was waren No-Gos](#was-war-dir-wichtig-und-was-waren-no-gos)
-- [Was hast du unternommen um die Page weiter auszubauen](#was-hast-du-unternommen-um-die-page-weiter-auszubauen)
-- [Welche Eigenschaften sollte die Page noch haben](#welche-eigenschaften-sollte-die-page-noch-haben)
-- [Was hat nicht geklappt oder konnte aktuell doch nicht aufgenommen werden](#was-hat-nicht-geklappt-oder-konnte-aktuell-doch-nicht-aufgenommen-werden)
-- [Was Planst du in Zukunft für diese Seite](#was-planst-du-in-zukunft-für-diese-seite)
+- [Wie kam ich auf die Idee?](#wie-kam-ich-auf-die-idee)
+- [Was war dir wichtig und was waren No-Gos?](#was-war-dir-wichtig-und-was-waren-no-gos)
+- [Was hast du unternommen um die Page weiter auszubauen?](#was-hast-du-unternommen-um-die-page-weiter-auszubauen)
+- [Welche Eigenschaften sollte die Page noch haben?](#welche-eigenschaften-sollte-die-page-noch-haben)
+- [Welches Feature hat nicht geklappt oder konnte aktuell doch nicht aufgenommen werden?](#welches-feature-hat-nicht-geklappt-oder-konnte-aktuell-doch-nicht-aufgenommen-werden)
+- [Was Planst du in Zukunft für diese Seite?](#was-planst-du-in-zukunft-für-diese-seite)
 - [Was würdest du das nächste mal anders machen?](#was-würdest-du-das-nächste-mal-anders-machen)
-- [Welchen Techstack hast du genau benutzt](#welchen-techstack-hast-du-genau-benutzt)
+- [Wie lange hast du für diese Page gebraucht?](#wie-lange-hast-du-für-diese-page-gebraucht)
+- [Welchen Tech-Stack hast du genau benutzt?](#welchen-tech-stack-hast-du-genau-benutzt)
+- [Mein Fazit](#mein-fazit)
 - [Youtube Video](#youtube-video)
 
 
@@ -32,7 +34,7 @@ tags: ["astro", "blogging", "learning in public"]
 
 
 
-## Wie kam ich auf die Idee
+## Wie kam ich auf die Idee?
 
 Das ich mich genau für diese Kombi [Astro](https://astro.build/) + [TailwindCSS](https://tailwindcss.com/) entschieden habe lag an dem Youtuber 
 [Programmieren mit Mario](https://www.youtube.com/@ProgrammierenMario).
@@ -46,7 +48,7 @@ Da ich schon immer entweder mit Bootstrap oder TailwindCSS arbeiten wollte, kam 
 Also entschied ich mich für Astro/TailwindCSS.
 
 
-## Was war dir wichtig und was waren No-Gos
+## Was war dir wichtig und was waren No-Gos?
 
 
 Oberste Priorität war es für mich den Code selber zu schreiben und kein Template zu benutzen.
@@ -55,7 +57,7 @@ der Lerneffekt ist, wie ich finde, bei selbstgeschriebenem Code um ein Vielfache
 Wir wollen ja lernen und weiter Erfahrung sammeln und an Margins, Paddings und „how to center a div“ verzweifeln 😂.
 
 
-## Was hast du unternommen um die Page weiter auszubauen
+## Was hast du unternommen um die Page weiter auszubauen?
 
 
 Nachdem ich nun den Kurs beendet habe und die Page 1:1 wie in dem Video aussieht, kam bei mir schnell der Gedanke auf noch mehr daraus zu machen.
@@ -69,7 +71,7 @@ Also auf zur Astro Docu(mentation) Seite und lesen, lesen und noch mehr lesen.
 An dieser Stelle muss ich sagen, dass die Doku von Astro super aufgebaut ist und alles gut erklärt wird.
 
 
-## Welche Eigenschaften sollte die Page noch haben
+## Welche Eigenschaften sollte die Page noch haben?
 
 
 <li>Mobile First</li>
@@ -91,7 +93,7 @@ An dieser Stelle muss ich sagen, dass die Doku von Astro super aufgebaut ist und
 
 Ein Back-to-Top Button in Javascript Code sieht z.B. so aus.
 ```js
-// Hier holt er sich die ID "top-top-button"
+// Hier holt er sich die ID "to-top-button"
 let toTopButton = document.getElementById("to-top-button");
 
 // Checkt ob der Button existiert
@@ -119,7 +121,7 @@ if (toTopButton) {
 ```
 
 
-## Was hat nicht geklappt oder konnte aktuell doch nicht aufgenommen werden
+## Welches Feature hat nicht geklappt oder konnte aktuell doch nicht aufgenommen werden?
 
 
 Zum Beispiel „internationalization“ [i18n](https://docs.astro.build/en/recipes/i18n/).
@@ -135,7 +137,7 @@ Ehrlich gesagt hatte auch keine Lust darauf mir wieder die Seite zu zerschießen
 Man muss hier auch erwähnen das man lange mit Debuggen beschäftigt ist.
 
 
-## Was Planst du in Zukunft für diese Seite
+## Was Planst du in Zukunft für diese Seite?
 
 
 <li>__*Pagination*__ einpflegen.</li>
@@ -160,20 +162,53 @@ verursacht hat als, wenn es von Anfang an eingepflegt worden wäre.
 Denke mal das es genau diese Dinge sind, wo die Unternehmen/Entwickler immer Probleme damit haben, wenn z.B. ein Kunde ständig seine in Auftrag gegebene Webseite ändern lässt und vieles dann nicht mehr so reibungslos wie vorher funktioniert.
 
 
-## Welchen Techstack hast du genau benutzt
+## Wie lange hast du für diese Page gebraucht?
 
 
-<li>Virtual Studio Code (VSC) als Code Editor.</li>
+Ich habe von Oktober 2023 bis Ende Dezember 2023 gebraucht um ca. 90% fertig stellen zu können.
+Ab Januar habe ich mich intensiver um mein AWS-Learning gekümmert und die Page erst mal ruhen lassen.
+Heutiger stand 04.06.2024 bereinige ich noch die letzten Schönheitsfehler damit die restlichen 10% auch fertig werden.
+Hoffe dann kann ich es endlich über Amazon S3 Hosten.
+
+## Welchen Tech-Stack hast du genau benutzt?
+
+
+<li>[Visual Studio Code](https://code.visualstudio.com/ "Visual Studio Code") (VSC) als Code Editor.</li>
 <li>Github für mein Repo(sitories).</li>
 <li>Astro für das komplette Grundgerüst</li>
 <li>TailwindCSS fürs Styling.</li>
-<li>React um die Randomuser-API zu fetchen.</li>
+<li>[React](https://react.dev/ "React") um die Randomuser-API zu fetchen.</li>
 <li>Javascript Vanilla für den Typewriter Effekt, ToggleSwitch etc.</li>
 <li>Markdown/Markdoc für die Blog-Seite.</li>
 <li>CSS native</li>
-<li>Swup für die Page Transitions.</li>
-<li>Cypress für das Testing.</li>
+<li>SWUP für die Page Transitions.</li>
+<li>[Cypress](https://www.cypress.io/ "Cypress") für das Testing.</li>
 <li>Google Lighthouse für den Performance Test</li>
+
+
+
+## Mein Fazit
+
+Bis auf den einen Vorfall, das ich selbstverschuldet mein [Repository](http://192.168.0.199:4321/posts/post-6/) zerschossen
+habe gefiel mir die Arbeit an diesem Projekt sehr gut.
+Ich habe sehr viel neu erlerntes Wissen verstehen und aneignen können.
+Das ist das Schöne an der Entwicklung/Programmierung, am Ende wird irgendwie
+alles gut, aber der Weg bis zum Ende kann echt mühselig und 💩 sein.
+
+Hier muss ich auch erwähnen, dass ich zeitlich immer eng angebunden bin.
+Ich habe nur 1–3 Stunden morgens die Möglichkeit an meiner Page zu bauen.
+Das kann natürlich sehr nervig sein, wenn man am Debuggen ist und versucht wie
+verrückt den Bug zu finden.
+Die Nachmittage, Abende und Wochenenden gehören halt den Kindern.
+
+
+Spätabends mache ich nur noch Sachen, die keine volle Gehirnaktivität mehr benötigen.
+Wie z.B. in der `Shell 2 + 2` oder `echo Hello World` eintippen.
+
+
+
+
+
 
 ## Youtube Video
 

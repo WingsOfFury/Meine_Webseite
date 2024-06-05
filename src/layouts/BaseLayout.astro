@@ -30,6 +30,7 @@ const { pageTitle, description } = Astro.props;
       class="swup-transition-fade relative md:container md:mx-auto w-full min-h-screen"
     >
       <Header />
+      <h1 class="transition animate-fadeInSlideRight mt-10">{description}</h1>
       <article class="text-lg md:text-2xl px-4 py-8">
         <slot />
       </article>
