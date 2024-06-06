@@ -22,6 +22,8 @@ tags: ["TailwindCSS", "Astro", "React", "AWS", "Testing"]
 - [Wofür ist das Testing gut?](#wofür-ist-das-testing-gut)
 - [Warum Cypress und kein anderes Tool?](#warum-cypress-und-kein-anderes-tool)
 - [Welche Testing Progamme gibt es noch?](#welche-testing-progamme-gibt-es-noch)
+- [Wir schreiben einen Test](#wir-schreiben-einen-test)
+- [Mein Fazit](#mein-fazit)
 
 
 </section>
@@ -30,27 +32,48 @@ tags: ["TailwindCSS", "Astro", "React", "AWS", "Testing"]
 
 ## Vorwort
 
-Da ich mich für [CI/CD Pipelines](https://www.redhat.com/de/topics/devops/what-cicd-pipeline "CI/CD-Pipeline") interessiere war es nur eine Frage der Zeit bis das
-Testing auch endlich an der Reihe war.
-Denn Früher oder Später wollte ich auch in dieses kalte Becken Springen und schauen warum 
-die QA Tester ihre Jobs sooo lieben.
+Leider fehlt mir die Zeit mich ausgiebig mit diesem großem Thema
+zu beschäftigen.
+Ich versuche es dir aber so gut wie es nur geht verständlich zu erklären.
+
+Da ich mich auch für [CI/CD Pipelines](https://www.redhat.com/de/topics/devops/what-cicd-pipeline "CI/CD-Pipeline") begeistere war es nur eine Frage der Zeit bis das
+Testing endlich an die Reihe gekommen ist.
+
+Hier lautet der Oberbegriff *Testing Framework* denn es gibt ja auch das *Test Automation Framework*.
+Die Namen klingen zwar fast gleich aber haben nicht das selbe Ziel.
+*Testing Framework* ist die allgemeine Struktur und *Test Automation Framework* ist eine spezielle Art vom Testing.
+Es enthält z.B. die Bibliotheken um automatisierte Testskripte zu erstellen, auszuführen und zu verwalten.
+Auch die Integration von CI/CD Pipelines läuft darüber.
+Hier ist ein [Link]() für dich der dir alles nochmal erklärt 
 
 
 ## Wofür ist das Testing gut?
 
-Das Testing ist ein Muss für Entwickler/Unternehmen die z.B. eine saubere und zuverlässige Webseite/App auf den Markt bringen wollen.
+Um eine saubere und zuverlässige Webseite/App/Software auf den Markt zu bringen und zu garantieren das sie auch flüssig und ohne probleme läuft kommt hier das Testing ins Spiel.
+Es ist ein Muss für Entwickler oder QA-Tester mit einem Testing Framework während der Produktion damit zu arbeiten.
 Durch Testing können viele Fehler/Bugs/Schwachstellen früh entdeckt und beseitigt werden die sich im späteren
 Verlauf der Produktion oder am Tag des Rollouts eventuell zu noch größeren Problemen entwickeln könnten.
+
+Im Worst Case müssten dann wahrscheinlich Entwickler von anderen Projekten abgezogen werden die sich um diese Probleme schnellstmöglich kümmern um den Schaden gering zu halten das wiederum verursacht ein anderes Problem und zwar das die Deadline für das aktuelle Projekt nicht mehr eingehalten werden kann.
+
+`Ergo: Unnötige KOPFSCHMERZEN !`
+
+Ich kenne das Testing z.B. aus der Spielebranche wenn vor dem Release Beta-Tester gesucht werden die das Spiel
+ausgiebig testen und ihr Wissen dann an die Software Firma übermitteln.
+Manchmal hat man aber das Gefühl das man bei Spielen unfreiwilig selbst zum Tester geworden ist weil viele schon so
+früh verbugt sind 😂.
+
 
 
 ## Warum Cypress und kein anderes Tool?
 
 Ich habe den Namen [Cypress](https://docs.cypress.io/guides/overview/why-cypress "Cypress") in letzter Zeit
-schon so oft gelesen das ich das Testframework selbst mal ausprobieren wollte.
-Astro hat auf seiner Docu Seite ein paar Testframeworks aufgelistet, darunter auch Cypress.
+schon so oft gelesen das ich das Testing Framework selbst mal ausprobieren wollte.
+Astro hat auf seiner Docu Seite ein paar Testing Frameworks aufgelistet, darunter auch Cypress.
 Das kam mir natürlich wie gelegen.
 Mein Tipp an dich ist geh am besten direkt auf die Docu Seite von Cypress.
 Die von Astro ist zwar gut aber nicht so umfangreich und schlüssiger Erklärt wie die von Cypress.
+Es gibt dort auch gute Erklärvideos.
 
 Und ja ich muss bei dem Namen immer an die Herren von *Cypress Hill* denken 😂. ![Cypress Hill](../../images/cypress_hill.jpeg)
 
@@ -65,14 +88,14 @@ Was mir auf Anhieb in den Sinn kommt wären die hier:
 <li>[Jest](https://jestjs.io/ "Jest")</li>
 
 
-Ihr könnt mir glauben dies ist nur ein kleiner Bruchteil aus dem riesigen Testingframework Kosmos.
+Ihr könnt mir ruhig glauben wenn ich euch sage das dies nur ein kleiner Bruchteil aus dem riesigen Testing Framework Universum ist.
 
 Hier seht ihr z.B. auch die Wöchentlichen Download zahlen von [NPM](https://www.npmjs.com/ "NPM").
-Selenium scheint das bekannteste zu sein weil das Framework schon seit 2004 auf dem Markt ist aber die
+Selenium scheint das bekannteste Testing Framework zu sein weil es schon seit 2004 auf dem Markt ist aber die
 beliebtheit scheint wohl zu sinken.
 
 <figure>
-<figcaption>***Selenium***</figcaption>
+<figcaption>(*Selenium*)</figcaption>
 <img
   src="/src/images/selenium.png"
   width="w-full"
@@ -86,7 +109,7 @@ beliebtheit scheint wohl zu sinken.
 
 
 <figure>
-<figcaption>***Mocha***</figcaption>
+<figcaption>(*Mocha*)</figcaption>
 <img
   src="/src/images/mocha.png"
   width="w-full"
@@ -100,7 +123,7 @@ beliebtheit scheint wohl zu sinken.
 
 
 <figure>
-<figcaption>***Jasmine***</figcaption>
+<figcaption>(*Jasmine*)</figcaption>
 <img
   src="/src/images/jasmine.png"
   width="w-full"
@@ -108,13 +131,13 @@ beliebtheit scheint wohl zu sinken.
   decoding="async"
   loading="lazy"
   alt="jasmine npm screenshot"
-  class="border-2 border-dark"
+  class="border-2 border-dark mb-4"
 />
 </figure>
 
 
 <figure>
-<figcaption>***Jest***</figcaption>
+<figcaption>(*Jest*)</figcaption>
 <img
   src="/src/images/jest.png"
   width="w-full"
@@ -128,7 +151,7 @@ beliebtheit scheint wohl zu sinken.
 
 
 <figure>
-<figcaption>***Cypress***</figcaption>
+<figcaption>(*Cypress*)</figcaption>
 <img
   src="/src/images/cypress1.png"
   width="w-full"
@@ -141,16 +164,26 @@ beliebtheit scheint wohl zu sinken.
 </figure>
 
 
+## Wir schreiben einen Test
 
-Je mehr ich mich mit Testingframeworks beschäftige umso mehr bekomme ich das Gefühl das es wie mit Programmiersprachen ist.
-Jedes Framework hat seine Vor und Nachteile.
-Das eine funktioniert z.B. mit Python besser das andere mit Java
+
+
+
+## Mein Fazit
+
+Puh, das Testing ist echt eine Welt für sich.
+
+Je mehr ich mich mit Testing Frameworks beschäftigt habe umso mehr bekam ich das 
+Gefühl das es wie mit Programmiersprachen ist.
+Das z.B. die Wahl des passenden Frameworks auch von den Projektanforderungen abhängt.
+Wie groß oder wie klein ist das Projekt?
+Jedes Framework hat seine Vor und Nachteile oder besser gesagt seine Key-Features.
+
+Das eine funktioniert z.B. mit Python sehr gut das andere mit Java
 und wiederum ein anderer besser mit Javascript.
-Das liegt auch IMO daran das die Frameworks fast alle für eine jeweilige Programmiersprache entwickelt worden sind und dementsprechend besser miteinander harmonieren.
-
-
-
-
+Das liegt dann wieder daran das das eine Framework mit Java programmiert wurde und auch nur für Java Empfohlen wird
+wahrscheinlich um einen sauberen Ablauf garantieren zu können.
+Oder andere bieten gleiche Empfehlungen für mehrere Programmiersprachen an.
 
 
 
