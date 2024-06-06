@@ -21,6 +21,7 @@ tags: ["TailwindCSS", "Astro", "React", "AWS", "Testing"]
 - [Vorwort](#vorwort)
 - [Wofür ist das Testing gut?](#wofür-ist-das-testing-gut)
 - [Warum Cypress und kein anderes Tool?](#warum-cypress-und-kein-anderes-tool)
+- [Welche Testing Progamme gibt es noch?](#welche-testing-progamme-gibt-es-noch)
 
 
 </section>
@@ -29,9 +30,9 @@ tags: ["TailwindCSS", "Astro", "React", "AWS", "Testing"]
 
 ## Vorwort
 
-Das Testing stand auch auf meiner Bucket List.
-Da ich mich auch für CI/CD Pipelines interessiere komme ich um das Testing nicht herum.
-Früher oder Später wollte ich auch in dieses kalte Becken Springen und schauen warum 
+Da ich mich für [CI/CD Pipelines](https://www.redhat.com/de/topics/devops/what-cicd-pipeline "CI/CD-Pipeline") interessiere war es nur eine Frage der Zeit bis das
+Testing auch endlich an der Reihe war.
+Denn Früher oder Später wollte ich auch in dieses kalte Becken Springen und schauen warum 
 die QA Tester ihre Jobs sooo lieben.
 
 
@@ -44,10 +45,108 @@ Verlauf der Produktion oder am Tag des Rollouts eventuell zu noch größeren Pro
 
 ## Warum Cypress und kein anderes Tool?
 
-Astro hat auf seiner tollen Docu Seite ein paar Testing Tools aufgelistet.
-hat und ich schon zig mal den Namen [Cypress](https://docs.cypress.io/guides/overview/why-cypress "Cypress") auf irgendwelchen Seiten gelesen habe entschied ich mich hierfür.
+Ich habe den Namen [Cypress](https://docs.cypress.io/guides/overview/why-cypress "Cypress") in letzter Zeit
+schon so oft gelesen das ich das Testframework selbst mal ausprobieren wollte.
+Astro hat auf seiner Docu Seite ein paar Testframeworks aufgelistet, darunter auch Cypress.
+Das kam mir natürlich wie gelegen.
+Mein Tipp an dich ist geh am besten direkt auf die Docu Seite von Cypress.
+Die von Astro ist zwar gut aber nicht so umfangreich und schlüssiger Erklärt wie die von Cypress.
 
 Und ja ich muss bei dem Namen immer an die Herren von *Cypress Hill* denken 😂. ![Cypress Hill](../../images/cypress_hill.jpeg)
+
+
+## Welche Testing Progamme gibt es noch?
+
+Was mir auf Anhieb in den Sinn kommt wären die hier:
+
+<li>[Selenium](https://www.selenium.dev/ "Selenium")</li>
+<li>[Mocha](https://mochajs.org/ "Mocha")</li>
+<li>[Jasmine](https://jasmine.github.io/ "Jasmine")</li>
+<li>[Jest](https://jestjs.io/ "Jest")</li>
+
+
+Ihr könnt mir glauben dies ist nur ein kleiner Bruchteil aus dem riesigen Testingframework Kosmos.
+
+Hier seht ihr z.B. auch die Wöchentlichen Download zahlen von [NPM](https://www.npmjs.com/ "NPM").
+Selenium scheint das bekannteste zu sein weil das Framework schon seit 2004 auf dem Markt ist aber die
+beliebtheit scheint wohl zu sinken.
+
+<figure>
+<figcaption>***Selenium***</figcaption>
+<img
+  src="/src/images/selenium.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="selenium npm screenshot"
+  class="border-2 border-dark mb-4"
+/>
+</figure>
+
+
+<figure>
+<figcaption>***Mocha***</figcaption>
+<img
+  src="/src/images/mocha.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="mocha npm screenshot"
+  class="border-2 border-dark mb-4"
+/>
+</figure>
+
+
+<figure>
+<figcaption>***Jasmine***</figcaption>
+<img
+  src="/src/images/jasmine.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="jasmine npm screenshot"
+  class="border-2 border-dark"
+/>
+</figure>
+
+
+<figure>
+<figcaption>***Jest***</figcaption>
+<img
+  src="/src/images/jest.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="jest npm screenshot"
+  class="border-2 border-dark mb-4"
+/>
+</figure>
+
+
+<figure>
+<figcaption>***Cypress***</figcaption>
+<img
+  src="/src/images/cypress1.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="cypress npm screenshot"
+  class="border-2 border-dark"
+/>
+</figure>
+
+
+
+Je mehr ich mich mit Testingframeworks beschäftige umso mehr bekomme ich das Gefühl das es wie mit Programmiersprachen ist.
+Jedes Framework hat seine Vor und Nachteile.
+Das eine funktioniert z.B. mit Python besser das andere mit Java
+und wiederum ein anderer besser mit Javascript.
+Das liegt auch IMO daran das die Frameworks fast alle für eine jeweilige Programmiersprache entwickelt worden sind und dementsprechend besser miteinander harmonieren.
 
 
 
