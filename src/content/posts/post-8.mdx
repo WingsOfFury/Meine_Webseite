@@ -22,7 +22,7 @@ tags: ["TailwindCSS", "Astro", "React", "AWS", "Testing"]
 - [Wofür ist das Testing gut?](#wofür-ist-das-testing-gut)
 - [Warum Cypress und kein anderes Tool?](#warum-cypress-und-kein-anderes-tool)
 - [Welche Testing Progamme gibt es noch?](#welche-testing-progamme-gibt-es-noch)
-- [Wir schreiben einen Test](#wir-schreiben-einen-test)
+- [Wie sieht ein Testing und die Syntax aus?](#wie-sieht-ein-testing-und-die-syntax-aus)
 - [Mein Fazit](#mein-fazit)
 
 
@@ -32,6 +32,7 @@ tags: ["TailwindCSS", "Astro", "React", "AWS", "Testing"]
 
 ## Vorwort
 
+<p>
 Leider fehlt mir die Zeit mich ausgiebig mit diesem großem Thema
 zu beschäftigen.
 Ich versuche es dir aber so gut wie es nur geht verständlich zu erklären.
@@ -44,43 +45,46 @@ Die Namen klingen zwar fast gleich aber haben nicht das selbe Ziel.
 *Testing Framework* ist die allgemeine Struktur und *Test Automation Framework* ist eine spezielle Art vom Testing.
 Es enthält z.B. die Bibliotheken um automatisierte Testskripte zu erstellen, auszuführen und zu verwalten.
 Auch die Integration von CI/CD Pipelines läuft darüber.
-Hier ist ein [Link]() für dich der dir alles nochmal erklärt 
-
+Hier ist ein [Link]() für dich der dir alles nochmal genau erklärt.
+</p>
 
 ## Wofür ist das Testing gut?
 
-Um eine saubere und zuverlässige Webseite/App/Software auf den Markt zu bringen und zu garantieren das sie auch flüssig und ohne probleme läuft kommt hier das Testing ins Spiel.
+<p>
+Um eine saubere und zuverlässige Webseite/App/Software auf den Markt zu bringen und zu garantieren, dass sie auch flüssig und ohne Probleme läuft, kommt hier das Testing ins Spiel.
 Es ist ein Muss für Entwickler oder QA-Tester mit einem Testing Framework während der Produktion damit zu arbeiten.
-Durch Testing können viele Fehler/Bugs/Schwachstellen früh entdeckt und beseitigt werden die sich im späteren
+Durch Testing können viele Fehler/Bugs/Schwachstellen früh entdeckt und beseitigt werden, die sich im späteren
 Verlauf der Produktion oder am Tag des Rollouts eventuell zu noch größeren Problemen entwickeln könnten.
 
-Im Worst Case müssten dann wahrscheinlich Entwickler von anderen Projekten abgezogen werden die sich um diese Probleme schnellstmöglich kümmern um den Schaden gering zu halten das wiederum verursacht ein anderes Problem und zwar das die Deadline für das aktuelle Projekt nicht mehr eingehalten werden kann.
+Im Worst Case müssten dann wahrscheinlich Entwickler von anderen Projekten abgezogen werden, die sich um diese Probleme schnellstmöglich kümmern, um den Schaden gering zu halten. Das wiederum verursacht ein anderes Problem, und zwar dass die Deadline für das aktuelle Projekt nicht mehr eingehalten werden kann.
 
 `Ergo: Unnötige KOPFSCHMERZEN !`
 
-Ich kenne das Testing z.B. aus der Spielebranche wenn vor dem Release Beta-Tester gesucht werden die das Spiel
-ausgiebig testen und ihr Wissen dann an die Software Firma übermitteln.
-Manchmal hat man aber das Gefühl das man bei Spielen unfreiwilig selbst zum Tester geworden ist weil viele schon so
-früh verbugt sind 😂.
-
+Ich kenne das Testing z.B. aus der Spielebranche, wenn vor dem Release Beta-Tester gesucht werden, die das Spiel
+ausgiebig testen und ihr Wissen dann an die Softwarefirma übermitteln.
+Manchmal hat man aber das Gefühl, dass man bei Spielen unfreiwillig selbst zum Tester geworden ist, weil viele schon so
+früh verbugt sind. 😂.
+</p>
 
 
 ## Warum Cypress und kein anderes Tool?
 
+<p>
 Ich habe den Namen [Cypress](https://docs.cypress.io/guides/overview/why-cypress "Cypress") in letzter Zeit
-schon so oft gelesen das ich das Testing Framework selbst mal ausprobieren wollte.
+schon so oft gelesen, dass ich das Testing Framework selbst mal ausprobieren wollte.
 Astro hat auf seiner Docu Seite ein paar Testing Frameworks aufgelistet, darunter auch Cypress.
 Das kam mir natürlich wie gelegen.
 Mein Tipp an dich ist geh am besten direkt auf die Docu Seite von Cypress.
-Die von Astro ist zwar gut aber nicht so umfangreich und schlüssiger Erklärt wie die von Cypress.
+Die von Astro ist zwar gut, aber nicht so umfangreich und schlüssiger erklärt wie die von Cypress.
 Es gibt dort auch gute Erklärvideos.
 
 Und ja ich muss bei dem Namen immer an die Herren von *Cypress Hill* denken 😂. ![Cypress Hill](../../images/cypress_hill.jpeg)
-
+</p>
 
 ## Welche Testing Progamme gibt es noch?
 
-Was mir auf Anhieb in den Sinn kommt wären die hier:
+<p>
+Was mir auf Anhieb in den Sinn kommt, wären die hier:
 
 <li>[Selenium](https://www.selenium.dev/ "Selenium")</li>
 <li>[Mocha](https://mochajs.org/ "Mocha")</li>
@@ -90,9 +94,15 @@ Was mir auf Anhieb in den Sinn kommt wären die hier:
 
 Ihr könnt mir ruhig glauben wenn ich euch sage das dies nur ein kleiner Bruchteil aus dem riesigen Testing Framework Universum ist.
 
-Hier seht ihr z.B. auch die Wöchentlichen Download zahlen von [NPM](https://www.npmjs.com/ "NPM").
-Selenium scheint das bekannteste Testing Framework zu sein weil es schon seit 2004 auf dem Markt ist aber die
-beliebtheit scheint wohl zu sinken.
+Hier seht ihr z.B. auch die wöchentlichen Downloads zahlen von [NPM](https://www.npmjs.com/ "NPM").
+Selenium scheint das bekannteste Testing Framework zu sein, weil es schon seit 2004 auf dem Markt ist.
+
+Laut den Zahlen scheint entweder die Beliebtheit zu sinken oder
+der Markt ist mit Selenium so gesättigt, dass die Entwickler nach
+vielleicht anderen besseren Alternativen suchen.
+
+Wäre jetzt auch nur eine Vermutung.
+</p>
 
 <figure>
 <figcaption>(*Selenium*)</figcaption>
@@ -102,7 +112,7 @@ beliebtheit scheint wohl zu sinken.
   height="200"
   decoding="async"
   loading="lazy"
-  alt="selenium npm screenshot"
+  alt="a screenshot shows the selenium weekly downloads from npmjs.com"
   class="border-2 border-dark mb-4"
 />
 </figure>
@@ -116,7 +126,7 @@ beliebtheit scheint wohl zu sinken.
   height="200"
   decoding="async"
   loading="lazy"
-  alt="mocha npm screenshot"
+  alt="a screenshot shows the mocha weekly downloads from npmjs.com"
   class="border-2 border-dark mb-4"
 />
 </figure>
@@ -130,7 +140,7 @@ beliebtheit scheint wohl zu sinken.
   height="200"
   decoding="async"
   loading="lazy"
-  alt="jasmine npm screenshot"
+  alt="a screenshot shows the jasmine weekly downloads from npmjs.com"
   class="border-2 border-dark mb-4"
 />
 </figure>
@@ -144,7 +154,7 @@ beliebtheit scheint wohl zu sinken.
   height="200"
   decoding="async"
   loading="lazy"
-  alt="jest npm screenshot"
+  alt="a screenshot shows the jest weekly downloads from npmjs.com"
   class="border-2 border-dark mb-4"
 />
 </figure>
@@ -158,33 +168,118 @@ beliebtheit scheint wohl zu sinken.
   height="200"
   decoding="async"
   loading="lazy"
-  alt="cypress npm screenshot"
+  alt="a screenshot shows the cypress weekly downloads from npmjs.com"
   class="border-2 border-dark"
 />
 </figure>
 
 
-## Wir schreiben einen Test
+## Wie sieht ein Testing und die Syntax aus?
 
+<p>
+Eines vorneweg:
+***So leid es mir auch tut ich muss diesen Teil aus zeitlichen Gründen so kurz wie möglich halten und kann nicht auf alle Bereiche eingehen.***
+
+Deswegen auch hier gerne die Weiterempfehlung zur [Cypress](https://docs.cypress.io/guides/overview/why-cypress "Cypress") Docu Seite.
+
+Hier ist es wichtig zu erwähnen, dass du zwei Terminalinstanzen parallel laufen lassen musst.
+Wie das geht, zeige ich dir gerne.
+Das bedeutet z.B. dass du das Astro Projekt mit `npm run dev`starten kannst, aber in der gleichen Terminalinstanz
+ein zusätzlicher Start mit Cypress nicht möglich ist.
+
+Abhilfe schafft hier einfach eine zweite Terminalinstanz.<br />
+</p>
+
+<figure>
+<figcaption>(*Terminal/Shell...Zwei Terminalinstanzen...Links Astro/Rechts Cypress*)</figcaption>
+<img
+  src="/src/images/terminal_astro_cypress.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="a screenshot shows the cypress final testing results from the terminal"
+  class="border-2 border-dark"
+/>
+</figure>
+
+<p>
+Mit Cypress hast du auch die Möglichkeit ein Testing im Terminal oder über einen
+externen Browser durchführen zu lassen.
+
+Der Befehl `npx cypress run` startet das Testing in der Terminalinstanz.
+Auf dem Bild unten siehst du ein abgeschlossenes Testing ohne eine Fehlermeldung.
+</p>
+
+<figure>
+<figcaption>(*Cypress Terminal/Shell Testing Example Results*)</figcaption>
+<img
+  src="/src/images/cypress_terminal.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="a screenshot shows the cypress final testing results from the terminal"
+  class="border-2 border-dark"
+/>
+</figure>
+
+
+<p>
+Ein automatischer Screenshot Funktion, Bild unten, ist mit an Board.
+Das ist sehr hilfreich für Fehleranalysen, Dokumentationen oder Testing Überwachungen.
+Es gibt auch ein manueller Screenshot Funktion sowie die Möglichkeit ein komplettes Testing auf Video aufzunehmen.
+Auf dem Screenshot kann man schon etwas vom Code sehen.
+</p>
+
+<figure>
+<figcaption>(*Cypress Terminal/Shell Screenshot*)</figcaption>
+<img
+  src="/src/images/cypress_screenshot.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="a screenshot shows the cypress screenshot function"
+  class="border-2 border-dark mb-16"
+/>
+</figure>
+
+<p>
+Der Befehl `npx cypress open` startet das Testing in einem externen Browser.
+</p>
+
+<figure>
+<figcaption>(*Cypress externer Browser*)</figcaption>
+<img
+  src="/src/images/cypress_browser.png"
+  width="w-full"
+  height="200"
+  decoding="async"
+  loading="lazy"
+  alt="a screenshot shows the cypress external browser"
+  class="border-2 border-dark"
+/>
+</figure>
 
 
 
 ## Mein Fazit
 
+<p>
 Puh, das Testing ist echt eine Welt für sich.
 
-Je mehr ich mich mit Testing Frameworks beschäftigt habe umso mehr bekam ich das 
-Gefühl das es wie mit Programmiersprachen ist.
-Das z.B. die Wahl des passenden Frameworks auch von den Projektanforderungen abhängt.
+Je mehr ich mich mit Testing Frameworks beschäftigt habe, umso mehr bekam ich das
+Gefühl, dass es wie mit Programmiersprachen ist.
+Das die Wahl des passenden Frameworks auch von den Projektanforderungen abhängt.
 Wie groß oder wie klein ist das Projekt?
-Jedes Framework hat seine Vor und Nachteile oder besser gesagt seine Key-Features.
+Jedes Framework hat seine Vor- und Nachteile oder besser gesagt seine Key-Features.
 
-Das eine funktioniert z.B. mit Python sehr gut das andere mit Java
+Das eine funktioniert z.B. mit Python sehr gut, das andere mit Java
 und wiederum ein anderer besser mit Javascript.
-Das liegt dann wieder daran das das eine Framework mit Java programmiert wurde und auch nur für Java Empfohlen wird
-wahrscheinlich um einen sauberen Ablauf garantieren zu können.
+Das liegt dann wieder daran, dass ein Framework was mit Java programmiert wurde und auch für Java empfohlen wird.
 Oder andere bieten gleiche Empfehlungen für mehrere Programmiersprachen an.
-
+</p>
 
 
 
