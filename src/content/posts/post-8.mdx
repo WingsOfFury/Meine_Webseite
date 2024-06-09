@@ -21,6 +21,7 @@ tags: ["TailwindCSS", "Astro", "React", "AWS", "Testing"]
 - [Vorwort](#vorwort)
 - [Wofür ist das Testing gut?](#wofür-ist-das-testing-gut)
 - [Warum Cypress und kein anderes Tool?](#warum-cypress-und-kein-anderes-tool)
+- [Welche Test Arten bietet Cypress an?](#welche-test-arten-bietet-cypress-an)
 - [Welche Testing Progamme gibt es noch?](#welche-testing-progamme-gibt-es-noch)
 - [Wie sieht ein Testing und die Syntax aus?](#wie-sieht-ein-testing-und-die-syntax-aus)
 - [Mein Fazit](#mein-fazit)
@@ -32,31 +33,34 @@ tags: ["TailwindCSS", "Astro", "React", "AWS", "Testing"]
 
 ## Vorwort
 
+
 <p>
-Leider fehlt mir aktuell einfach die Zeit, mich intensiver mit diesem großen Thema
-zu beschäftigen.
-Ich werde selbstversändlich so gut es geht dir alles erklären.
+***Leider fehlt es mir aktuell an Zeit, mich intensiver mit diesem sehr 
+interessanten Thema auseinander zu setzen.
+Ich werde mein Bestes geben um dir alles so verständlich wie möglich zu erklären.***
 
-Da ich mich auch für [CI/CD Pipelines](https://www.redhat.com/de/topics/devops/what-cicd-pipeline "CI/CD-Pipeline") begeistere war es nur eine Frage der Zeit bis das
-Testing endlich an die Reihe gekommen ist.
-
-Hier lautet der Oberbegriff *Testing Framework* denn es gibt ja auch das *Test Automation Framework*.
-Die Namen klingen zwar fast gleich aber haben nicht das selbe Ziel.
-*Testing Framework* ist die allgemeine Struktur und *Test Automation Framework* ist eine spezielle Art vom Testing.
-Es enthält z.B. die Bibliotheken um automatisierte Testskripte zu erstellen, auszuführen und zu verwalten.
-Auch die Integration von CI/CD Pipelines läuft darüber.
-Hier ist ein [Link]() für dich der dir alles nochmal genau erklärt.
+Der Oberbegriff hier lautet *Testing Framework*, denn es gibt auch das *Test Automation Framework*. 
+Die Namen klingen zwar fast gleich, haben aber nicht dasselbe Ziel.
+Ein *Testing Framework* ist die allgemeine Struktur, die die Methodik und die Standards für das Testen definiert. 
+Es umfasst Richtlinien, Best Practices und Werkzeuge, die den Testprozess unterstützen.
+Ein *Test Automation Framework* hingegen ist eine spezielle Art von Testing Framework. 
+Es enthält spezifische Bibliotheken und Tools, um automatisierte Testskripte zu erstellen, auszuführen und zu verwalten. 
+Außerdem ermöglicht es die Integration von CI/CD-Pipelines, wodurch kontinuierliche Integration und Bereitstellung unterstützt werden.
 </p>
+
 
 ## Wofür ist das Testing gut?
 
 <p>
-Um eine saubere und zuverlässige Webseite/App/Software auf den Markt zu bringen und zu garantieren, dass sie auch flüssig und ohne Probleme läuft, kommt hier das Testing ins Spiel.
+Egal ob im Frontend, Backend oder in [CI/CD Pipelines](https://www.redhat.com/de/topics/devops/what-cicd-pipeline "CI/CD-Pipelines").
+Testing ist heute aus dem Softwareentwicklungszyklus nicht mehr weg zu denken.
+Das Testing kommt ins Spiel, um eine saubere und zuverlässige Webseite/App/Software auf den Markt zu bringen und zu garantieren, dass sie flüssig und ohne Probleme läuft.
 Es ist ein Muss für Entwickler oder QA-Tester mit einem Testing Framework während der Produktion damit zu arbeiten.
-Durch Testing können viele Fehler/Bugs/Schwachstellen früh entdeckt und beseitigt werden, die sich im späteren
-Verlauf der Produktion oder am Tag des Rollouts eventuell zu noch größeren Problemen entwickeln könnten.
 
-Im Worst Case müssten dann wahrscheinlich Entwickler von anderen Projekten abgezogen werden, die sich um diese Probleme schnellstmöglich kümmern, um den Schaden gering zu halten. Das wiederum verursacht ein anderes Problem, und zwar dass die Deadline für das aktuelle Projekt nicht mehr eingehalten werden kann.
+Durch Testing können viele Fehler, Bugs und Schwachstellen frühzeitig entdeckt und beseitigt werden.
+Im späteren Verlauf der Produktion oder am Tag des Rollouts könnten diese ansonsten zu noch größeren Problemen führen.
+Im schlimmsten Fall müssten wahrscheinlich Entwickler von anderen Projekten abgezogen werden, um sich schnellstmöglich um diese Probleme zu kümmern, damit der Schaden so gering wie möglich bleibt. 
+Dies wiederum verursacht ein anderes Problem: Die Deadline für das aktuelle Projekt kann möglicherweise nicht mehr eingehalten werden.
 
 `Ergo: Unnötige KOPFSCHMERZEN !`
 
@@ -81,6 +85,15 @@ Es gibt dort auch gute Erklärvideos.
 Und ja ich muss bei dem Namen immer an die Herren von *Cypress Hill* denken 😂. ![Cypress Hill](../../images/cypress_hill.jpeg)
 </p>
 
+
+## Welche Test Arten bietet Cypress an?
+
+<li>[End-to-End Tests](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test "End2End") (kurz E2E)</li>
+<li>[Component-Tests](https://docs.cypress.io/guides/component-testing/overview "Component-Tests")</li>
+<li>[Unit-Tests](https://www.browserstack.com/guide/cypress-unit-testing "Unit-Tests")</li>
+<li>[Integration-Tests](https://code.likeagirl.io/cypress-integration-testing-ec36301cda62 "Integration-Test")</li>
+
+
 ## Welche Testing Progamme gibt es noch?
 
 <p>
@@ -92,9 +105,9 @@ Was mir auf Anhieb in den Sinn kommt, wären die hier:
 <li>[Jest](https://jestjs.io/ "Jest")</li>
 
 
-Ihr könnt mir ruhig glauben wenn ich euch sage das dies nur ein kleiner Bruchteil aus dem riesigen Testing Framework Universum ist.
+Ihr könnt mir ruhig glauben, wenn ich euch sage, das dies nur ein kleiner Bruchteil aus dem riesigen Testing Framework Universum ist.
 
-Hier seht ihr z.B. auch die wöchentlichen Downloads zahlen von [NPM](https://www.npmjs.com/ "NPM").
+Hier seht ihr z.B. auch die wöchentlichen Downloadzahlen von [NPM](https://www.npmjs.com/ "NPM").
 Selenium scheint das bekannteste Testing Framework zu sein, weil es schon seit 2004 auf dem Markt ist.
 
 Laut den Zahlen scheint entweder die Beliebtheit zu sinken oder
@@ -177,11 +190,6 @@ Wäre jetzt auch nur eine Vermutung.
 ## Wie sieht ein Testing und die Syntax aus?
 
 <p>
-Eines vorneweg:
-***So leid es mir auch tut ich muss diesen Teil aus zeitlichen Gründen so kurz wie möglich halten und kann nicht auf alle Bereiche eingehen.***
-
-Deswegen auch hier gerne die Weiterempfehlung zur [Cypress](https://docs.cypress.io/guides/overview/why-cypress "Cypress") Docu Seite.
-
 Hier ist es wichtig zu erwähnen, dass du zwei Terminalinstanzen parallel laufen lassen musst.
 Wie das geht, zeige ich dir gerne.
 Das bedeutet z.B. dass du das Astro Projekt mit `npm run dev`starten kannst, aber in der gleichen Terminalinstanz
@@ -207,7 +215,7 @@ Abhilfe schafft hier einfach eine zweite Terminalinstanz.<br />
 Mit Cypress hast du auch die Möglichkeit ein Testing im Terminal oder über einen
 externen Browser durchführen zu lassen.
 
-Der Befehl `npx cypress run` startet das Testing in der Terminalinstanz.
+Der Befehl `npx cypress run` wird auch als *headless* bezeichnet, da er das Testing in einer Terminalinstanz startet, ohne eine sichtbare Benutzeroberfläche zu öffnen. 
 Auf dem Bild unten siehst du ein abgeschlossenes Testing ohne eine Fehlermeldung.
 </p>
 
@@ -226,9 +234,9 @@ Auf dem Bild unten siehst du ein abgeschlossenes Testing ohne eine Fehlermeldung
 
 
 <p>
-Eine automatische Screenshot Funktion, Bild unten, ist mit an Board.
-Das ist sehr hilfreich für Fehleranalysen, Dokumentationen oder Testing Überwachungen.
-Es gibt auch eine manuelle Screenshot Funktion sowie die Möglichkeit ein komplettes Testing auf Video aufzunehmen.
+Eine automatische Screenshot-Funktion bei Testfehlern, wie im Bild unten zu sehen, ist mit an Bord. 
+Das ist sehr hilfreich für Fehleranalysen, Dokumentationen oder Testüberwachungen. 
+Es gibt auch eine manuelle Screenshot-Funktion sowie die Möglichkeit, ein komplettes Testing auf Video aufzunehmen.
 Auf dem Screenshot erkennt man schon etwas vom Code.
 </p>
 
@@ -246,7 +254,8 @@ Auf dem Screenshot erkennt man schon etwas vom Code.
 </figure>
 
 <p>
-Der Befehl `npx cypress open` startet das Testing in einem externen Browser.
+Der Befehl `npx cypress open` startet das Testing in einem externen Browser, 
+indem er das *Cypress Test Runner Interface* öffnet.
 </p>
 
 <figure>

@@ -1,5 +1,5 @@
-describe('home page', () => {
-  it('ist about dabei', () => {
+describe('homelander', () => {
+  it('benutze den Contact Button', () => {
     cy.visit('http://192.168.0.199:4321/')
     
     
@@ -13,7 +13,7 @@ describe('home page', () => {
 
 
     cy.get("Header").should("exist")
-    cy.get("#themeToggle").should("exist").click().end()
+    cy.get("#themeToggle").should("exist").click()
     cy.get(".inline-flex").click()
 
 
