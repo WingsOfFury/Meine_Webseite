@@ -13,34 +13,49 @@ import spotlightjs from "@spotlightjs/astro";
 
 // MDX importieren
 import mdx from "@astrojs/mdx";
-import { remarkReadingTime } from "./remark-reading-time.mjs";
-import rehypeExternalLinks from "rehype-external-links";
 
+//Remark Reading Time importieren
+import { remarkReadingTime } from "./remark-reading-time.mjs";
+
+//Rehype External Links importieren
+import rehypeExternalLinks from "rehype-external-links";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   // Astro-Plugins registrieren
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), react(), sentry(), spotlightjs(), mdx(), sitemap()],
-  // site: "https://example.com",
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    react(),
+    sentry(),
+    spotlightjs(),
+    mdx(),
+    sitemap(),
+  ],
+  site: "http://192.168.0.199:4321/",
   // Markdown-Plugin konfigurieren
   markdown: {
     remarkPlugins: [remarkReadingTime],
     syntaxHighlight: "shiki",
     shikiConfig: {
       theme: "one-dark-pro",
-      wrap: true
+      wrap: true,
     },
-    rehypePlugins: [[rehypeExternalLinks, {
-      content: {
-        type: "text",
-        value: " ↗️"
-      }
-    }]]
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          content: {
+            type: "text",
+            value: " ↗️",
+          },
+        },
+      ],
+    ],
     // gfm: true,
-  }
+  },
 });
