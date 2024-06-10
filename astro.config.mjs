@@ -36,7 +36,7 @@ export default defineConfig({
     mdx(),
     sitemap(),
   ],
-  site: "http://192.168.0.199:4321/",
+  // site: "http://192.168.0.199:4321/",
   // Markdown-Plugin konfigurieren
   markdown: {
     remarkPlugins: [remarkReadingTime],
