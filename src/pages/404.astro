@@ -9,7 +9,7 @@ import ErrorLayout from "../layouts/ErrorLayout.astro";
     <div
       class="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl"
     >
-      <div class="lg:w-1/2">
+      <div class="lg:w-1/2 lg:h-[500px]">
         <div
           class="h-64 bg-cover lg:h-full"
           style="background-image:url('https://media.istockphoto.com/id/901208180/photo/computer-monitor.jpg?s=612x612&w=0&k=20&c=JlSZQeTg1hKvqpbyhAGPQs6KF5uY9FIdTfRCcVOSkT8=')"
@@ -17,26 +17,27 @@ import ErrorLayout from "../layouts/ErrorLayout.astro";
         </div>
       </div>
 
-      <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
-        <h3
+      <div
+        class="flex flex-col justify-center max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2"
+      >
+        <h1
           class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl"
         >
-          Build Your New <span class="text-blue-500">Idea</span>
-        </h3>
+          Der Tag ist wieder zu lang.<br />
+          Der Kaffee zu wenig.<br />
+          Die Arbeit stresst. <br />
+          Mach dir keinen Kopf. <br />
+          Es gibt schlimmeres im Leben.
+        </h1>
 
-        <p class="mt-4 text-gray-500 dark:text-gray-300">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi
-          reprehenderit vitae exercitationem aliquid dolores ullam temporibus
-          enim expedita aperiam mollitia iure consectetur dicta tenetur, porro
-          consequuntur saepe accusantium consequatur.
-        </p>
+        <p class="mt-4 text-gray-500 dark:text-gray-300"></p>
 
-        <div class="inline-flex w-full mt-6 sm:w-auto">
+        <div class="inline-flex justify-center w-full mt-6 sm:w-auto">
           <a
             href="/"
-            class="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
+            class="px-6 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80"
           >
-            Go Home
+            Geh zurück
           </a>
         </div>
       </div>

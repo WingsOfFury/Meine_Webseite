@@ -8,9 +8,11 @@ description: 'Fragen und Antworten.'
 image:
     src: '/src/images/thinking.jpeg'
     alt: 'A man sits in front of a notebook and thinks.'
-tags: ["astro", "blogging", "learning in public"]
+tags: ["Astro", "TailwindCSS", "Frontend", "Bootstrap", "Google Lighthouse", "React"] 
 # relatedPosts: ["post-3"]
 ---
+
+
 
 
 <section class="w-10/12 text-justify"> 
@@ -20,12 +22,12 @@ tags: ["astro", "blogging", "learning in public"]
 - [Vorwort](#vorwort)
 - [Wie kam ich auf die Idee?](#wie-kam-ich-auf-die-idee)
 - [Was war dir wichtig und was waren No-Gos?](#was-war-dir-wichtig-und-was-waren-no-gos)
-- [Was hast du unternommen um die Page weiter auszubauen?](#was-hast-du-unternommen-um-die-page-weiter-auszubauen)
-- [Welche Eigenschaften sollte die Page noch haben?](#welche-eigenschaften-sollte-die-page-noch-haben)
+- [Was hast du unternommen um die Seite weiter auszubauen?](#was-hast-du-unternommen-um-die-seite-weiter-auszubauen)
+- [Welche Eigenschaften sollte die Seite noch haben?](#welche-eigenschaften-sollte-die-seite-noch-haben)
 - [Welches Feature hat nicht geklappt oder konnte aktuell noch nicht übernommen werden?](#welches-feature-hat-nicht-geklappt-oder-konnte-aktuell-noch-nicht-übernommen-werden)
 - [Was Planst du in Zukunft für diese Seite?](#was-planst-du-in-zukunft-für-diese-seite)
 - [Was würdest du das nächste mal anders machen?](#was-würdest-du-das-nächste-mal-anders-machen)
-- [Wie sieht dein Zeitmanagement für diese Page aus?](#wie-sieht-dein-zeitmanagement-für-diese-page-aus)
+- [Wie sieht dein Zeitmanagement für diese Seite aus?](#wie-sieht-dein-zeitmanagement-für-diese-seite-aus)
 - [Welchen Tech-Stack hast du genau benutzt?](#welchen-tech-stack-hast-du-genau-benutzt)
 - [Mein Fazit](#mein-fazit)
 - [Youtube Video](#youtube-video)
@@ -34,11 +36,13 @@ tags: ["astro", "blogging", "learning in public"]
 </section>
 
 
+
 ## Vorwort
 
-Diese Page soll nur verdeutlichen, was ich alles erbaut habe und welche Funktionen implementiert worden sind.
-Auf der Blog-Seite findest du viele interessante Artikel über meine Learning Journey.
-Bitte nicht wundern, falls etwas mal nicht 100 % so genau recherchiert worden ist.<br />
+Diese Seite soll lediglich zeigen, was ich alles erstellt habe und welche Funktionen implementiert wurden. 
+Auf der Blog-Seite findest du viele interessante Artikel über meine Learning Journey. 
+Ich habe den Content der Blogs selber recherchiert und aufgebaut. 
+Dennoch gilt der Inhalt ohne Gewähr.<br />
 Hab Spaß.<br />
 **Akansel**
 
@@ -53,9 +57,26 @@ Das ich mich genau für diese Kombi [Astro](https://astro.build/) + [TailwindCSS
 
 
 Es gab vor einiger Zeit einen Hype von Englischsprachigen und Deutschen Devs auf YouTube, die Astro in den höchsten Tönen gelobt haben.
-Zu diesem Zeitpunkt war ich auch auf der Suche nach einem neuen Tech-Stack, mit dem ich meine eigene Page bauen wollte.
-Da ich schon immer entweder mit Bootstrap oder TailwindCSS arbeiten wollte, kam mir das mit TailwindCSS natürlich super gelegen.
+Zu diesem Zeitpunkt war ich auch auf der Suche nach einem neuen Tech-Stack, mit dem ich meine eigene Seite bauen wollte.
+Da ich schon immer entweder mit [Bootstrap](https://getbootstrap.com/ "Bootstrap") oder TailwindCSS arbeiten wollte, kam mir das mit TailwindCSS natürlich super gelegen.
 Also entschied ich mich für Astro/TailwindCSS.
+
+Hier ein Beispiel für die Vorzüge von TailwindCSS: 
+<li>Du brauchst keine zusätzliche CSS-Datei, um Elemente mit IDs, Klassen oder Selektoren anzusprechen.</li>
+<li>Weniger Code und trotzdem das gleiche Ergebnis.</li>
+<li>Alles geschieht nach dem Utility-First-Prinzip oder mithilfe von Utility-Klassen.</li>
+```css
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+```
+
+```css
+.mx-3 {
+    margin-left: 0.75rem /* 12px */;
+    margin-right: 0.75rem /* 12px */;
+}
+```
 
 
 ## Was war dir wichtig und was waren No-Gos?
@@ -67,21 +88,21 @@ der Lerneffekt ist, wie ich finde, bei selbstgeschriebenem Code um ein Vielfache
 Wir wollen ja lernen und weiter Erfahrung sammeln und an Margins, Paddings und „how to center a div“ verzweifeln 😂.
 
 
-## Was hast du unternommen um die Page weiter auszubauen?
+## Was hast du unternommen um die Seite weiter auszubauen?
 
 
-Nachdem ich nun den Kurs beendet habe und die Page 1:1 wie in dem Video aussieht, kam bei mir schnell der Gedanke auf noch mehr daraus zu machen.
-Schon beim Aufbau der Page schossen mir automatisch viele neue Ideen durch den Kopf, die ich gerne umsetzen wollte.
+Nachdem ich nun den Kurs beendet habe und die Seite 1:1 wie in dem Video aussieht, kam bei mir schnell der Gedanke auf noch mehr daraus zu machen.
+Schon beim Aufbau der Seite schossen mir automatisch viele neue Ideen durch den Kopf, die ich gerne umsetzen wollte.
 Ich habe den Typewriter Effekt, der mit Javascript erstellt wurde, beibehalten.
 Astro arbeitet nach dem ZeroJS Prinzip.
 Das heißt je weniger JS von der Client-Side aus läuft, umso besser, da Astro Server-first bevorzugt.
 Ich habe auch einen Typewriter Effekt mit TailwindCSS hinbekommen, aber JS Code schaut irgendwie sexier aus 😂.
-Mal schauen was später [Google Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) an werten ausgibt wenn die Page fertig ist.
+Mal schauen was später [Google Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) an werten ausgibt wenn die Seite fertig ist.
 Also auf zur Astro Docu(mentation) Seite und lesen, lesen und noch mehr lesen.
 An dieser Stelle muss ich sagen, dass die Doku von Astro super aufgebaut ist und alles gut erklärt wird.
 
 
-## Welche Eigenschaften sollte die Page noch haben?
+## Welche Eigenschaften sollte die Seite noch haben?
 
 
 <li>Mobile First</li>
@@ -141,8 +162,8 @@ Ich habe es 2–3 Wochen lang geduldig ausprobiert, um es endlich zum Laufen zu 
 Hab es am Ende genervt weg gelassen.
 Wollte erst mit „Deutsch/Englisch“ anfangen und dann, wenn es geklappt hätte, weitere Sprachen hinzufügen.
 
-Die Accessibility kam leider viel später auf, als die Seite schon fast fertig gewesen ist.
-Ich wollte die Page auch endlich zum Abschluss bringen und nicht weiter herumexperimentieren.
+Thema Accessibility kam leider viel später auf, als die Seite schon fast fertig gewesen ist.
+Ich wollte die Seite auch endlich zum Abschluss bringen und nicht weiter herumexperimentieren.
 Ehrlich gesagt hatte auch keine Lust darauf mir wieder die Seite zu zerschießen.
 Man muss hier auch erwähnen, dass man lange mit Debuggen beschäftigt ist.
 
@@ -166,38 +187,37 @@ Da bin ich mir sicher.
 ## Was würdest du das nächste mal anders machen?
 
 
-Ich würde von vorneherein wissen wollen, was die Page alles können/haben muss.
-Ich habe das Gefühl gehabt, dass alles, was später implementiert, wird mir mehr Probleme
-verursacht hat als, wenn es von Anfang an eingepflegt worden wäre.
+Ich würde von Anfang an genau wissen wollen, welche Funktionen und Eigenschaften die Seite haben muss. 
+Ich habe die Erfahrung gemacht, dass spätere Implementierungen mehr Probleme verursacht haben, als wenn sie von Anfang an berücksichtigt worden wären.
 
-Denke mal das es genau diese Dinge sind, wo die Unternehmen/Entwickler immer Probleme damit haben, wenn z.B. ein Kunde ständig seine in Auftrag gegebene Webseite ändern lässt und vieles dann nicht mehr so reibungslos wie vorher funktioniert.
-
-
-## Wie sieht dein Zeitmanagement für diese Page aus?
+Ich glaube, dass genau diese Situationen für Unternehmen und Entwickler problematisch sind, wenn ein Kunde ständig Änderungen an der beauftragten Webseite vornehmen lässt, was dazu führt, dass vieles nicht mehr so reibungslos funktioniert wie zuvor.
 
 
-Ich habe von Oktober 2023 bis Ende Dezember 2023 gebraucht um ca. 90% fertig stellen zu können.
-Ab Januar habe ich mich intensiver um mein AWS-Learning gekümmert und die Page erst mal ruhen lassen.
-Heutiger stand 04.06.2024 bereinige ich noch die letzten Schönheitsfehler damit die restlichen 10% auch fertig werden.
-Hoffe dann kann ich die Page endlich über Amazon S3 Hosten.
+## Wie sieht dein Zeitmanagement für diese Seite aus?
 
 
-Leider fehlt mir aktuell die Zeit.
-Ich habe nur 1–3 Stunden morgens die Möglichkeit an meiner Page zu bauen.
-Das kann natürlich sehr nervig sein, wenn man am Debuggen ist und versucht wie
-verrückt den Bug zu finden.
-Die Nachmittage, Abende und Wochenenden gehören halt den Kindern.
+Von Oktober 2023 bis Ende Dezember 2023 habe ich etwa 90% meiner Webseite fertiggestellt. 
+Ab Januar habe ich mich intensiv meinem AWS-Learning gewidmet und die Arbeit an der Seite vorerst pausiert. 
+Der aktuelle Stand am 04.06.2024 ist, dass ich noch die letzten Schönheitsfehler bereinige, um die verbleibenden 10% abzuschließen. 
+Ich hoffe, die Seite bald über Amazon S3 hosten zu können.
 
+Leider fehlt mir derzeit die Zeit. Ich habe nur morgens 1–3 Stunden, um an meiner Seite zu arbeiten. 
+Das kann sehr frustrierend sein, besonders wenn ich beim Debuggen verzweifelt nach einem Bug suche. 
+Nachmittage, Abende und Wochenenden sind für meine Familie reserviert.
 
-Ach ja. 
-Dazwischen kümmere ich mich ab 12 Uhr um das Mittagessen.
-Im März 2024 haben wir an unserem Haus eine Etagenaufstockung vollzogen.
+Ach ja, ab 12 Uhr kümmere ich mich auch um das Mittagessen. 
+Im März 2024 haben wir unser Haus um eine Etage aufgestockt. 
 Seit April bin ich fast täglich oben auf der Baustelle bei meinen Schwiegereltern.
 
-***Meine Learnings hier wären***: Zwischenwände mit Dämmwolle gefüllt, 500 KG OSB-Platten an die Wand genagelt,
-500 KG Rigips-Platten an die Wand genagelt, Rigips Wände geschliffen.
+***Meine Baustellen-Learnings hier wären*** 🤣🤣:
 
-Und ja ich habe Lebe noch und bin hoch motiviert.
+<li>Zwischenwände mit Dämmwolle gefüllt.</li>
+<li>Insgesamt über 1 Tonne OSB-Platten an die Wand genagelt.</li>
+<li>2,5 Tonnen Rigips-Platten an die Wand genagelt.</li>
+<li>Rigips-Wände geschliffen.</li>
+<li>Aktuell am Tapezieren.</li>
+
+Und ja, ich lebe noch und bin hoch motiviert, mein Portfolio weiter auszubauen.
 
 
 ## Welchen Tech-Stack hast du genau benutzt?
@@ -219,7 +239,7 @@ Und ja ich habe Lebe noch und bin hoch motiviert.
 
 ## Mein Fazit
 
-Bis auf den einen Vorfall, das ich selbstverschuldet mein [Repository](http://192.168.0.199:4321/posts/post-6/) zerschossen
+Bis auf den einen Vorfall, das ich selbstverschuldet mein [Repository](http://192.168.0.199:4321/posts/post-6/ "Repository") zerschossen
 habe gefiel mir die Arbeit an diesem Projekt sehr gut.
 
 Ich habe sehr viel neu erlerntes Wissen verstehen und aneignen können.
@@ -240,3 +260,5 @@ Ich hätte auch niemals gedacht das ich die Seite so weit ausbauen würde.
 
 
 </section>
+
+
