@@ -11,7 +11,9 @@ const { frontmatter } = Astro.props;
       class="border-dark border-2 w-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] object-fill"
       alt={frontmatter.image.alt}
     />
-    <section class="flex flex-row justify-between lg:text-base text-xs w-full">
+    <section
+      class="flex flex-row justify-between lg:text-base text-[9px] w-full"
+    >
       <p>
         Verfasst von <a href="/about/">{frontmatter.author}</a>
       </p>

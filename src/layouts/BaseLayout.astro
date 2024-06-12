@@ -1,47 +1,71 @@
 ---
+// Importiere die Header-Komponente aus dem components-Ordner
 import Header from "../components/Header.astro";
+
+// Importiere die Footer-Komponente aus dem components-Ordner
 import Footer from "../components/Footer.astro";
+
+// Importiere die mobile Navigations-Komponente aus dem components-Ordner
 import NavigationMobile from "../components/NavigationMobile.astro";
+
+// Importiere die globalen CSS-Stile
 import "../styles/global.css";
 
+// Importiere verschiedene Schriftstile der Schriftart "Ubuntu"
 import "@fontsource/ubuntu/300.css";
 import "@fontsource/ubuntu/400.css";
 import "@fontsource/ubuntu/500.css";
 import "@fontsource/ubuntu/700.css";
 
+// Importiere die Schriftart "Poppins"
 import "@fontsource/poppins";
 
+// Destrukturiere die Variablen pageTitle und description aus den Astro.props
 const { pageTitle, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="de">
   <head>
+    <!-- Setze die Zeichencodierung auf UTF-8 -->
     <meta charset="UTF-8" />
+    <!-- Setze die Ansichtsfenster-Breite -->
     <meta name="viewport" content="width=device-width" />
+    <!-- Setze die Seitenbeschreibung -->
     <meta name="description" content={description} />
+    <!-- Setze den Generator -->
     <meta name="generator" content={Astro.generator} />
+    <!-- Füge ein Favicon hinzu -->
     <link rel="icon" type="image/png" sizes="192x192" href="/ac1.png" />
+    <!-- Setze den Seitentitel -->
     <title>{pageTitle}</title>
   </head>
+  <!-- Setze Klassen für den hellen und dunklen Modus -->
   <body class="bg-light dark:bg-dark text-dark dark:text-light">
     <main
       id="swup"
       class="swup-transition-fade relative md:container md:mx-auto w-full min-h-screen"
     >
+      <!-- Füge die Header-Komponente ein -->
       <Header />
+      <!-- Füge eine animierte Überschrift hinzu -->
       <h1 class="transition animate-fadeInSlideRight mt-10">{description}</h1>
       <article class="text-lg md:text-2xl px-4 py-8">
+        <!-- Platzhalter für dynamischen Inhalt -->
         <slot />
       </article>
+      <!-- Füge die Footer-Komponente ein -->
       <Footer />
+      <!-- Füge die mobile Navigations-Komponente ein -->
       <NavigationMobile />
     </main>
     <script>
       import "../scripts/menu.js";
     </script>
-    <!-- Ich habe in Zeile 29 md:container auf lg:container gesetzt.Jetzt verläuft die border-2 einstellung komplett von Bildrand zu Bildrand sobald sie unter 1024px fällt.--><!-- Zeile 29 habe ich auf 2xl:container geändert damit der Effekt (es fehlt ein stück vom Bild oben rechts in der Ecke im Header) wieder verschwindet  --><!--class="swup-transition-fade relative min-xl:container md:mx-auto w-full min-h-screen" --><!-- Zeile 40 wurde eine Transition eingefügt um die "{description}" 
-bei jedem Seitenwechsel in das Bild rein Sliden zu lassen-->
+    <!-- Kommentiere verschiedene Änderungen und Anpassungen:
+         Zeile 29: md:container auf lg:container geändert, um die border-2 Einstellung von Rand zu Rand unter 1024px zu ermöglichen.
+         Zeile 29: Auf 2xl:container geändert, um einen visuellen Effekt im Header zu beheben.
+         Zeile 40: Transition eingefügt, um "{description}" bei jedem Seitenwechsel hinein gleiten zu lassen. -->
     <button
       id="to-top-button"
       onclick="goToTop()"
@@ -54,8 +78,10 @@ bei jedem Seitenwechsel in das Bild rein Sliden zu lassen-->
         fill="currentColor"
         class="w-6 h-6"
       >
+        <!-- SVG-Pfad für das Pfeilsymbol -->
         <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z"></path>
       </svg>
+      <!-- Text für Screenreader -->
       <span class="sr-only">Go to top</span>
     </button>
   </body>

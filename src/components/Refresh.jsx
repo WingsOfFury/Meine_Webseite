@@ -7,8 +7,6 @@ import Country from './Country';
 import Age from './Age';
 
 
-// const pageTitle = "Stimmen aus der Community...";
-
 const Refresh = () => {
     // Zustand für deine API-Daten
     const [randomUserData, setrandomUserData] = useState(null);
@@ -41,12 +39,12 @@ const Refresh = () => {
         return () => clearInterval(intervalId);
     }, []); // Leeres Array als zweites Argument stellt sicher, dass der Effekt nur einmal beim Laden der Komponente ausgeführt wird
 
-    // Ich habe setTimeout benutzt um sofort die Testimonials API starten zu können
+
     // Ich muss wegen "Refresh client:load" die Testimonial Seite jedes mal manuell Refreshen damit 
     // die API startet
-    setTimeout(() => {
-        console.log();
-    }, 1);
+    // setTimeout(() => {
+    //     console.log();
+    // }, 1);
 
     // Hier kannst du den Rest deiner JSX-Komponente mit den API-Daten rendern
     return (
