@@ -7,7 +7,9 @@ const pageTitle = "Startseite";
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col xl:flex-row justify-between items-center">
-    <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center py-10">
+    <div
+      class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center py-10 animate-fadeInSlideRight"
+    >
       <Image
         src={devguy}
         width={1200}
@@ -20,7 +22,9 @@ const pageTitle = "Startseite";
     <div
       class="w-full xl:w-1/2 flex flex-col justify-between items-center xl:items-start"
     >
-      <div class="text-4xl md:text-6xl text-center xl:text-start mb-4">
+      <div
+        class="text-4xl md:text-6xl text-center xl:text-start mb-4 transition animate-fadeInSlideLeft"
+      >
         <br />
         <span
           id="dynamic-header-text"
@@ -33,7 +37,7 @@ const pageTitle = "Startseite";
         befindet sich in der Navbar. Mein Portfolio ist hier natürlich auch
         komplett mit Github verlinkt. Du kannst mir auch gerne schreiben. -->
 
-        <p>
+        <p class="transition animate-fadeInSlideLeft">
           Schön, dass du es auf meine Seite geschafft hast. Schau dich gerne in
           aller Ruhe um. Alle wichtigen Informationen findest du auf der
           Blog-Seite. Wenn du mir schreiben möchtest – egal ob

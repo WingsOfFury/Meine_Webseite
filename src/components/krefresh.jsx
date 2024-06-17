@@ -1,15 +1,15 @@
-
 import React, { useState, useEffect } from 'react';
-import Location from './Location';
-import Contact from './Contact';
-import State from './State';
-import Country from './Country';
-import Age from './Age';
+
+
+
+
+
+
 
 
 const Refresh = () => {
     // Zustand für deine API-Daten
-    const [randomUserData, setrandomUserData] = useState(null);
+    const [randomUserData, setRandomUserData] = useState(null);
 
     // Funktion zum Abrufen der API-Daten
     const fetchUserData = async () => {
@@ -19,9 +19,9 @@ const Refresh = () => {
             console.log('API-Daten aktualisiert!');
 
             // Hier setzt du den Zustand mit den erhaltenen Benutzerdaten
-            setrandomUserData(data.results[0]); // Da die API ein Array mit Ergebnissen zurückgibt, nehmen wir das erste Element
+            setRandomUserData(data.results[0]); // Da die API ein Array mit Ergebnissen zurückgibt, nehmen wir das erste Element
         } catch (error) {
-            console.error('Abrufen der API-Daten Fehlgeschlagen:', error);
+            console.error('Abrufen der API-Daten fehlgeschlagen:', error);
         }
     };
 
@@ -33,12 +33,11 @@ const Refresh = () => {
         // Intervall alle 3 Sekunden für das Aktualisieren der API-Daten
         const intervalId = setInterval(() => {
             fetchUserData();
-        }, 3000)
+        }, 3000);
 
-        // Aufräumen: Interval stoppen, wenn die Komponente unmontiert wird
+        // Aufräumen: Intervall stoppen, wenn die Komponente unmontiert wird
         return () => clearInterval(intervalId);
     }, []); // Leeres Array als zweites Argument stellt sicher, dass der Effekt nur einmal beim Laden der Komponente ausgeführt wird
-
 
     // Ich muss wegen "Refresh client:load" die Testimonial Seite jedes mal manuell Refreshen damit 
     // die API startet
@@ -69,7 +68,7 @@ const Refresh = () => {
                             {randomUserData.login.username}
                         </article>
                         <hr className="mt-8" />
-                        <article className="text-center font-normal text-lg">
+                        <article className="text-center font-normal text-lg" style={{ color: 'orange' }}>
                             <Location city={randomUserData.location.city} />
                             <State state={randomUserData.location.state} />
                             <Country country={randomUserData.location.country} />
@@ -78,10 +77,15 @@ const Refresh = () => {
                         </article>
                     </section>
                 </section>
-            )
-            }
-        </ >
+            )}
+        </>
     );
 };
+
+const Location = ({ city }) => <div>{city}</div>;
+const State = ({ state }) => <div>{state}</div>;
+const Country = ({ country }) => <div>{country}</div>;
+const Age = ({ age }) => <div>{age}</div>;
+const Contact = ({ email }) => <div>{email}</div>;
 
 export default Refresh;

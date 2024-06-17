@@ -91,56 +91,58 @@ const textCase = "uppercase";
       </p>
     )
   } -->
-  <p>Ein paar Infos über mich:</p>
+  <section class="animate-fadeInSlideRight">
+    <p>Ein paar Infos über mich:</p>
 
-  <li>
-    Ich heiße {identity.firstName} bin {identity.age} Jahre alt und komme aus
-    {identity.city}.
-  </li>
-  <li>
-    Bevor ich mich voll und ganz der Full Stack Web Entwicklung verschrieben
-    habe, war ich 10 Jahre in der Systemgastronomie tätig.
-  </li>
-  <li>
-    Da ich schon immer in der IT arbeiten wollte, habe ich von September 2022
-    bis Februar 2023 erfolgreich an einem {identity.occupation} Bootcamp teilgenommen.
     <li>
-      Durch die Teilnahme an diesem Bootcamp habe ich nicht nur wertvolle
-      Fähigkeiten und Wissen erworben, sondern auch meine eigene Webseite
-      entwickelt. Gleichzeitig konnte ich mich intensiv auf meine erste
-      AWS-Zertifizierung vorbereiten und diese erfolgreich bestehen. Die Zeit
-      nach dem Bootcamp habe ich intensiv genutzt, um mein Wissen weiter zu
-      vergrößern und zu festigen.
+      Ich heiße {identity.firstName} bin {identity.age} Jahre alt und komme aus
+      {identity.city}.
     </li>
+    <li>
+      Bevor ich mich voll und ganz der Full Stack Web Entwicklung verschrieben
+      habe, war ich 10 Jahre in der Systemgastronomie tätig.
+    </li>
+    <li>
+      Da ich schon immer in der IT arbeiten wollte, habe ich von September 2022
+      bis Februar 2023 erfolgreich an einem {identity.occupation} Bootcamp teilgenommen.
+      <li>
+        Durch die Teilnahme an diesem Bootcamp habe ich nicht nur wertvolle
+        Fähigkeiten und Wissen erworben, sondern auch meine eigene Webseite
+        entwickelt. Gleichzeitig konnte ich mich intensiv auf meine erste
+        AWS-Zertifizierung vorbereiten und diese erfolgreich bestehen. Die Zeit
+        nach dem Bootcamp habe ich intensiv genutzt, um mein Wissen weiter zu
+        vergrößern und zu festigen.
+      </li>
 
-    <p>
-      {
-        identity.hobbies.length >= 3 && (
-          <li>
-            Meine Hobbies sind: {identity.hobbies[0]}, {identity.hobbies[2]}
-            und das {identity.hobbies[1]}.
-          </li>
-        )
-      }
-    </p>
-    <p>
-      Diese drei Hobbys passen perfekt zusammen.<br />
-      Das erste ist gut für den Geist, das zweite für den Körper und das dritte für
-      die Kreativität (...und Bauch 😂).
-    </p>
-    <!-- <p>
+      <p>
+        {
+          identity.hobbies.length >= 3 && (
+            <li>
+              Meine Hobbies sind: {identity.hobbies[0]}, {identity.hobbies[2]}
+              und das {identity.hobbies[1]}.
+            </li>
+          )
+        }
+      </p>
+      <p>
+        Diese drei Hobbys passen perfekt zusammen.<br />
+        Das erste ist gut für den Geist, das zweite für den Körper und das dritte
+        für die Kreativität (...und Bauch 😂).
+      </p>
+      <!-- <p>
       Nach meiner Ausbildung zum {identity.occupation} habe ich angefangen mich in
       richtung AWS Cloud zu Orientieren. Ich habe auch die AWS CCP Zertifizierung
       bestanden. Mein Ziel ist es AWS
       {identity.occupationNew} zu werden.
     </p> -->
-    <p>Meine Skills sind:</p><p></p><ul></ul>
-    <section>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </section>
-  </li>
+      <p>Meine Skills sind:</p><p></p><ul></ul>
+      <section>
+        {skills.map((skill) => <li class="skill">{skill}</li>)}
+      </section>
+    </li>
+  </section>
 
-  <section>
+  <section class="animate-fadeInSlideLeft">
     <h1>Meine AWS Badges:</h1>
   </section>
   <section
