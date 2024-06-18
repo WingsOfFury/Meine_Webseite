@@ -9,33 +9,15 @@ const description = "Blog Tags";
 ---
 
 <BaseLayout pageTitle={pageTitle} description={description}>
-  <div class="tags">
+  <div class="flex flex-wrap">
     {
       tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+        <p class="p-4 border-2 border-dark m-1 text-2xl bg-dark">
+          <a class="text-white" href={`/tags/${tag}`}>
+            {tag}
+          </a>
         </p>
       ))
     }
   </div>
 </BaseLayout>
-
-<!-- <style is:inline>
-  a {
-    color: #00539f;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: solid 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
-  }
-</style> -->

@@ -2,6 +2,10 @@
 import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
+
+const allPosts = await getCollection("posts");
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+import { getCollection } from "astro:content";
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
@@ -30,5 +34,19 @@ const { frontmatter } = Astro.props;
     <hr class="border-1 border-dark w-10/12 mt-10 mb-20" />
     <!-- <p>{frontmatter.pubDate.toString().slice(0, 10)}</p> -->
     <slot />
+
+    <hr class="w-10/12 bg-dark h-px my-8 border-0 dark:bg-gray-700" />
+    <h1 class="text-left w-10/12">Tags:</h1>
+    <section class="flex flex-wrap w-10/12 text-justify">
+      {
+        tags.map((tag) => (
+          <p class="p-2 border-2 border-dark m-1 text-lg bg-dark">
+            <a class="text-white" href={`/tags/${tag}`}>
+              {tag}
+            </a>
+          </p>
+        ))
+      }
+    </section>
   </section>
 </BaseLayout>

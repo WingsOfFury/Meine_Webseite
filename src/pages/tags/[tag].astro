@@ -26,7 +26,7 @@ const { posts } = Astro.props;
 
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
-  <ul class="w-[290px]">
+  <ul>
     <li>
       {
         posts.map((post) => (
