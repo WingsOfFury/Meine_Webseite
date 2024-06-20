@@ -7,14 +7,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "cy:open": "cypress open"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.1.0",
-    "@astrojs/react": "^3.5.0",
+    "@astrojs/mdx": "^3.1.1",
+    "@astrojs/react": "^3.6.0",
     "@astrojs/rss": "^4.0.6",
-    "@astrojs/sitemap": "^3.1.5",
+    "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/poppins": "^5.0.14",
     "@fontsource/ubuntu": "^5.0.13",
@@ -23,17 +22,13 @@
     "@swup/a11y-plugin": "^5.0.0",
     "@swup/head-plugin": "^2.2.0",
     "@swup/scroll-plugin": "^3.3.2",
-    "astro": "^4.10.2",
+    "astro": "^4.11.0",
     "astro-icon": "^0.8.2",
-    "install": "^0.13.0",
     "mdast-util-to-string": "^4.0.0",
     "npm": "^10.8.1",
     "reading-time": "^1.5.0",
     "rehype-external-links": "^3.0.0",
     "swup": "^4.6.1",
     "tailwindcss": "^3.4.4"
-  },
-  "devDependencies": {
-    "cypress": "^13.11.0"
   }
 }
