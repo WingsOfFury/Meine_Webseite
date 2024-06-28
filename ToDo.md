@@ -1,12 +1,12 @@
 *TODO - 
 <!-- Ändere bitte akansel-cengiz.yaml unter src> content> authors> in eine JSON Datei um.  -->
-Deploy die Webseite über AWS.
-Implementiere einen Visitor Counter für dein Resume ein.
+<!-- Deploy die Webseite über AWS. -->
+<!-- Implementiere einen Visitor Counter für dein Resume ein. -->
 <!-- Implementiere eine Resume Seite mit deinem Lebenslauf ein. -->
 <!-- Implementiere eine multiple Sprachen Leiste neben dem toggleSwitch ein. -->
 <!-- AWS Badges in About einpflegen. -->
 
-SEO  zum späteren Zeitpunkt implementieren. 
+Sitemap  zum späteren Zeitpunkt implementieren. 
 i18n zum späteren Zeitpunkt implementieren.
 
 
