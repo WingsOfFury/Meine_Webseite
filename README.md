@@ -1,3 +1,13 @@
+# Meine erste eigene Webseite
+
+<h3>TechStack</h3>
+
+- Astro, TailwindCSS, JavaScript, React 
+
+
+
+
+
 # Astro Starter Kit: Basics
 
 ```sh
