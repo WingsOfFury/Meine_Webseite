@@ -2,7 +2,10 @@
 
 <h3>TechStack</h3>
 
-- Astro, TailwindCSS, JavaScript, React 
+- Astro
+- TailwindCSS
+- JavaScript
+- React 
 
 
 
