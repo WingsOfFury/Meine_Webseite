@@ -7,8 +7,7 @@ import tailwind from "@astrojs/tailwind";
 // React importieren
 import react from "@astrojs/react";
 
-// Sentry und Spotlight importieren
-import sentry from "@sentry/astro";
+//Spotlight importieren
 import spotlightjs from "@spotlightjs/astro";
 
 // MDX importieren
@@ -31,7 +30,6 @@ export default defineConfig({
       },
     }),
     react(),
-    sentry(),
     spotlightjs(),
     mdx(),
     sitemap(),

@@ -6,7 +6,98 @@ const description = "Mein Portfolio";
 ---
 
 <BaseLayout pageTitle={pageTitle} description={description}>
-  <section class="animate-fadeInSlideUp">
-    <p>Diese Webseite ist teil meines Portfolios.</p>
+  <section
+    class="grid-cols-1 sm:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 animate-fadeInSlideUp"
+  >
+    <section
+      class="mx-3 mt-6 flex flex-col justify-self-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0 max-w-sm h-auto transition-shadow duration-300 hover:shadow-xl hover:shadow-gray-400"
+    >
+      <!-- Portfolio Karte 1 -->
+
+      <img
+        src="/images/preview_meine_webseite.png"
+        alt="Vorschau Bild Meine_Webseite"
+        class="w-full h-48 object-cover"
+      />
+      <div class="p-4">
+        <h4 class="text-xl font-semibold mb-2">Meine Webseite</h4>
+        <p class="mb-4 text-base text-gray-400 dark:text-neutral-200">
+          Meine erste eigene Webseite die ich mithilfe von Astro, TailwindCSS,
+          JavaScript und React entwickelt habe.
+        </p>
+
+        <a
+          href="https://meine-webseite-vrq8.vercel.app/portfolio"
+          class="text-indigo-600 hover:text-indigo-900"
+        >
+          <button
+            class="p-2 flex text-xs text-white duration-300 ease-in delay-300 hover:bg-dark bg-dark focus:shadow-outline hover:text-slate-300 ring-slate-300 hover:ring-2 hover:ring-dark dark:hover:ring-white"
+          >
+            Weiterlesen
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Portfolio Karte 2 -->
+    <section
+      class="mx-3 mt-6 flex flex-col justify-self-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0 max-w-sm h-auto transition-shadow duration-300 hover:shadow-xl hover:shadow-gray-400"
+    >
+      <img
+        src="/images/preview_thedesignshop.png"
+        alt="Vorschau Bild The_Design_Shop Webseite"
+        class="w-full h-48 object-cover"
+      />
+      <div class="p-4">
+        <h4 class="text-xl font-semibold mb-2">The Design Shop</h4>
+        <p class="mb-4 text-base text-gray-400 dark:text-neutral-200">
+          Während meiner Zeit im Bootcamp arbeitete ich an einem Projekt mit dem
+          Thema "Grid".
+        </p>
+
+        <a
+          href="https://thedesignshop-wingsoffurys-projects.vercel.app/"
+          class="text-indigo-600 hover:text-indigo-900"
+        >
+          <button
+            class="p-2 flex text-xs text-white duration-300 ease-in delay-300 hover:bg-dark bg-dark focus:shadow-outline hover:text-slate-300 ring-slate-300 hover:ring-2 hover:ring-dark dark:hover:ring-white"
+          >
+            Weiterlesen
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Portfolio Karte 3 -->
+    <section
+      class="mx-3 mt-6 flex flex-col justify-self-center bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 sm:shrink-0 sm:grow sm:basis-0 max-w-sm h-auto transition-shadow duration-300 hover:shadow-xl hover:shadow-gray-400"
+    >
+      <img
+        src="/images/preview_dragon_repeller.png"
+        alt="Vorschau Bild The_Design_Shop Webseite"
+        class="w-full h-48 object-cover"
+      />
+      <div class="p-4">
+        <h4 class="text-xl font-semibold mb-2">
+          JavaScript Rollenspiel - Dragon Repeller
+        </h4>
+        <p class="mb-4 text-base text-gray-400 dark:text-neutral-200">
+          Ein Mini-Game das ich mit JavaScript programmiert habe.
+        </p>
+
+        <a
+          href="https://javascript-rollenspiel-dragon-repeller.vercel.app//"
+          class="text-indigo-600 hover:text-indigo-900"
+        >
+          <button
+            class="p-2 flex text-xs text-white duration-300 ease-in delay-300 hover:bg-dark bg-dark focus:shadow-outline hover:text-slate-300 ring-slate-300 hover:ring-2 hover:ring-dark dark:hover:ring-white"
+          >
+            Weiterlesen
+          </button>
+        </a>
+      </div>
+    </section>
   </section>
 </BaseLayout>
+
+<!--Entferne bitte den Hover Effekt der User Blog Cards und implementiere zugleich den obigen neuen Effekt -->
