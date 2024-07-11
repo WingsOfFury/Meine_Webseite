@@ -17,6 +17,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/poppins": "^5.0.14",
     "@fontsource/ubuntu": "^5.0.13",
+    "@sentry/astro": "^8.17.0",
     "@sentry/node": "^7.118.0",
     "@spotlightjs/astro": "^2.0.0",
     "@swup/a11y-plugin": "^5.0.0",
