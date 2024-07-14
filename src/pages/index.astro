@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import devguy from "/public/images/developer-guy.png";
+import Button from "../components/Button.astro";
+
 const pageTitle = "Startseite";
 ---
 
@@ -40,14 +42,17 @@ const pageTitle = "Startseite";
           jederzeit zur Verfügung.<br />
           In diesem Sinne: Cheers 🥂
         </p>
-        <!-- <div class="flex items-center">
-        <Button url="mailto:akcengiz@gmx.de" title="Contact" external={true} />
-      </div> -->
-        <section class="flex items-center"></section>
+        <div class="flex justify-center lg:justify-start animate-fadeInSlideUp">
+          <Button
+            url="mailto:akcengiz@gmx.de"
+            title="Contact"
+            external={true}
+          />
+        </div>
       </section>
     </section>
   </section>
-  <!-- Ich habe im Button, NavigationSocialBar und im Header die Icons von Rounded-full auf Eckig umgestellt -->
 </BaseLayout>
 
 <!-- Zeile 8 habe ich das heraus kopiert weil es sonst auf der HeroPage mit angezeigt wird "description="Akansel Cengiz Webseite" -->
+<!-- Ich habe im Button, NavigationSocialBar und im Header die Icons von Rounded-full auf Eckig umgestellt -->
