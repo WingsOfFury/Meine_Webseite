@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import Location from './Location';
-import Contact from './Contact';
-import State from './State';
-import Country from './Country';
-import Age from './Age';
+import Location from '../components/Location.jsx';
+import Contact from '../components/Contact.jsx';
+import State from '../components/State.jsx';
+import Country from '../components/Country.jsx';
+import Age from '../components/Age.jsx';
 
 
 const Refresh = () => {
