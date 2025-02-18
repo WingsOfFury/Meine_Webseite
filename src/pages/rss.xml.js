@@ -8,7 +8,7 @@ export async function GET(context) {
     stylesheet: "/rss/styles.xsl",
     title: "Astro und TailwindCSS Learner | Blog",
     description: "Meine erste Webseite mit Astro und TailwindCSS",
-    site: "http://192.168.0.199:4321/",
+    site: "https://www.akansel.de",
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
